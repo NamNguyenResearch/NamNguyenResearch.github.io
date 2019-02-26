@@ -10,6 +10,7 @@ redirect_from:
 
 
 Hi, my name is Trung Vu. I am a third year Ph.D. candidate in [Computer Science](https://eecs.oregonstate.edu/) - AI / Machine Learning group - at [Oregon State University](https://oregonstate.edu/), advised by [Dr. Raviv Raich](https://web.engr.oregonstate.edu/~raich/). My research focuses on scalable optimization methods in machine learning and signal processing. I am passionate about the challenging problems that arise in the core of optimization methods such as the convergence properties and accommodation of acceleration. 
+{: .text-justify}
 
 
 
@@ -25,4 +26,4 @@ Hi, my name is Trung Vu. I am a third year Ph.D. candidate in [Computer Science]
 	* **02/15**: PhD Program Meeting. 3 more courses to go...
 * 2017
 	* **01/09**: Starting from Winter 2017, I joined a 2-year commercialization project with [SmartVineyards](http://smartvineyards.net/) in developing an intelligent decision support system to improve irrigation management in vineyards and other west coast crops. This project is funded by [Oregon BEST](https://oregonbest.org) and brings together researchers from different departments at Oregon State University and Washington State University. I am the only graduate student in the group. 
-
+{: .text-justify}
