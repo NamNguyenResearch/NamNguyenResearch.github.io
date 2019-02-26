@@ -9,51 +9,45 @@ redirect_from:
 
 {% include base_path %}
 
+([pdf](https://trungvietvu.github.io/files/cv))
+
 Education
 ======
-* B.S. in Github, Github University, 2012
-* M.S. in Jekyll, Github University, 2014
-* Ph.D in Version Control Theory, Github University, 2018 (expected)
+* B.S. in Computer Science, Hanoi University of Science and Technology, 2014
+* Ph.D in Computer Science, Oregon State University, 2021 (expected)
 
 Work experience
 ======
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* Winter 2017 - Fall 2018: Research Assistant
+  * Oregon State University
+  * Duties included: developing an intelligent decision support system to improve irrigation management in vineyards and other west coast crops
+  * Supervisor: Dr. Raviv Raich
 
 Publications
 ======
-  <ul>{% for post in site.publications %}
+  {% assign sorted = (site.publications | sort: 'date') | reverse %}
+  <ul>{% for post in sorted %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
-Talks
+Conference Activity/Participation
 ======
-  <ul>{% for post in site.talks %}
-    {% include archive-single-talk-cv.html %}
-  {% endfor %}</ul>
-  
-Teaching
+* Papers Presented
+  * Accelerating Iterative Hard Thresholding for Low-Rank Matrix Completion via Adaptive Restart, ICASSP 2019, May 11-17.
+* Posters
+  * Local Convergence of the Heavy Ball method in Iterative Hard Thresholding for Low-Rank Matrix Completion, ICASSP 2019, May 11-17.
+  * Adaptive Step Size Momentum Method for Deconvolution, SSP Workshop 2018, June 10-13.
+* Campus or Departmental Talks
+  * Accelerating Iterative Hard Thresholding for Low-Rank Matrix Completion via Adaptive Restart, SSP Group, March 1, 2019.
+  * Adaptive Step Size Momentum Method for Deconvolution, April, 2018.
+
+Teaching Assistant
 ======
   <ul>{% for post in site.teaching %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
-Service and leadership
+Service
 ======
-* Currently signed in to 43 different slack teams
+* Reviewer
+  * ICASSP 2018, 2019

@@ -7,10 +7,10 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Trung Vu"
+title                    : ""
 title_separator          : "-"
 name                     : &name "Trung Vu"
-description              : &description "PhD Student, Computer Science"
+description              : &description "PhD Candidate, Computer Science"
 url                      : https://trungvietvu.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "trungvietvu/trungvietvu.github.io"
