@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : ""
+title                    : "Trung Vu"
 title_separator          : "-"
 name                     : &name "Trung Vu"
 description              : &description "PhD Candidate, Computer Science"
