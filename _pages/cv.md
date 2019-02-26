@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-([pdf](https://trungvietvu.github.io/files/cv))
+([pdf](https://trungvietvu.github.io/files/CV_TrungVu.pdf))
 
 Education
 ======
