@@ -37,7 +37,7 @@ Conference Activity/Participation
   * Local Convergence of the Heavy Ball method in Iterative Hard Thresholding for Low-Rank Matrix Completion, ICASSP 2019, May 11-17.
   * Adaptive Step Size Momentum Method for Deconvolution, SSP Workshop 2018, June 10-13.
 * Campus or Departmental Talks
-  * Accelerating Iterative Hard Thresholding for Low-Rank Matrix Completion via Adaptive Restart, SSP Group, March 1, 2019.
+  * Accelerating Iterative Hard Thresholding for Low-Rank Matrix Completion via Adaptive Restart, Signal Processing group, March 1, 2019.
   * Adaptive Step Size Momentum Method for Deconvolution, April, 2018.
 
 Teaching Assistant
