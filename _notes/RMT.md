@@ -2,7 +2,7 @@
 title: "Notes on Random Matrix Theory"
 collection: notes
 permalink: /note/2019/RMT
-date: 2019-04-29
+date: 2020-04-29
 excerpt: Random Matrix Theory
 tags:
   - random matrix

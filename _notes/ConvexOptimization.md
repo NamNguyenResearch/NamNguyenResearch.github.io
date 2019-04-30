@@ -3,16 +3,16 @@ title: "Notes on Convex Optimization"
 collection: notes
 permalink: /note/2019/ConvexOptimization
 date: 2019-04-29
-excerpt: Useful inequalities in analysis of convex optimization. Applications in proofs of gradient descent and projected gradient descent.
-tags:
+excerpt: Some useful inequalities in convex analysis and their applications in proofs of gradient descent and proximal gradient descent.
+<!--tags:
   - convex optimization
-  - convergence analysis
+  - convergence analysis-->
 ---
 
 
 # 1. Lower and upper bounds
 
-**Assumption** Let function $$\newcommand{\norm}[1]{\left\lVert#1\right\rVert} f: \mathbb{R}^n \rightarrow \mathbb{R}$$ be a continuous and twice differentiable (if necessary), for any $$x,y \in \mathbb{R}^n, \alpha \in [0,1]$$. 
+**Assumption.** Let function $$\newcommand{\norm}[1]{\left\lVert#1\right\rVert} f: \mathbb{R}^n \rightarrow \mathbb{R}$$ be a continuous and twice differentiable (if necessary), for any $$x,y \in \mathbb{R}^n, \alpha \in [0,1]$$. 
 
 Theorem 1.
 : $$f$$ is convex if and only if one of the following conditions holds:
@@ -70,7 +70,6 @@ f^k &\leq f^* - \langle \nabla f^{k-1}, x^*-x^{k-1} \rangle - \frac{\mu}{2} \nor
 - If $$\mu=0$$, from \eqref{decrease2} we have $$f^k-f^* \leq \frac{L}{2} \bigg( \norm{x^{k-1}-x^*}^2 - \norm{x^{k}-x^*}^2 \bigg)$$. Summing over all $$i=1,\ldots,k$$ yields
 
 $$ f^k - f^* \leq \frac{L}{2k} \norm{x^0-x^*}^2. \qquad \text{ (Sublinear rate)} \nonumber $$
-
 - If $$\mu>0$$, from \eqref{decrease2} we have $$\norm{x^k-x^*}^2 \leq \big( 1-\frac{\mu}{L} \big) \norm{x^{k-1}-x^*}^2$$. Thus a simple recursion yields
 
 $$ \norm{x^k-x^*}^2 \leq \big( 1-\frac{\mu}{L} \big)^k \norm{x^0-x^*}^2. \qquad \text{ (Linear rate) } \nonumber $$
@@ -91,11 +90,11 @@ $$ \begin{align*}
 
 
 # 3. Proximal Gradient Descent (PGD)
-Consider $$g(x)=f(x)+h(x)$$ where the regularization term $$h(x)$$ is convex. The PGD update is
+Consider $$g(x)=f(x)+h(x)$$ where the regularization term $$h(x)$$ is convex. The PGD update is  
 
-$$ x^k= \text{prox}_{h/L} \Big(x^{k-1}-\frac{1}{L} \nabla f(x^{k-1})\Big) = x^{k-1} - \frac{1}{L} G(x^{k-1}) \nonumber $$
+$$ x^k= \text{prox}_{h/L} \Big(x^{k-1}-\frac{1}{L} \nabla f(x^{k-1})\Big) = x^{k-1} - \frac{1}{L} G(x^{k-1}) \nonumber $$ 
 
-where $$G(x)=L \cdot \big( x^{k-1} - \text{prox}_{h/L} (x^{k-1}-\frac{1}{L}x^{k-1}) \big)$$. Similar to GD, we have
+where $$ G(x)=L \cdot \big( x^{k-1} - \text{prox}_{h/L} (x^{k-1}-\frac{1}{L}x^{k-1}) \big) $$. Similar to GD, we have
 
 $$ \begin{align*}
 g^k &= f^k+h^k \\
@@ -113,6 +112,8 @@ g^k &\leq g^* + \langle G^{k-1}, x^k-x^* \rangle + \frac{1}{2L} \norm{G^{k-1}}^2
 \end{align*} $$
 
 
-
-
+## References
+```
+1. Y. Nesterov, Introductory lectures on convex optimization: a basic course, Kluwer Academic Publishers, 2004.
+```
 
