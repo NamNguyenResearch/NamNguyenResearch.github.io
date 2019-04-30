@@ -1,5 +1,6 @@
 ---
 title: "Local Convergence of the Heavy Ball method in Iterative Hard Thresholding for Low-Rank Matrix Completion"
+author: "Trung Vu and Raviv Raich"
 collection: publications
 permalink: /publication/ICASSP2019_HB
 date: 2019-02-01

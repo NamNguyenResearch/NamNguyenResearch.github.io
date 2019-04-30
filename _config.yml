@@ -149,6 +149,7 @@ markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
 # Conversion
 markdown: kramdown
+mathjax: true
 highlighter: rouge
 lsi: false
 excerpt_separator: "\n\n"
@@ -173,6 +174,9 @@ collections:
     output: true
     permalink: /:collection/:path/
   publications:
+    output: true
+    permalink: /:collection/:path/
+  notes:
     output: true
     permalink: /:collection/:path/
   #portfolio:
@@ -216,6 +220,15 @@ defaults:
   - scope:
       path: ""
       type: publications
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comments: true
+  # _notes
+  - scope:
+      path: ""
+      type: notes
     values:
       layout: single
       author_profile: true
