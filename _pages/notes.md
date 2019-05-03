@@ -9,6 +9,7 @@ author_profile: true
 {% include base_path %}
 
 {% for post in site.notes reversed %}
-  {% include archive-single.html %}
-  {: .text-justify}
+	{% if post.enable %}
+     	{% include archive-single.html %}
+  	{% endif %}
 {% endfor %}
