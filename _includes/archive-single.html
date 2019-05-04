@@ -61,6 +61,9 @@
     {% if post.poster%}
       <a href=" {{ post.poster }} ">[Poster]</a>
     {% endif %}
+    {% if post.appendix%}
+      <a href=" {{ post.appendix }} ">[Appendix]</a>
+    {% endif %}
     {% if post.bibtex%}
       <details><summary>Bibtex</summary>
         <pre style="white-space: normal;font-size:.7em">{{ post.bibtex }}</pre>
