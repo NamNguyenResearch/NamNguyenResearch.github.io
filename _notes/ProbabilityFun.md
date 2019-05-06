@@ -12,9 +12,20 @@ excerpt: Some interesting thought on basic probability question. It is embarrasi
 Last Friday I had an interesting discussion with my advisor on probability theory. He gave me three questions for undergrad-level. They are as follows:
 
 Question 1.
-: 1. How many ways can 10 students be divided into 5 groups with 2 students each?
+: 1. How many ways can 20 students be divided into 10 groups with 2 students each?
 2. Suppose we randomly assign a group of 10 CS students and 10 ECE students into 10 pairs. What is the probability of a diverse assignment? A diverse assignment is defined as the one in which every pair has students from both CS and ECE. 
 3. In part 2, what is the probability of a non-diverse assignment? A non-diverse assignment is defined as the one in which every pair only has students from either CS or ECE.
+
+<details>
+	<summary style="font-style: italic;">Answer</summary>
+	<span>
+		1. The answer is quite straightforward $$ \frac{\prod_{k=1}^{10} {2k \choose 2}}{10!} = \frac{20!}{10! \cdot 2^{10}}. \nonumber $$
+		2. This question is a little bit tricky since the way we compute the probability depends on the sample space. If we choose the sample space the same as part 1, then there is 10 way to pair the first CS student with an ECE student; the second CS student has 9 choices; and so on. The probability in this case is $$ \frac{10!}{\frac{20!}{10! \cdot 2^{10}}} = \frac{(10!)^2 2^{10}}{20!} \approx 0.005542. \nonumber $$ 
+		<!--On the other hand, we can think of selecting the first pair of students as having equal probability to be diversity or non-diversity. If that pair is diversity, then the numbers of CS and ECE students remain balance. Thus, selecting the second pair of students as having equal probability to be diversity or non-diversity. Continuing this argument until all 10 pairs are formed, we have the probability is $$ \frac{1}{2^{10}}. $$-->
+		3. There are $$ \frac{\prod_{k=1}^{5} {2k \choose 2}}{5!} \nonumber $$ way to group 10 CS (or ECE) students into 5 pairs. Therefore, the probability of a non-diverse assignment is $$ \frac{\Bigl(\frac{\prod_{k=1}^{5} {2k \choose 2}}{5!}\Bigr)^2}{\frac{20!}{10! \cdot 2^{10}}} = \frac{(10!)^3}{20! (5!)^2} \approx 0.001364. \nonumber $$
+	</span> 
+</details>
+
 
 Question 2.
 : Assume that every family has 2 children and independent of the other, each children can be either boy or girl with probability $$0.5$$.

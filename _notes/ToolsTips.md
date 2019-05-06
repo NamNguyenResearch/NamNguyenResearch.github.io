@@ -147,7 +147,9 @@ cvx_end
 - Markdown
 	- Cheat sheet: [https://en.support.wordpress.com/markdown-quick-reference/](https://en.support.wordpress.com/markdown-quick-reference/)
 
-
+- Blogs
+	- [Terence Tao](https://terrytao.wordpress.com/)
+	- [Alex McFarlane](https://flipdazed.github.io)
 
 
 
