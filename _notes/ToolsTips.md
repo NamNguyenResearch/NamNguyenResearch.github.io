@@ -1,11 +1,14 @@
 ---
-title: "Tools and Tips"
+title: "Miscellaneous"
 collection: notes
-permalink: /note/2019/ToolsTips
+permalink: /note/2019/Miscellaneous
 date: 2019-02-02
 enable: true
-excerpt: Some useful tools and tips I often use in my research. 
+excerpt: A quick reference to the list of items that I often use in my research. 
 ---
+
+
+Below is a quick reference to the list of items that I often use in my research. 
 
 ---
 # Latex
@@ -41,11 +44,31 @@ excerpt: Some useful tools and tips I often use in my research.
 \newcommand{\R}{\mathbb R}
 ```
 
+- New operators
+
+```latex
+\DeclareMathOperator*{\argmin}{argmin}
+\DeclareMathOperator*{\argmax}{argmax}
+```
+
+- Scale equations
+
+```latex
+\newcommand{\Scale}[2][4]{\scalebox{#1}{$#2$}}
+
+\begin{align*}
+\Scale[0.85]{ x+y=1 }
+\end{align*}
+```
+
 - Algorithms
 
 ```latex
 \usepackage{algorithm}
 \usepackage[noend]{algpseudocode}
+
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
 
 \begin{algorithm}[H]
 \caption{ARNAG-IHT}
@@ -63,6 +86,21 @@ excerpt: Some useful tools and tips I often use in my research.
 \end{algorithm}
 ```
 
+- Align algorithms and texts in two-column mode
+
+```latex
+\makeatletter
+\newcommand\fs@betterruled{
+  \def\@fs@cfont{\bfseries}\let\@fs@capt\floatc@ruled
+  \def\@fs@pre{\vspace*{5pt}\hrule height.8pt depth0pt \kern2pt}
+  \def\@fs@post{\kern2pt\hrule\relax}
+  \def\@fs@mid{\kern2pt\hrule\kern2pt}
+  \let\@fs@iftopcapt\iftrue}
+\floatstyle{betterruled}
+\restylefloat{algorithm}
+\makeatother
+```
+
 ---
 # Matlab
 
@@ -70,8 +108,7 @@ excerpt: Some useful tools and tips I often use in my research.
 
 ```matlab
 setaxs = 'set(get(gca,';
-fontsty = [' ''Fontname'',''times'', ''FontSize'',12, ''Fontweight'',''normal'', '...
-            ,' ''Fontangle'',''normal''); '];
+fontsty = [' ''Fontname'',''times'', ''FontSize'',12, ''Fontweight'',''normal'', ',' ''Fontangle'',''normal''); '];
 
 eval( [setaxs '''xlabel''' '),' fontsty] );
 eval( [setaxs '''ylabel''' '),' fontsty] );
@@ -82,6 +119,27 @@ eval( ['set(gca,'               fontsty] );
 leg = legend;
 eval( ['set(leg,'               fontsty] );
 ```
+
+- CVX
+
+```matlab
+cvx_begin quiet
+    variable x_cvx(n)
+    expression xg
+    for g=1:G
+        if g<G
+            xg(g) = norm(x_cvx(h*(g-1)+1:h*g),2);
+        else
+            xg(g) = norm(x_cvx(h*(g-1)+1:end),2);
+        end
+    end
+    minimize(sum_square_abs(y-A*x_cvx) + lambda*sum(xg))
+    subject to
+        ones(1,n)*x_cvx == 1    
+        x_cvx >= 0        
+cvx_end
+```
+
 
 ---
 # Webpages

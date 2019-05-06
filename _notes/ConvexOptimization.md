@@ -11,6 +11,7 @@ enable: true
 ---
 
 
+---
 # 1. Lower and upper bounds
 
 **Assumption.** Let function $$\newcommand{\norm}[1]{\left\lVert#1\right\rVert} f: \mathbb{R}^n \rightarrow \mathbb{R}$$ be a continuous and twice differentiable (if necessary), for any $$x,y \in \mathbb{R}^n, \alpha \in [0,1]$$. 

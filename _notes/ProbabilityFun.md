@@ -8,6 +8,7 @@ excerpt: Some interesting thought on basic probability question. It is embarrasi
 ---
 
 
+---
 Last Friday I had an interesting discussion with my advisor on probability theory. He gave me three questions for undergrad-level. They are as follows:
 
 Question 1.
