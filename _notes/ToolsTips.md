@@ -140,6 +140,14 @@ cvx_begin quiet
 cvx_end
 ```
 
+- Create random unitary matrix (QR decomposition)
+
+```matlab
+X = (randn(n) + i*randn(n))/sqrt(2);
+[Q,R] = qr(X);
+R = diag(diag(R)./abs(diag(R)));
+U = Q*R;
+```
 
 ---
 # Webpages
