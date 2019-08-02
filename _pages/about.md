@@ -20,7 +20,7 @@ Currently, I am working on the analysis of iterative hard thresholding for low-r
 	* <span style='color: red'>**08/01**:</span> Our paper "On Convergence of Projected Gradient Descent for Minimizing a Large-scale Quadratic over the Unit Sphere" has been accepted to [MLSP 2019](https://www.ieeemlsp.cc/)!
 	* **06/15**: I will be a TA for CS 290 - Web Development again this Summer term. Looking forward to a productive term!
 	* **04/01**: I will be a TA for two courses with the same name CS 290 - Web Development this Spring term. Looking forward to a productive term!
-	* <span style='color: red'>**03/01**:</span> *Departmental Talks* - I have chance to go through a dry run of my presentation on the paper "Accelerating Iterative Hard Thresholding for Low-Rank Matrix Completion via Adaptive Restart" with the Signal Processing group.
+	* **03/01**: *Departmental Talks* - I have chance to go through a dry run of my presentation on the paper "Accelerating Iterative Hard Thresholding for Low-Rank Matrix Completion via Adaptive Restart" with the Signal Processing group.
 	* <span style='color: red'>**02/15**:</span> I am fortunate to receive the [IEEE Signal Processing Society Travel Grant](https://signalprocessingsociety.org/events/sps-travel-grants) for [ICASSP 2019](https://2019.ieeeicassp.org). See you, London!
 	* <span style='color: red'>**02/01**:</span> Our two papers "Accelerating Iterative Hard Thresholding for Low-Rank Matrix Completion via Adaptive Restart" and "Local Convergence of the Heavy Ball method in Iterative Hard Thresholding for Low-Rank Matrix Completion" were accepted to [ICASSP 2019](https://2019.ieeeicassp.org)!
 	* **01/05**: I will be a TA for CS 261 - Data Structures this Winter term.

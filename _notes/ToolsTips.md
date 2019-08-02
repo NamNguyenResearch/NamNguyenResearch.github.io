@@ -51,6 +51,14 @@ Below is a quick reference to the list of items that I often use in my research.
 \DeclareMathOperator*{\argmax}{argmax}
 ```
 
+- Scale table
+
+```latex
+\resizebox{\linewidth}{!}{
+\begin{tabular} ...
+}
+```
+
 - Scale equations
 
 ```latex

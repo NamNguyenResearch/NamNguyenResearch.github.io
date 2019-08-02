@@ -57,7 +57,7 @@ For convenience, denote $$f(x^k)$$ and $$\nabla f(x^k)$$ by $$f^k$$ and $$\nabla
 $$ \begin{align} 
 f^k &\leq f^{k-1} + \langle \nabla f^{k-1}, x^k-x^{k-1} \rangle  + \frac{L}{2} \norm{x^k-x^{k-1}}^2 \nonumber \\
 &= f^{k-1} - \langle \nabla f^{k-1}, \frac{1}{L} \nabla f^{k-1} \rangle  + \frac{L}{2} \norm{\frac{1}{L} \nabla f^{k-1}}^2 \nonumber \\
-&= f^{k-1} - \frac{1}{2L} \norm{\nabla f^{k-1}}^2 \label{decrease1}
+&= f^{k-1} - \frac{1}{2L} \norm{\nabla f^{k-1}}^2
 \end{align}$$
 
 Further,
@@ -66,19 +66,19 @@ $$ \begin{align}
 f^k &\leq f^* - \langle \nabla f^{k-1}, x^*-x^{k-1} \rangle - \frac{\mu}{2} \norm{x^*-x^{k-1}}^2 - \frac{1}{2L} \norm{\nabla f^{k-1}}^2 \nonumber \\
 &= f^* + \langle \nabla f^{k-1}, x^{k-1}-x^* \rangle - \frac{1}{2L} \norm{\nabla f^{k-1}}^2 - \frac{\mu}{2} \norm{x^*-x^{k-1}}^2 \nonumber \\
 &= f^* - \frac{L}{2} \bigg( \norm{x^{k-1}-x^*}^2 - \norm{x^{k-1}-x^*-\frac{1}{L}\nabla f^{k-1} }^2 \bigg) - \frac{\mu}{2} \norm{x^{k-1}-x^*}^2 \nonumber \\
-\Rightarrow f^k-&f^* \leq \frac{L}{2} \bigg( \big( 1-\frac{\mu}{L} \big) \norm{x^{k-1}-x^*}^2 - \norm{x^{k}-x^*}^2 \bigg) \label{decrease2}
+\Rightarrow f^k-&f^* \leq \frac{L}{2} \bigg( \big( 1-\frac{\mu}{L} \big) \norm{x^{k-1}-x^*}^2 - \norm{x^{k}-x^*}^2 \bigg)
 \end{align}$$
 
-- If $$\mu=0$$, from \eqref{decrease2} we have $$f^k-f^* \leq \frac{L}{2} \bigg( \norm{x^{k-1}-x^*}^2 - \norm{x^{k}-x^*}^2 \bigg)$$. Summing over all $$i=1,\ldots,k$$ yields
+- If $$\mu=0$$, from (2) we have $$f^k-f^* \leq \frac{L}{2} \bigg( \norm{x^{k-1}-x^*}^2 - \norm{x^{k}-x^*}^2 \bigg)$$. Summing over all $$i=1,\ldots,k$$ yields
 
 $$ f^k - f^* \leq \frac{L}{2k} \norm{x^0-x^*}^2. \qquad \text{ (Sublinear rate)} \nonumber $$
-- If $$\mu>0$$, from \eqref{decrease2} we have $$\norm{x^k-x^*}^2 \leq \big( 1-\frac{\mu}{L} \big) \norm{x^{k-1}-x^*}^2$$. Thus a simple recursion yields
+- If $$\mu>0$$, from (2) we have $$\norm{x^k-x^*}^2 \leq \big( 1-\frac{\mu}{L} \big) \norm{x^{k-1}-x^*}^2$$. Thus a simple recursion yields
 
 $$ \norm{x^k-x^*}^2 \leq \big( 1-\frac{\mu}{L} \big)^k \norm{x^0-x^*}^2. \qquad \text{ (Linear rate) } \nonumber $$
 
 Remark 1.
 : Notice the difference among bounds on function value and bounds on domain side. The convergence rate hence depends on which sequence is considered.
-- From \eqref{decrease1}, we can derive a better bound:  
+- From (1), we can derive a better bound:  
 $$ \begin{align*} 
 f^{k-1}-f^k &\geq \frac{1}{2L} \norm{\nabla f^{k-1}}^2 \geq \frac{\mu}{L} (f^{k-1}-f^*)  \nonumber \\
 \Rightarrow f^k-f^* &\leq (1-\frac{\mu}{L})^k (f^0-f^*) \nonumber
