@@ -3,7 +3,7 @@ title: "My experience on ICASSP 2019"
 collection: notes
 permalink: /note/2019/ICASSP19
 date: 2019-05-19
-enable: true
+enable: false
 excerpt: List of papers I had chance to go over during ICASSP 2019 in Brighton, UK.
 tags:
   - ICASSP

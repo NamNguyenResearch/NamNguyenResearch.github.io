@@ -58,7 +58,7 @@ $$ \begin{align}
 f^k &\leq f^{k-1} + \langle \nabla f^{k-1}, x^k-x^{k-1} \rangle  + \frac{L}{2} \norm{x^k-x^{k-1}}^2 \nonumber \\
 &= f^{k-1} - \langle \nabla f^{k-1}, \frac{1}{L} \nabla f^{k-1} \rangle  + \frac{L}{2} \norm{\frac{1}{L} \nabla f^{k-1}}^2 \nonumber \\
 &= f^{k-1} - \frac{1}{2L} \norm{\nabla f^{k-1}}^2
-\end{align}$$
+\end{align} $$
 
 Further,
 
@@ -67,11 +67,12 @@ f^k &\leq f^* - \langle \nabla f^{k-1}, x^*-x^{k-1} \rangle - \frac{\mu}{2} \nor
 &= f^* + \langle \nabla f^{k-1}, x^{k-1}-x^* \rangle - \frac{1}{2L} \norm{\nabla f^{k-1}}^2 - \frac{\mu}{2} \norm{x^*-x^{k-1}}^2 \nonumber \\
 &= f^* - \frac{L}{2} \bigg( \norm{x^{k-1}-x^*}^2 - \norm{x^{k-1}-x^*-\frac{1}{L}\nabla f^{k-1} }^2 \bigg) - \frac{\mu}{2} \norm{x^{k-1}-x^*}^2 \nonumber \\
 \Rightarrow f^k-&f^* \leq \frac{L}{2} \bigg( \big( 1-\frac{\mu}{L} \big) \norm{x^{k-1}-x^*}^2 - \norm{x^{k}-x^*}^2 \bigg)
-\end{align}$$
+\end{align} $$
 
 - If $$\mu=0$$, from (2) we have $$f^k-f^* \leq \frac{L}{2} \bigg( \norm{x^{k-1}-x^*}^2 - \norm{x^{k}-x^*}^2 \bigg)$$. Summing over all $$i=1,\ldots,k$$ yields
 
 $$ f^k - f^* \leq \frac{L}{2k} \norm{x^0-x^*}^2. \qquad \text{ (Sublinear rate)} \nonumber $$
+
 - If $$\mu>0$$, from (2) we have $$\norm{x^k-x^*}^2 \leq \big( 1-\frac{\mu}{L} \big) \norm{x^{k-1}-x^*}^2$$. Thus a simple recursion yields
 
 $$ \norm{x^k-x^*}^2 \leq \big( 1-\frac{\mu}{L} \big)^k \norm{x^0-x^*}^2. \qquad \text{ (Linear rate) } \nonumber $$
