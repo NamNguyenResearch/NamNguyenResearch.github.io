@@ -16,6 +16,10 @@ Education
 * B.S. in Computer Science, Hanoi University of Science and Technology, 2014
 * Ph.D in Computer Science, Oregon State University, 2021 (expected)
 
+Research Interest
+======
+My research focuses on scalable optimization methods in machine learning and signal processing. I am passionate about the challenging problems that arise in the core of optimization methods such as the convergence guarantees and the accommodation of acceleration. Currently, I am working on the theoretical analysis of projected gradient descent for structured non-convex problems such as sparse recovery and low-rank matrix completion.
+
 Publications
 ======
   <ul>{% for post in site.publications reversed %}
