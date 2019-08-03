@@ -54,7 +54,7 @@ $$ \begin{align*} x^k=x^{k-1}- \frac{1}{L} \nabla f (x^{k-1}). \end{align*}$$
 
 For convenience, denote $$f(x^k)$$ and $$\nabla f(x^k)$$ by $$f^k$$ and $$\nabla f^k$$, respectively. Then from Section 1, we have
 
-$$ \begin{align*} f^k &\leq f^{k-1} + \langle \nabla f^{k-1}, x^k-x^{k-1} \rangle  + \frac{L}{2} \norm{x^k-x^{k-1}}^2 \nonumber \\ &= f^{k-1} - \langle \nabla f^{k-1}, \frac{1}{L} \nabla f^{k-1} \rangle  + \frac{L}{2} \norm{\frac{1}{L} \nabla f^{k-1}}^2 \nonumber \\ &= f^{k-1} - \frac{1}{2L} \norm{\nabla f^{k-1}}^2 \end{align*} $$
+$$ \begin{align*} f^k &\leq f^{k-1} + \langle \nabla f^{k-1}, x^k-x^{k-1} \rangle  + \frac{L}{2} \norm{x^k-x^{k-1}}^2 \\ &= f^{k-1} - \langle \nabla f^{k-1}, \frac{1}{L} \nabla f^{k-1} \rangle  + \frac{L}{2} \norm{\frac{1}{L} \nabla f^{k-1}}^2 \\ &= f^{k-1} - \frac{1}{2L} \norm{\nabla f^{k-1}}^2 \end{align*} $$
 
 Further,
 
@@ -76,15 +76,9 @@ $$ \norm{x^k-x^*}^2 \leq \big( 1-\frac{\mu}{L} \big)^k \norm{x^0-x^*}^2. \qquad 
 Remark 1.
 : Notice the difference among bounds on function value and bounds on domain side. The convergence rate hence depends on which sequence is considered.
 - From (1), we can derive a better bound:  
-$$ \begin{align*} 
-f^{k-1}-f^k &\geq \frac{1}{2L} \norm{\nabla f^{k-1}}^2 \geq \frac{\mu}{L} (f^{k-1}-f^*)  \nonumber \\
-\Rightarrow f^k-f^* &\leq (1-\frac{\mu}{L})^k (f^0-f^*) \nonumber
-\end{align*}$$
+$$ \begin{align*} f^{k-1}-f^k &\geq \frac{1}{2L} \norm{\nabla f^{k-1}}^2 \geq \frac{\mu}{L} (f^{k-1}-f^*) \\ \Rightarrow f^k-f^* &\leq (1-\frac{\mu}{L})^k (f^0-f^*) \end{align*}$$
 - From Theorem 4, choosing $$\eta=\frac{2}{L+\mu}$$ results in the optimal rate:  
-$$ \begin{align*}
-&\norm{x^k-x^*} \leq (1-\frac{2\mu}{L+\mu})^k \norm{x^0-x^*}, \\
-&f^k-f^* \leq \frac{L}{2} (1-\frac{2\mu}{L+\mu})^{2k} \norm{x^0-x^*}^2.
-\end{align*} $$
+$$ \begin{align*} &\norm{x^k-x^*} \leq (1-\frac{2\mu}{L+\mu})^k \norm{x^0-x^*}, \\ &f^k-f^* \leq \frac{L}{2} (1-\frac{2\mu}{L+\mu})^{2k} \norm{x^0-x^*}^2. \end{align*} $$
 - The proof for backtracking line search relies on the fact that the step size $$\eta_k \geq \min\{\beta, \frac{\eta_0}{L} \}$$.
 
 
