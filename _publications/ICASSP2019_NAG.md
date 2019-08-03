@@ -8,6 +8,7 @@ venue: 'IEEE International Conference on Acoustics Speech and Signal Processing 
 citation: 'Trung Vu, Raviv Raich. &quot;Accelerating Iterative Hard Thresholding for Low-Rank Matrix Completion via Adaptive Restart,&quot; In Proceedings of 2019 IEEE International Conference on Acoustics Speech and Signal Processing (ICASSP), Brighton, UK, May 12-17, 2019.'
 appendix: '/files/ICASSP19_NAGAppendix.pdf'
 paperurl: 'https://ieeexplore.ieee.org/document/8683082'
+pdf: '/files/ICASSP19_NAG.pdf'
 slides: '/files/ICASSP19_NAGSlides.pdf'
 code: '/files/ICASSP19_NAGIHT.zip'
 bibtex: '@inproceedings{vu2019accelerating,<br />

@@ -8,6 +8,7 @@ venue: 'IEEE International Conference on Acoustics Speech and Signal Processing 
 citation: 'Trung Vu, Raviv Raich. &quot;Local Convergence of the Heavy Ball method in Iterative Hard Thresholding for Low-Rank Matrix Completion,&quot; In Proceedings of 2019 IEEE International Conference on Acoustics Speech and Signal Processing (ICASSP), Brighton, UK, May 12-17, 2019.'
 appendix: '/files/ICASSP19_HBAppendix.pdf'
 paperurl: 'https://ieeexplore.ieee.org/document/8682312'
+pdf: '/files/ICASSP19_HB.pdf'
 poster: '/files/ICASSP19_HBPoster.pdf'
 code: '/files/ICASSP19_HBIHT.zip'
 bibtex: '@inproceedings{vu2019local,<br />

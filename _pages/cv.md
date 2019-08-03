@@ -16,13 +16,6 @@ Education
 * B.S. in Computer Science, Hanoi University of Science and Technology, 2014
 * Ph.D in Computer Science, Oregon State University, 2021 (expected)
 
-Work experience
-======
-* Winter 2017 - Fall 2018: Research Assistant
-  * Oregon State University
-  * Duties included: developing an intelligent decision support system to improve irrigation management in vineyards and other west coast crops
-  * Supervisor: Dr. Raviv Raich
-
 Publications
 ======
   <ul>{% for post in site.publications reversed %}
@@ -39,6 +32,13 @@ Conference Activity/Participation
 * Campus or Departmental Talks
   * Accelerating Iterative Hard Thresholding for Low-Rank Matrix Completion via Adaptive Restart, Signal Processing group, March 1, 2019.
   * Adaptive Step Size Momentum Method for Deconvolution, April, 2018.
+
+Work experience
+======
+* Winter 2017 - Fall 2018: Research Assistant
+  * Oregon State University
+  * Duties included: developing an intelligent decision support system to improve irrigation management in vineyards and other west coast crops
+  * Supervisor: Dr. Raviv Raich
 
 Teaching Assistant
 ======
