@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 
-Hi, my name is Trung Vu. I am a third year Ph.D. candidate in [Computer Science](https://eecs.oregonstate.edu/) - AI / Machine Learning group - at [Oregon State University](https://oregonstate.edu/), advised by [Dr. Raviv Raich](https://web.engr.oregonstate.edu/~raich/). My research focuses on scalable optimization methods in machine learning and signal processing. I am passionate about the challenging problems that arise in the core of optimization methods such as the convergence properties and accommodation of acceleration. 
+Hi, my name is Trung Vu. I am a fourth year Ph.D. candidate in [Computer Science](https://eecs.oregonstate.edu/) - AI / Machine Learning group - at [Oregon State University](https://oregonstate.edu/), advised by [Dr. Raviv Raich](https://web.engr.oregonstate.edu/~raich/). My research focuses on scalable optimization methods in machine learning and signal processing. I am passionate about the challenging problems that arise in the core of optimization methods such as the convergence properties and accommodation of acceleration. 
 Currently, I am working on the analysis of iterative hard thresholding for low-rank matrix completion.
 {: .text-justify}
 
@@ -17,6 +17,7 @@ Currently, I am working on the analysis of iterative hard thresholding for low-r
 
 > ## News and Updates
 * **2019**
+	* **09/15**: I will be a TA for CS 271 - Computer Architecture and Assembly Language this Fall term.
 	* <span style='color: red'>**08/01**:</span> Our paper ["On Convergence of Projected Gradient Descent for Minimizing a Large-scale Quadratic over the Unit Sphere"](/publications#MLSP2019) has been accepted to [MLSP 2019](https://www.ieeemlsp.cc/)! We are now in [the top 10 student paper award finalists](https://www.ieeemlsp.cc/student-paper-award-finalists.html).
 	* **06/15**: I will be a TA for CS 290 - Web Development again this Summer term. Looking forward to a productive term!
 	* **04/01**: I will be a TA for two courses with the same name CS 290 - Web Development this Spring term. Looking forward to a productive term!
