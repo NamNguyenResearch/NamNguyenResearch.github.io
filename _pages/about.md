@@ -17,8 +17,9 @@ Currently, I am working on the analysis of iterative hard thresholding for low-r
 
 > ## News and Updates
 * **2019**
+	* **10/17**: I received the best student paper award (2nd place) at MLSP 2019, Pittsburgh!
 	* **09/15**: I will be a TA for CS 271 - Computer Architecture and Assembly Language this Fall term.
-	* <span style='color: red'>**08/01**:</span> Our paper ["On Convergence of Projected Gradient Descent for Minimizing a Large-scale Quadratic over the Unit Sphere"](/publications#MLSP2019) has been accepted to [MLSP 2019](https://www.ieeemlsp.cc/)! We are now in [the top 10 student paper award finalists](https://www.ieeemlsp.cc/student-paper-award-finalists.html).
+	* <span style='color: red'>**08/01**:</span> Our paper ["On Convergence of Projected Gradient Descent for Minimizing a Large-scale Quadratic over the Unit Sphere"](/publications#MLSP2019) has been accepted to [MLSP 2019](https://www.ieeemlsp.cc/)!
 	* **06/15**: I will be a TA for CS 290 - Web Development again this Summer term. Looking forward to a productive term!
 	* **04/01**: I will be a TA for two courses with the same name CS 290 - Web Development this Spring term. Looking forward to a productive term!
 	* **03/01**: *Departmental Talks* - I have chance to go through a dry run of my presentation on the paper "Accelerating Iterative Hard Thresholding for Low-Rank Matrix Completion via Adaptive Restart" with the Signal Processing group at OSU.

@@ -30,9 +30,10 @@ Publications
 Conference Activity/Participation
 ======
 * Papers Presented
-  * Accelerating Iterative Hard Thresholding for Low-Rank Matrix Completion via Adaptive Restart, ICASSP 2019, May 11-17.
+  * On Convergence of Projected Gradient Descent for Minimizing a Large-scale Quadratic over the Unit Sphere, MLSP 2019, October 13-16, Pittsburgh, US.
+  * Accelerating Iterative Hard Thresholding for Low-Rank Matrix Completion via Adaptive Restart, ICASSP 2019, May 11-17, London, UK.
 * Posters
-  * Local Convergence of the Heavy Ball method in Iterative Hard Thresholding for Low-Rank Matrix Completion, ICASSP 2019, May 11-17.
+  * Local Convergence of the Heavy Ball method in Iterative Hard Thresholding for Low-Rank Matrix Completion, ICASSP 2019, May 11-17, London, UK.
   * Adaptive Step Size Momentum Method for Deconvolution, SSP Workshop 2018, June 10-13.
 * Campus or Departmental Talks
   * Accelerating Iterative Hard Thresholding for Low-Rank Matrix Completion via Adaptive Restart, Signal Processing group, March 1, 2019.

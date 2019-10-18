@@ -1,7 +1,7 @@
 ---
 uid: "ICASSP2019_NAG"
 title: "Accelerating Iterative Hard Thresholding for Low-Rank Matrix Completion via Adaptive Restart"
-author: "Trung Vu and Raviv Raich"
+author: "<strong>Trung Vu</strong> and Raviv Raich"
 collection: publications
 permalink: /publication/ICASSP2019_NAG
 date: 2019-02-01
