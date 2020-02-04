@@ -16,6 +16,8 @@ Currently, I am working on the analysis of iterative hard thresholding for low-r
 
 
 > ## News and Updates
+* **2020**
+	* **01/06**: I will be a TA for ECE464/564 - Digital Signal Processing this Winter term!
 * **2019**
 	* <span style='color: red'>**10/17**:</span> I received the Student Paper Award (2nd place) at MLSP 2019, Pittsburgh!
 	* **09/15**: I will be a TA for CS 271 - Computer Architecture and Assembly Language this Fall term.
