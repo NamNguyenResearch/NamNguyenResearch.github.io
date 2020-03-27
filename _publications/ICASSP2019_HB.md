@@ -15,7 +15,7 @@ code: '/files/ICASSP19_HBIHT.zip'
 bibtex: '@inproceedings{vu2019local,<br />
   &emsp;title={Local Convergence of the Heavy Ball Method in Iterative Hard Thresholding for Low-rank Matrix Completion},<br />
   &emsp;author={Vu, Trung and Raich, Raviv},<br />
-  &emsp;booktitle={ICASSP 2019-2019 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},<br />
+  &emsp;booktitle={ICASSP 2019 - 2019 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},<br />
   &emsp;pages={3417--3421},<br />
   &emsp;year={2019},<br />
   &emsp;organization={IEEE}<br />

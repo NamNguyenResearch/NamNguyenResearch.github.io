@@ -15,7 +15,7 @@ code: '/files/ICASSP19_NAGIHT.zip'
 bibtex: '@inproceedings{vu2019accelerating,<br />
   &emsp;title={Accelerating Iterative Hard Thresholding for Low-Rank Matrix Completion via Adaptive Restart},<br />
   &emsp;author={Vu, Trung and Raich, Raviv},<br />
-  &emsp;booktitle={ICASSP 2019-2019 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},<br />
+  &emsp;booktitle={ICASSP 2019 - 2019 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},<br />
   &emsp;pages={2917--2921},<br />
   &emsp;year={2019},<br />
   &emsp;organization={IEEE}<br />
