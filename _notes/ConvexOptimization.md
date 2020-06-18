@@ -46,66 +46,68 @@ $$ \begin{align*}
 \end{align*}$$
 
 
-# 2. Convergence of Gradient Descent
+# 2. Convergence of Gradient Descent (GD)
 
 For simplicity, we consider fixed step size $$\eta_k=\frac{1}{L}$$:
 
-$$ x^k=x^{k-1}- \frac{1}{L} \nabla f (x^{k-1}). \tag{1} \label{gd_update} $$
+$$ x^k=x^{k-1}- \frac{1}{L} \nabla f (x^{k-1}) . \tag{1} \label{gd_update} $$
 
-For convenience, denote $$f(x^k)$$ and $$\nabla f(x^k)$$ by $$f^k$$ and $$\nabla f^k$$, respectively. Then from Section 1, we have (\ref{gd_update})
+For convenience, denote $$f(x^k)$$ and $$\nabla f(x^k)$$ by $$f^k$$ and $$\nabla f^k$$, respectively. Then by the smoothness of $f$ at $x^k$, we have
 
 \begin{aligned} f^k &\leq f^{k-1} + \langle \nabla f^{k-1}, x^k-x^{k-1} \rangle  + \frac{L}{2} \norm{x^k-x^{k-1}}^2 \\\\\\
 &= f^{k-1} - \langle \nabla f^{k-1}, \frac{1}{L} \nabla f^{k-1} \rangle  + \frac{L}{2} \norm{\frac{1}{L} \nabla f^{k-1}}^2 \\\\\\
-&= f^{k-1} - \frac{1}{2L} \norm{\nabla f^{k-1}}^2 \end{aligned}
+&= f^{k-1} - \frac{1}{2L} \norm{\nabla f^{k-1}}^2 . \end{aligned}
 
-Further,
+Further, from the strong convexity of $f$ at $x^{k-1}$:
 
-\begin{aligned} f^k &\leq f^* - \langle \nabla f^{k-1}, x^*-x^{k-1} \rangle - \frac{\mu}{2} \norm{x^*-x^{k-1}}^2 - \frac{1}{2L} \norm{\nabla f^{k-1}}^2 \\\\\\
-&= f^* + \langle \nabla f^{k-1}, x^{k-1}-x^* \rangle - \frac{1}{2L} \norm{\nabla f^{k-1}}^2 - \frac{\mu}{2} \norm{x^*-x^{k-1}}^2 \\\\\\
-&= f^* - \frac{L}{2} \bigg( \norm{x^{k-1}-x^*}^2 - \norm{x^{k-1}-x^*-\frac{1}{L}\nabla f^{k-1} }^2 \bigg) - \frac{\mu}{2} \norm{x^{k-1}-x^*}^2 \end{aligned}
+\begin{aligned} f^k &\leq f^{\star} - \langle \nabla f^{k-1}, x^{\star}-x^{k-1} \rangle - \frac{\mu}{2} \norm{x^{\star}-x^{k-1}}^2 - \frac{1}{2L} \norm{\nabla f^{k-1}}^2 \\\\\\
+&= f^{\star} + \langle \nabla f^{k-1}, x^{k-1}-x^{\star} \rangle - \frac{1}{2L} \norm{\nabla f^{k-1}}^2 - \frac{\mu}{2} \norm{x^{\star}-x^{k-1}}^2 \\\\\\
+&= f^{\star} - \frac{L}{2} \bigg( \norm{x^{k-1}-x^{\star}}^2 - \norm{x^{k-1}-x^{\star}-\frac{1}{L}\nabla f^{k-1} }^2 \bigg) - \frac{\mu}{2} \norm{x^{k-1}-x^{\star}}^2 . \end{aligned}
 
-Thus,
+Thus, we can bound the distance on the function side by:
 
-$$f^k-f^* \leq \frac{L}{2} \bigg( \big( 1-\frac{\mu}{L} \big) \norm{x^{k-1}-x^*}^2 - \norm{x^{k}-x^*}^2 \bigg) \tag{2} \label{obj_side}$$
+$$f^k-f^{\star} \leq \frac{L}{2} \bigg( \big( 1-\frac{\mu}{L} \big) \norm{x^{k-1}-x^{\star}}^2 - \norm{x^{k}-x^{\star}}^2 \bigg) \tag{2} \label{obj_side}$$
 
-- If $$\mu=0$$, from (\ref{obj_side}) we have $$f^k-f^* \leq \frac{L}{2} \bigg( \norm{x^{k-1}-x^*}^2 - \norm{x^{k}-x^*}^2 \bigg)$$. Summing over all $$i=1,\ldots,k$$ yields
+Since $f$ is convex, there are two possibilities:
+- If $$\mu=0$$, from (\ref{obj_side}) we have $$f^k-f^{\star} \leq \frac{L}{2} \bigg( \norm{x^{k-1}-x^{\star}}^2 - \norm{x^{k}-x^{\star}}^2 \bigg)$$. Summing over all $$i=1,\ldots,k$$ yields
 
-$$ f^k - f^* \leq \frac{L}{2k} \norm{x^0-x^*}^2. \qquad \text{ (Sublinear rate)} \nonumber $$
+$$ f^k - f^{\star} \leq \frac{L}{2k} \norm{x^0-x^{\star}}^2. \qquad \qquad \text{ (Sublinear rate)}  $$
 
-- If $$\mu>0$$, from (\ref{obj_side}) we have $$\norm{x^k-x^*}^2 \leq \big( 1-\frac{\mu}{L} \big) \norm{x^{k-1}-x^*}^2$$. Thus a simple recursion yields
+- If $$\mu>0$$, from (\ref{obj_side}) we have $$\norm{x^k-x^{\star}}^2 \leq \big( 1-\frac{\mu}{L} \big) \norm{x^{k-1}-x^{\star}}^2$$. Thus a simple recursion yields
 
-$$ \norm{x^k-x^*}^2 \leq \big( 1-\frac{\mu}{L} \big)^k \norm{x^0-x^*}^2. \qquad \text{ (Linear rate) } \nonumber $$
+$$ \norm{x^k-x^{\star}}^2 \leq \big( 1-\frac{\mu}{L} \big)^k \norm{x^0-x^{\star}}^2 . \qquad \text{ (Linear rate) }  $$
 
 Remark 1.
 : Notice the difference among bounds on function value and bounds on domain side. The convergence rate hence depends on which sequence is considered.
 - From (\ref{gd_update}), we can derive a better bound:  
-$$ \begin{align*} f^{k-1}-f^k &\geq \frac{1}{2L} \norm{\nabla f^{k-1}}^2 \geq \frac{\mu}{L} (f^{k-1}-f^*) \\ \Rightarrow f^k-f^* &\leq (1-\frac{\mu}{L})^k (f^0-f^*) \end{align*}$$
+\begin{aligned} f^{k-1}-f^k &\geq \frac{1}{2L} \norm{\nabla f^{k-1}}^2 \geq \frac{\mu}{L} (f^{k-1}-f^{\star}) \\\\\\ \Rightarrow f^k-f^{\star} &\leq (1-\frac{\mu}{L})^k (f^0-f^{\star}) . \end{aligned}
 - From Theorem 4, choosing $$\eta=\frac{2}{L+\mu}$$ results in the optimal rate:  
-$$ \begin{align*} &\norm{x^k-x^*} \leq (1-\frac{2\mu}{L+\mu})^k \norm{x^0-x^*}, \\ &f^k-f^* \leq \frac{L}{2} (1-\frac{2\mu}{L+\mu})^{2k} \norm{x^0-x^*}^2. \end{align*} $$
+\begin{aligned} &\norm{x^k-x^{\star}} \leq (1-\frac{2\mu}{L+\mu})^k \norm{x^0-x^{\star}}, \\ &f^k-f^{\star} \leq \frac{L}{2} (1-\frac{2\mu}{L+\mu})^{2k} \norm{x^0-x^{\star}}^2 . \end{aligned}
 - The proof for backtracking line search relies on the fact that the step size $$\eta_k \geq \min\{\beta, \frac{\eta_0}{L} \}$$.
 
 
-# 3. Proximal Gradient Descent (PGD)
+# 3. Convergence of Proximal Gradient Descent (PGD)
 Consider $$g(x)=f(x)+h(x)$$ where the regularization term $$h(x)$$ is convex. The PGD update is  
 
-$$ x^k= \text{prox}_{h/L} \Big(x^{k-1}-\frac{1}{L} \nabla f(x^{k-1})\Big) = x^{k-1} - \frac{1}{L} G(x^{k-1}) \nonumber $$ 
+$$ x^k= \text{prox}_{h/L} \Big(x^{k-1}-\frac{1}{L} \nabla f(x^{k-1})\Big) = x^{k-1} - \frac{1}{L} G(x^{k-1}) , $$ 
 
 where $$ G(x)=L \cdot \big( x^{k-1} - \text{prox}_{h/L} (x^{k-1}-\frac{1}{L}x^{k-1}) \big) $$. Similar to GD, we have
 
-$$ \begin{align*}
-g^k &= f^k+h^k \\
-&\leq \bigg( f^{k-1} - \langle \nabla f^{k-1}, \frac{1}{L} G^{k-1} \rangle + \frac{1}{2L} \norm{G^{k-1}}^2 \bigg) + \bigg( h^* + \langle \partial h^k, x^k-x^* \rangle \bigg) \\
-&\leq \bigg( f^* + \langle \nabla f^{k-1}, x^{k-1}-x^* \rangle - \frac{\mu}{2} \norm{x^{k-1}-x^*}^2 \bigg) - \langle \nabla f^{k-1}, \frac{1}{L} G^{k-1} \rangle + \frac{1}{2L} \norm{G^{k-1}}^2 + h^* + \langle \partial h^k, x^k-x^* \rangle \\
-&= g^* + \langle \nabla f^{k-1} + \partial h^k, x^k-x^* \rangle + \frac{1}{2L} \norm{G^{k-1}}^2 - \frac{\mu}{2} \norm{x^{k-1}-x^*}^2
-\end{align*} $$
+\begin{aligned}
+g^k &= f^k+h^k \\\\\\
+&\leq \bigg( f^{k-1} - \langle \nabla f^{k-1}, \frac{1}{L} G^{k-1} \rangle + \frac{1}{2L} \norm{G^{k-1}}^2 \bigg) + \bigg( h^{\star} + \langle \partial h^k, x^k-x^{\star} \rangle \bigg) \\\\\\
+&\leq \bigg( f^{\star} + \langle \nabla f^{k-1}, x^{k-1}-x^{\star} \rangle - \frac{\mu}{2} \norm{x^{k-1}-x^{\star}}^2 \bigg) - \langle \nabla f^{k-1}, \frac{1}{L} G^{k-1} \rangle \\\\\\
+&\qquad + \frac{1}{2L} \norm{G^{k-1}}^2 + h^{\star} + \langle \partial h^k, x^k-x^{\star} \rangle \\\\\\
+&= g^{\star} + \langle \nabla f^{k-1} + \partial h^k, x^k-x^{\star} \rangle + \frac{1}{2L} \norm{G^{k-1}}^2 - \frac{\mu}{2} \norm{x^{k-1}-x^{\star}}^2 .
+\end{aligned}
 
-Since $$G^{k-1}-\nabla f^{k-1} \in \partial h^{k}$$, we get
+Since $$G^{k-1}-\nabla f^{k-1} \in \partial h^{k}$$, we obtain
 
-$$ \begin{align*}
-g^k &\leq g^* + \langle G^{k-1}, x^k-x^* \rangle + \frac{1}{2L} \norm{G^{k-1}}^2 - \frac{\mu}{2} \norm{x^{k-1}-x^*}^2 \\
-&= g^* + \langle G^{k-1}, x^{k-1}-x^* \rangle - \frac{1}{2L} \norm{G^{k-1}}^2 - \frac{\mu}{2} \norm{x^{k-1}-x^*}^2 \\
-&= \frac{L}{2} \bigg( \big( 1-\frac{\mu}{L} \big) \norm{x^{k-1}-x^*}^2 - \norm{x^{k}-x^*}^2 \bigg)
-\end{align*} $$
+\begin{aligned}
+g^k &\leq g^{\star} + \langle G^{k-1}, x^k-x^{\star} \rangle + \frac{1}{2L} \norm{G^{k-1}}^2 - \frac{\mu}{2} \norm{x^{k-1}-x^{\star}}^2 \\\\\\
+&= g^{\star} + \langle G^{k-1}, x^{k-1}-x^{\star} \rangle - \frac{1}{2L} \norm{G^{k-1}}^2 - \frac{\mu}{2} \norm{x^{k-1}-x^{\star}}^2 \\\\\\
+&= \frac{L}{2} \bigg( \big( 1-\frac{\mu}{L} \big) \norm{x^{k-1}-x^{\star}}^2 - \norm{x^{k}-x^{\star}}^2 \bigg) .
+\end{aligned}
 
 
 ## References
