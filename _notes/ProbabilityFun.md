@@ -3,7 +3,7 @@ title: "Some interesting probability questions"
 collection: notes
 permalink: /note/2019/ProbabilityFun
 date: 2019-05-02
-enable: true
+enable: false
 excerpt: Some interesting thought on basic probability question. It is embarrasing that I did not give the correct answers at my first try. 
 ---
 
