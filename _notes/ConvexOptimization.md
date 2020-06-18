@@ -50,14 +50,13 @@ $$ \begin{align*}
 
 For simplicity, we consider fixed step size $$\eta_k=\frac{1}{L}$$:
 
-\begin{align*} x^k&=x^{k-1}- \frac{1}{L} \nabla f (x^{k-1}) \\\\\\
-x^k&=x^{k-1}- \frac{1}{L} \nabla f (x^{k-1}) \end{align*}
+$$ x^k=x^{k-1}- \frac{1}{L} \nabla f (x^{k-1}). \label{gd_update} $$
 
-For convenience, denote $$f(x^k)$$ and $$\nabla f(x^k)$$ by $$f^k$$ and $$\nabla f^k$$, respectively. Then from Section 1, we have
+For convenience, denote $$f(x^k)$$ and $$\nabla f(x^k)$$ by $$f^k$$ and $$\nabla f^k$$, respectively. Then from Section 1, we have (\ref{gd_update})
 
-$$ \begin{align} f^k &\leq f^{k-1} + \langle \nabla f^{k-1}, x^k-x^{k-1} \rangle  + \frac{L}{2} \norm{x^k-x^{k-1}}^2 \\
-&= ff^{k-1} - \langle \nabla f^{k-1}, \frac{1}{L} \nabla f^{k-1} \rangle  + \frac{L}{2} \norm{\frac{1}{L} \nabla f^{k-1}}^2 \\
-&= f^{k-1} - \frac{1}{2L} \norm{\nabla f^{k-1}}^2 \end{align} $$
+$$ \begin{aligned} f^k &\leq f^{k-1} + \langle \nabla f^{k-1}, x^k-x^{k-1} \rangle  + \frac{L}{2} \norm{x^k-x^{k-1}}^2 \\
+&= f^{k-1} - \langle \nabla f^{k-1}, \frac{1}{L} \nabla f^{k-1} \rangle  + \frac{L}{2} \norm{\frac{1}{L} \nabla f^{k-1}}^2 \\
+&= f^{k-1} - \frac{1}{2L} \norm{\nabla f^{k-1}}^2 \end{aligned} $$
 
 Further,
 
