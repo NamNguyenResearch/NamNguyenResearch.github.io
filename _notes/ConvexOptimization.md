@@ -50,8 +50,8 @@ $$ \begin{align*}
 
 For simplicity, we consider fixed step size $$\eta_k=\frac{1}{L}$$:
 
-\begin{align} x^k&=x^{k-1}- \frac{1}{L} \nabla f (x^{k-1}) \\\\\\
-x^k&=x^{k-1}- \frac{1}{L} \nabla f (x^{k-1}) \end{align}
+\begin{align*} x^k&=x^{k-1}- \frac{1}{L} \nabla f (x^{k-1}) \\\\\\
+x^k&=x^{k-1}- \frac{1}{L} \nabla f (x^{k-1}) \end{align*}
 
 For convenience, denote $$f(x^k)$$ and $$\nabla f(x^k)$$ by $$f^k$$ and $$\nabla f^k$$, respectively. Then from Section 1, we have
 
