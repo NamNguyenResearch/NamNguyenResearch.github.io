@@ -1,9 +1,9 @@
 ---
 title: "Miscellaneous"
 collection: notes
-permalink: /note/2019/Miscellaneous
+permalink: /note/2019/Tips
 date: 2019-02-02
-enable: true
+enable: false
 excerpt: A quick reference to the list of items that I often use in my research. 
 ---
 

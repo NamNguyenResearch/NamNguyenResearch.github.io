@@ -50,34 +50,35 @@ $$ \begin{align*}
 
 For simplicity, we consider fixed step size $$\eta_k=\frac{1}{L}$$:
 
-$$ x^k=x^{k-1}- \frac{1}{L} \nabla f (x^{k-1}). \label{gd_update} $$
+$$ x^k=x^{k-1}- \frac{1}{L} \nabla f (x^{k-1}). \tag{1} \label{gd_update} $$
 
 For convenience, denote $$f(x^k)$$ and $$\nabla f(x^k)$$ by $$f^k$$ and $$\nabla f^k$$, respectively. Then from Section 1, we have (\ref{gd_update})
 
-\begin{aligned} f^k &\leq f^{k-1} + \langle \nabla f^{k-1}, x^k-x^{k-1} \rangle  + \frac{L}{2} \norm{x^k-x^{k-1}}^2 \\\\\\
+$$\begin{aligned} f^k &\leq f^{k-1} + \langle \nabla f^{k-1}, x^k-x^{k-1} \rangle  + \frac{L}{2} \norm{x^k-x^{k-1}}^2 \\\\\\
 &= f^{k-1} - \langle \nabla f^{k-1}, \frac{1}{L} \nabla f^{k-1} \rangle  + \frac{L}{2} \norm{\frac{1}{L} \nabla f^{k-1}}^2 \\\\\\
-&= f^{k-1} - \frac{1}{2L} \norm{\nabla f^{k-1}}^2 \end{aligned}
+&= f^{k-1} - \frac{1}{2L} \norm{\nabla f^{k-1}}^2 \end{aligned}$$
 
 Further,
 
-$$ \begin{align} 
-f^k &\leq f^* - \langle \nabla f^{k-1}, x^*-x^{k-1} \rangle - \frac{\mu}{2} \norm{x^*-x^{k-1}}^2 - \frac{1}{2L} \norm{\nabla f^{k-1}}^2 \nonumber \\
-&= f^* + \langle \nabla f^{k-1}, x^{k-1}-x^* \rangle - \frac{1}{2L} \norm{\nabla f^{k-1}}^2 - \frac{\mu}{2} \norm{x^*-x^{k-1}}^2 \nonumber \\
-&= f^* - \frac{L}{2} \bigg( \norm{x^{k-1}-x^*}^2 - \norm{x^{k-1}-x^*-\frac{1}{L}\nabla f^{k-1} }^2 \bigg) - \frac{\mu}{2} \norm{x^{k-1}-x^*}^2 \nonumber \\
-\Rightarrow f^k-&f^* \leq \frac{L}{2} \bigg( \big( 1-\frac{\mu}{L} \big) \norm{x^{k-1}-x^*}^2 - \norm{x^{k}-x^*}^2 \bigg)
-\end{align} $$
+$$\begin{aligned} f^k &\leq f^* - \langle \nabla f^{k-1}, x^*-x^{k-1} \rangle - \frac{\mu}{2} \norm{x^*-x^{k-1}}^2 - \frac{1}{2L} \norm{\nabla f^{k-1}}^2 \\\\\\
+&= f^* + \langle \nabla f^{k-1}, x^{k-1}-x^* \rangle - \frac{1}{2L} \norm{\nabla f^{k-1}}^2 - \frac{\mu}{2} \norm{x^*-x^{k-1}}^2 \\\\\\
+&= f^* - \frac{L}{2} \bigg( \norm{x^{k-1}-x^*}^2 - \norm{x^{k-1}-x^*-\frac{1}{L}\nabla f^{k-1} }^2 \bigg) - \frac{\mu}{2} \norm{x^{k-1}-x^*}^2 \end{aligned}$$
 
-- If $$\mu=0$$, from (2) we have $$f^k-f^* \leq \frac{L}{2} \bigg( \norm{x^{k-1}-x^*}^2 - \norm{x^{k}-x^*}^2 \bigg)$$. Summing over all $$i=1,\ldots,k$$ yields
+Thus
+
+$$f^k-f^* \leq \frac{L}{2} \bigg( \big( 1-\frac{\mu}{L} \big) \norm{x^{k-1}-x^*}^2 - \norm{x^{k}-x^*}^2 \bigg) \tag{2} \label{obj_side}$$
+
+- If $$\mu=0$$, from (\ref{obj_side}) we have $$f^k-f^* \leq \frac{L}{2} \bigg( \norm{x^{k-1}-x^*}^2 - \norm{x^{k}-x^*}^2 \bigg)$$. Summing over all $$i=1,\ldots,k$$ yields
 
 $$ f^k - f^* \leq \frac{L}{2k} \norm{x^0-x^*}^2. \qquad \text{ (Sublinear rate)} \nonumber $$
 
-- If $$\mu>0$$, from (2) we have $$\norm{x^k-x^*}^2 \leq \big( 1-\frac{\mu}{L} \big) \norm{x^{k-1}-x^*}^2$$. Thus a simple recursion yields
+- If $$\mu>0$$, from (\ref{obj_side}) we have $$\norm{x^k-x^*}^2 \leq \big( 1-\frac{\mu}{L} \big) \norm{x^{k-1}-x^*}^2$$. Thus a simple recursion yields
 
 $$ \norm{x^k-x^*}^2 \leq \big( 1-\frac{\mu}{L} \big)^k \norm{x^0-x^*}^2. \qquad \text{ (Linear rate) } \nonumber $$
 
 Remark 1.
 : Notice the difference among bounds on function value and bounds on domain side. The convergence rate hence depends on which sequence is considered.
-- From (1), we can derive a better bound:  
+- From (\ref{gd_update}), we can derive a better bound:  
 $$ \begin{align*} f^{k-1}-f^k &\geq \frac{1}{2L} \norm{\nabla f^{k-1}}^2 \geq \frac{\mu}{L} (f^{k-1}-f^*) \\ \Rightarrow f^k-f^* &\leq (1-\frac{\mu}{L})^k (f^0-f^*) \end{align*}$$
 - From Theorem 4, choosing $$\eta=\frac{2}{L+\mu}$$ results in the optimal rate:  
 $$ \begin{align*} &\norm{x^k-x^*} \leq (1-\frac{2\mu}{L+\mu})^k \norm{x^0-x^*}, \\ &f^k-f^* \leq \frac{L}{2} (1-\frac{2\mu}{L+\mu})^{2k} \norm{x^0-x^*}^2. \end{align*} $$
