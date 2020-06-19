@@ -1,10 +1,10 @@
 ---
-title: "Notes on Dirichlet Distribution"
+title: "Learning a Dirichlet Distribution model is as simple as it looks"
 collection: notes
-permalink: /notes/2019/DirichletDist
-date: 2018-01-12
-enable: true
-excerpt: Derivation of EM algorithm for estimating the parameters of Dirichlet distribution. 
+permalink: /notes/2017/DirichletDist
+date: 2017-01-12
+enable: false
+excerpt: This note studies the derivation of EM algorithm for estimating the parameters of Dirichlet distribution. 
 ---
 
 
@@ -12,36 +12,41 @@ Let $$\newcommand{\E}{\mathbb E} \newcommand{\bm}[1]{\boldsymbol#1} \bm \alpha =
 
 \begin{aligned} X_k \sim \text{Gamma}(\alpha_k,1). \end{aligned}
 
-Then the random vector $$\bm{P} =(P_1,\ldots,P_K)$$, defined by $$P_k = \frac{X_k}{\sum_{j=1}^K X_j}$$, follows a Dirichlet distribution of order $$K$$ with parameter $$\bm{\alpha}$$. Suppose $$\bm{x}=(x_1,\ldots,x_K)$$ and $$\bm{p}=(p_1,\ldots,p_K)$$, $$\sum_{k=1}^K p_k=1$$, are the corresponding samples of $$\bm{X}$$ and $$\bm{P}$$. The probability distributions are given by
+Then the random vector $$\bm{P} =(P_1,\ldots,P_K)$$, defined by $$P_k = \frac{X_k}{\sum_{j=1}^K X_j}$$, follows a Dirichlet distribution of order $$K$$ with parameter $$\bm{\alpha}$$. Suppose $$\bm{x}=(x_1,\ldots,x_K)$$ and $$\bm{p}=(p_1,\ldots,p_K)$$, $$\sum_{k=1}^K p_k=1$$, are the corresponding samples of $$\bm{X}$$ and $$\bm{P}$$. Their corresponding probability distributions are given by
 
 \begin{aligned}
-f(x_k  \mid \alpha_k) &= \frac{x_k^{\alpha_k-1} e^{-x_k}}{\Gamma(\alpha_k)} \\\\\\
-f(\bm p \mid \bm \alpha) &= \frac{\Gamma(\sum_{k=1}^K \alpha_k)}{\prod_{k=1}^K \Gamma(\alpha_k)} \prod_{k=1}^K p_k^{\alpha_k-1}
+f(x_k  \mid \alpha_k) &= \frac{x_k^{\alpha_k-1} e^{-x_k}}{\Gamma(\alpha_k)} , \\\\\\
+f(\bm p \mid \bm \alpha) &= \frac{\Gamma(\sum_{k=1}^K \alpha_k)}{\prod_{k=1}^K \Gamma(\alpha_k)} \prod_{k=1}^K p_k^{\alpha_k-1} ,
 \end{aligned}
 
 where the gamma function is define as $$ \Gamma(z)=\int_0^{\infty} x^{z-1} e^{-x}dx $$.
 
 
 # 1. Single sample estimation
-Consider the problem of estimating the parameter $$\bm \alpha$$ of a Dirichlet distribution given an observation $$\bm p$$. The incomplete and complete log likelihood are as follows
+Let us first consider the problem of estimating the parameter $$\bm \alpha$$ of a Dirichlet distribution given an observation $$\bm p$$. Following the principle of maximum likelihood estimation (MLE), we compute the incomplete log likelihood as
+
+$$ l(\bm \alpha; \bm p) = \log f(\bm p \mid \bm \alpha) = \sum_{k=1}^K \alpha_k \log p_k - \sum_{k=1}^K \log \Gamma(\alpha_k) + \log \Gamma(\sum_{k=1}^K \alpha_k) + const . $$
+
+Since it is non-trivial to maximize the incomplete log-likelihood, we resort to expectation–maximization (EM) approach by considering the complete log likelihood instead: 
 
 \begin{aligned}
-l(\bm \alpha; \bm p) &= \log f(\bm p \mid \bm \alpha) = \sum_{k=1}^K \alpha_k \log p_k - \sum_{k=1}^K \log \Gamma(\alpha_k) + \log \Gamma(\sum_{k=1}^K \alpha_k) + const \\\\\\
 l(\bm \alpha; \bm p, \bm x) &= \log f(\bm p, \bm x \mid \bm \alpha) = \log f(\bm p \mid \bm x) + \log f(\bm x \mid \bm \alpha) \\\\\\
 &= \sum_{k=1}^K \log f(p_k \mid \bm x) + \sum_{k=1}^K \log f(x_k|\alpha_k) \\\\\\
-&= \sum_{k=1}^K \alpha_k \log x_k - \sum_{k=1}^K \log \Gamma(\alpha_k) + const
+&= \sum_{k=1}^K \alpha_k \log x_k - \sum_{k=1}^K \log \Gamma(\alpha_k) + const .
 \end{aligned}
 
-The surrogate function of EM algorithm is given by
+In E-step, we identify the surrogate function as follows:
 
-\begin{aligned} Q(\bm \alpha \mid \bm \alpha') &= \E_{\bm X \mid \bm P,\bm \alpha'} [\log l(\bm \alpha; \bm p, \bm x)] =  \sum_{k=1}^K \alpha_k \E_{\bm X \mid \bm P,\bm \alpha'} [\log x_k] - \sum_{k=1}^K \log \Gamma(\alpha_k) + const \\\\\\
+\begin{aligned} Q(\bm \alpha \mid \bm \alpha') &= \E_{\bm X \mid \bm P,\bm \alpha'} [\log l(\bm \alpha; \bm p, \bm x)] \\\\\\
+&= \sum_{k=1}^K \alpha_k \E_{\bm X \mid \bm P,\bm \alpha'} [\log x_k] - \sum_{k=1}^K \log \Gamma(\alpha_k) + const \\\\\\
 &= \sum_{k=1}^K \alpha_k \E_{X_k \mid \bm P,\bm \alpha'} [\log x_k] - \sum_{k=1}^K \log \Gamma(\alpha_k) + const \\\\\\
-&= \sum_{k=1}^K \alpha_k \bigg( \psi\bigl(\sum_{k=1}^K \alpha_k^\prime \bigr) + \log p_k \bigg) - \sum_{k=1}^K \log \Gamma(\alpha_k) + const \end{aligned}
+&= \sum_{k=1}^K \alpha_k \bigg( \psi\bigl(\sum_{k=1}^K \alpha_k^\prime \bigr) + \log p_k \bigg) - \sum_{k=1}^K \log \Gamma(\alpha_k) + const . \end{aligned}
 
+where $\psi$ the digamma function defined as $\psi(z) = \frac{d}{dz} \log \Gamma(z) = \frac{\Gamma'(z)}{\Gamma(z)}$, and the last equality stems from the following lemma:
 
-Proposition 1.
+Lemma 1.
 : $$ \begin{align} \label{posterior}
-X_k \mid \bm P,\bm \alpha' \sim \text{Gamma}\Bigl(\sum_{k=1}^K \alpha_k, p_k \Bigr) 
+X_k \mid \bm P,\bm \alpha \sim \text{Gamma}\Bigl(\sum_{k=1}^K \alpha_k, p_k \Bigr) 
 \end{align} $$.
 
 Proof.
@@ -60,7 +65,7 @@ f(x_1, \bm p \mid \bm \alpha) &= \int_{x_2} \ldots \int_{x_K} f(x_1,\ldots,x_K,p
 &= \frac{x_1^{\alpha_1-1}e^{-x_1}}{\Gamma(\alpha_1)} \int_s s^{K-1} \prod_{k=2}^K \frac{(sp_k)^{\alpha_k-1}e^{-sp_k}}{\Gamma(\alpha_k)} \delta(p_1-\frac{x_1}{s}) \delta(x_1-sp_1) ds \qquad \text{( since } \sum_{k=1}^K p_k=1 \text{ )} \\\\\\
 &= \frac{x_1^{\alpha_1-1} e^{-x_1} \prod_{k=2}^K p_k^{\alpha_k-1}}{\prod_{k=1}^K \Gamma(\alpha_k)} \int_s s^{\sum_{k=2}^K \alpha_k} e^{-s(1-p_1)} \delta(p_1-\frac{x_1}{s}) \frac{\delta(s-\frac{x_1}{p_1})}{p_1}ds \\\\\\
 &= \frac{\Gamma(\sum_{k=1}^K \alpha_k)}{\prod_{k=1}^K \Gamma(\alpha)} \prod_{k=1}^K p_k^{\alpha_k-1} e^{-x_1} x_1^{\alpha_1-1} \bigg( \frac{x_1}{p_1} \bigg)^{\sum_{k=2}^K \alpha_k} e^{-\frac{x_1}{p_1} + x_1} \\\\\\
-&= f(\bm p \mid \bm \alpha) \frac{x_1^{\sum_{k=1}^K \alpha_k-1} e^{-\frac{x_1}{p_1}}}{\Gamma(\sum_{k=1}^K \alpha_k) p_1^{\sum_{k=1}^K \alpha_k}} 
+&= f(\bm p \mid \bm \alpha) \frac{x_1^{\sum_{k=1}^K \alpha_k-1} e^{-\frac{x_1}{p_1}}}{\Gamma(\sum_{k=1}^K \alpha_k) p_1^{\sum_{k=1}^K \alpha_k}} .
 \end{aligned}
 
 Therefore, the probability density function is computed by
@@ -87,7 +92,9 @@ Another way to look at the $$Q$$ function is to use a lower bound on $$\Gamma(\s
 \Gamma(x) \geq \Gamma(y) e^{(x-y)\psi(y)}.
 \end{aligned}
 
-In EM algorithm, we maximize $$Q$$ by setting its gradient to zero.
+
+# 3. The Maximization Step
+In M-step, we maximize $$Q$$ by setting its gradient to zero.
 
 \begin{aligned}
 \frac{\partial Q}{\partial \alpha_k} = n \bigg( t_k - \psi(\alpha_k) + \psi \bigl(\sum_{k=1}^K \alpha_k^\prime \bigr) \bigg) = 0 \Rightarrow \alpha_k = \psi^{-1} \bigg( \psi \bigl(\sum_{k=1}^K \alpha_k^\prime \bigr) + t_k \bigg).
@@ -96,7 +103,7 @@ In EM algorithm, we maximize $$Q$$ by setting its gradient to zero.
 On the other hand, using gradient ascent, we have
 
 \begin{aligned}
-\frac{\partial l}{\partial \alpha_k} = n \bigg( t_k - \psi(\alpha_k) + \psi \bigl(\sum_{k=1}^K \alpha_k \bigr) \bigg)
+\frac{\partial l}{\partial \alpha_k} = n \bigg( t_k - \psi(\alpha_k) + \psi \bigl(\sum_{k=1}^K \alpha_k \bigr) \bigg) .
 \end{aligned}
 
 

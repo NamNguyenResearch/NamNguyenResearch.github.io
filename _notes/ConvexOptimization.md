@@ -1,9 +1,9 @@
 ---
-title: "Notes on Convex Optimization"
+title: "Some Useful Inequalities in Convex Optimization"
 collection: notes
 permalink: /notes/2019/ConvexOptimization
 date: 2018-04-29
-excerpt: Some useful inequalities in convex analysis and their applications in proofs of gradient descent and proximal gradient descent.
+excerpt: This note collects a set of inequalities that I found extremely useful in convex analysis. We will consider two simple applications of them in proofs of gradient descent and proximal gradient descent.
 enable: true
 <!--tags:
   - convex optimization

@@ -1,9 +1,9 @@
 ---
-title: "Notes on Multinomial Logistic Regression"
+title: "Multinomial Logistic Regression: Convexity and Smoothness"
 collection: notes
-permalink: /notes/2019/MLR
+permalink: /notes/2016/MLR
 date: 2016-10-29
-excerpt: Derivation of Multinomial Logistic Regression.
+excerpt: Multinomial logistic regression is a generalization of binary logistic regression to multiclass problems. This note will explain the nice geometry of the likelihood function in estimating the model parameters, the key to understanding how multinomial logistic regression works. 
 enable: true
 ---
 
@@ -34,11 +34,11 @@ The last inequality shows that $\lambda \geq 0$ or $\bm M$ is PSD. The upperboun
 
 ---
 # 2. Multinomial Logistic Regression (MLR)
-For simplicity, let us consider the problem with just one observation including the input $\bm x \in \mathbb{R}^d$ and the one-hot output vector $\bm y \in \\{ 0,1 \\}^C$. The MLR model with parameter $\bm w = [\bm w_1^T, \ldots, \bm w_C^T]^T \in \mathbb{R}^{Cd}$ is given by
+For simplicity, let us consider the problem with just one observation including the input $\bm x \in \mathbb{R}^d$ and the one-hot output vector $\bm y \in \\{ 0,1 \\}^C$. The MLR model with parameter $\bm w = [\bm w_1^T, \ldots, \bm w_C^T]^T \in \mathbb{R}^{Cd}$ is given by 
 
 $$ p_i = Pr(y_i=1 \mid \bm x ; \bm w) = \frac{\exp(\bm w_i^T \bm x)}{\sum_{j=1}^C \exp(\bm w_j^T \bm x)} \text{ for } i=1,\ldots,C . $$
 
-Notice that the stochastic vector $\bm p = [p_1,\ldots,p_C]$ is indeed a function of $\bm w$ and $\bm p(\bm w) = \bm \sigma(\bm W \bm x)$, where $\bm W = [\bm w_1,\ldots,\bm w_C]^T .$
+Here again for the reason of simplicity, we ignore the bias term. Notice that the stochastic vector $\bm p = [p_1,\ldots,p_C]$ is indeed a function of $\bm w$ and $\bm p(\bm w) = \bm \sigma(\bm W \bm x)$, where $\bm W = [\bm w_1,\ldots,\bm w_C]^T .$
 
 The maximum likelihood estimation aims to optimize the following objective function
 
