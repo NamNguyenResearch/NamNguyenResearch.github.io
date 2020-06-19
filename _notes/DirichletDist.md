@@ -1,7 +1,7 @@
 ---
 title: "Notes on Dirichlet Distribution"
 collection: notes
-permalink: /note/2019/DirichletDist
+permalink: /notes/2019/DirichletDist
 date: 2018-01-12
 enable: true
 excerpt: Derivation of EM algorithm for estimating the parameters of Dirichlet distribution. 

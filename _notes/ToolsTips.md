@@ -1,7 +1,7 @@
 ---
 title: "Miscellaneous"
 collection: notes
-permalink: /note/2019/Tips
+permalink: /notes/2019/Tips
 date: 2019-02-02
 enable: false
 excerpt: A quick reference to the list of items that I often use in my research. 
@@ -155,6 +155,28 @@ X = (randn(n) + i*randn(n))/sqrt(2);
 [Q,R] = qr(X);
 R = diag(diag(R)./abs(diag(R)));
 U = Q*R;
+```
+
+
+---
+# Commandline
+
+- Search history: *Ctrl-R*
+
+```console
+(reverse-i-search)`':
+```
+
+- Recursively search all files for a string
+
+```console
+find </path/to/dir> -type f -print0 | xargs -0 grep -l <keyword>
+```
+
+- Transfering files (commonly used)
+
+```console
+scp -rv <source_files> <des_files>
 ```
 
 ---
