@@ -62,6 +62,6 @@ It is straightforward to see from (\ref{bound_sigma}) that $l(\bm w)$ with bound
 ---
 ## References
 ```
-1. Dankmar Böhning, “Multinomial logistic regression algorithm,” Annals of the Institute of Statistical Mathematics, vol. 44, no. 1, pp. 197–200, 1992.
+1. D. Böhning, “Multinomial logistic regression algorithm,” Annals of the Institute of Statistical Mathematics, vol. 44, no. 1, pp. 197–200, 1992.
 ```
 
