@@ -1,33 +1,31 @@
 ---
-title: "Learning a Dirichlet Distribution model is as simple as it looks"
+title: "Learning a Dirichlet Distribution model"
 collection: notes
 permalink: /notes/2017/DirichletDist
 date: 2017-01-12
-enable: false
+enable: true
 excerpt: This note studies the derivation of EM algorithm for estimating the parameters of Dirichlet distribution. 
 ---
 
 
-Let $$\newcommand{\E}{\mathbb E} \newcommand{\bm}[1]{\boldsymbol#1} \bm \alpha = (\alpha_1, \ldots, \alpha_K)$$ be a vector of positive reals. For each $$k=1,\ldots,K$$, denote $$X_k$$ the random variable that is gamma-distributed with shape $$\alpha_k$$ and scale $$1$$, i.e.,
+# 1. Dirichlet distribution
+Let $$\newcommand{\E}{\mathbb E} \newcommand{\bm}[1]{\boldsymbol#1} \bm \alpha = (\alpha_1, \ldots, \alpha_K)$$ be a vector of positive reals. For each $$k=1,\ldots,K$$, denote $$X_k$$ the random variable that is gamma-distributed with shape $$\alpha_k$$ and scale $$1$$, denoted by $X_k \sim \text{Gamma}(\alpha_k,1)$. The density of $X_k$ is given by
 
-\begin{aligned} X_k \sim \text{Gamma}(\alpha_k,1). \end{aligned}
+\begin{aligned} f(x_k  \mid \alpha_k) &= \frac{x_k^{\alpha_k-1} e^{-x_k}}{\Gamma(\alpha_k)} , \end{aligned}
 
-Then the random vector $$\bm{P} =(P_1,\ldots,P_K)$$, defined by $$P_k = \frac{X_k}{\sum_{j=1}^K X_j}$$, follows a Dirichlet distribution of order $$K$$ with parameter $$\bm{\alpha}$$. Suppose $$\bm{x}=(x_1,\ldots,x_K)$$ and $$\bm{p}=(p_1,\ldots,p_K)$$, $$\sum_{k=1}^K p_k=1$$, are the corresponding samples of $$\bm{X}$$ and $$\bm{P}$$. Their corresponding probability distributions are given by
+where the gamma function is define as $$ \Gamma(z)=\int_0^{\infty} x^{z-1} e^{-x}dx $$. Then the random vector $$\bm{P} =(P_1,\ldots,P_K)$$, defined by $$P_k = \frac{X_k}{\sum_{j=1}^K X_j}$$ for $k=1,\ldots,K$, follows a Dirichlet distribution of order $$K$$ with parameter $$\bm{\alpha}$$:
 
 \begin{aligned}
-f(x_k  \mid \alpha_k) &= \frac{x_k^{\alpha_k-1} e^{-x_k}}{\Gamma(\alpha_k)} , \\\\\\
-f(\bm p \mid \bm \alpha) &= \frac{\Gamma(\sum_{k=1}^K \alpha_k)}{\prod_{k=1}^K \Gamma(\alpha_k)} \prod_{k=1}^K p_k^{\alpha_k-1} ,
+f(\bm p \mid \bm \alpha) &= \frac{\Gamma\bigl(\sum_{k=1}^K \alpha_k \bigr)}{\prod_{k=1}^K \Gamma(\alpha_k)} \prod_{k=1}^K p_k^{\alpha_k-1} .
 \end{aligned}
 
-where the gamma function is define as $$ \Gamma(z)=\int_0^{\infty} x^{z-1} e^{-x}dx $$.
 
+# 2. Single sample estimation
+Let us first consider the problem of estimating the parameter $$\bm \alpha$$ of a Dirichlet distribution given *one* observation $$\bm p=(p_1,\ldots,p_K)$$ such that $$\sum_{k=1}^K p_k=1$$. Following the principle of maximum likelihood estimation (MLE), we compute the incomplete log likelihood as
 
-# 1. Single sample estimation
-Let us first consider the problem of estimating the parameter $$\bm \alpha$$ of a Dirichlet distribution given an observation $$\bm p$$. Following the principle of maximum likelihood estimation (MLE), we compute the incomplete log likelihood as
+$$ l(\bm \alpha; \bm p) = \log f(\bm p \mid \bm \alpha) = \sum_{k=1}^K \alpha_k \log p_k - \sum_{k=1}^K \log \Gamma(\alpha_k) + \log \Gamma\bigl(\sum_{k=1}^K \alpha_k \bigr) + const . $$
 
-$$ l(\bm \alpha; \bm p) = \log f(\bm p \mid \bm \alpha) = \sum_{k=1}^K \alpha_k \log p_k - \sum_{k=1}^K \log \Gamma(\alpha_k) + \log \Gamma(\sum_{k=1}^K \alpha_k) + const . $$
-
-Since it is non-trivial to maximize the incomplete log-likelihood, we resort to expectation–maximization (EM) approach by considering the complete log likelihood instead: 
+It is non-trivial to maximize the incomplete log-likelihood as its gradient involves taking the derivative $\nabla_{\bm \alpha} \log \Gamma\bigl(\sum_{k=1}^K \alpha_k \bigr)$. We resort to expectation–maximization (EM) approach by considering the complete log likelihood instead: 
 
 \begin{aligned}
 l(\bm \alpha; \bm p, \bm x) &= \log f(\bm p, \bm x \mid \bm \alpha) = \log f(\bm p \mid \bm x) + \log f(\bm x \mid \bm \alpha) \\\\\\
@@ -75,7 +73,7 @@ f(x_1 \mid \bm p, \bm \alpha) &= \frac{f(x_1, \bm p \mid \bm \alpha)}{f(\bm p \m
 \end{aligned}
 
 
-# 2. Multiple samples estimation
+# 3. Multiple samples estimation
 Similarly, suppose there are $$n$$ observations $$\{ \bm p_1, \ldots, \bm p_n \}$$. We have
 
 \begin{aligned}
