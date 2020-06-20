@@ -1,23 +1,31 @@
 ---
-title: "Learning a Dirichlet Distribution model"
+title: "Estimating a Dirichlet Distribution using Expectation–Maximization"
 collection: notes
 permalink: /notes/2017/DirichletDist
 date: 2017-01-12
 enable: true
-excerpt: This note studies the derivation of EM algorithm for estimating the parameters of Dirichlet distribution. 
+excerpt: This note describes the EM algorithm for estimating the parameters of Dirichlet distribution. 
 ---
 
 
 # 1. Dirichlet distribution
-Let $$\newcommand{\E}{\mathbb E} \newcommand{\bm}[1]{\boldsymbol#1} \bm \alpha = (\alpha_1, \ldots, \alpha_K)$$ be a vector of positive reals. For each $$k=1,\ldots,K$$, denote $$X_k$$ the random variable that is gamma-distributed with shape $$\alpha_k$$ and scale $$1$$, denoted by $X_k \sim \text{Gamma}(\alpha_k,1)$. The density of $X_k$ is given by
+Let $$\newcommand{\E}{\mathbb E} \newcommand{\bm}[1]{\boldsymbol#1} \bm \alpha = (\alpha_1, \ldots, \alpha_K)$$ be a vector of positive reals. For each $$k=1,\ldots,K$$, denote $$X_k$$ the random variable that is gamma-distributed with shape $$\alpha_k$$ and scale $$1$$ (or $X_k \sim \text{Gamma}(\alpha_k,1)$). The density of $X_k$ is given by
 
 \begin{aligned} f(x_k  \mid \alpha_k) &= \frac{x_k^{\alpha_k-1} e^{-x_k}}{\Gamma(\alpha_k)} , \end{aligned}
 
-where the gamma function is define as $$ \Gamma(z)=\int_0^{\infty} x^{z-1} e^{-x}dx $$. Then the random vector $$\bm{P} =(P_1,\ldots,P_K)$$, defined by $$P_k = \frac{X_k}{\sum_{j=1}^K X_j}$$ for $k=1,\ldots,K$, follows a Dirichlet distribution of order $$K$$ with parameter $$\bm{\alpha}$$:
+where the gamma function is define as $$ \Gamma(z)=\int_0^{\infty} x^{z-1} e^{-x}dx $$. Then the random vector $$\bm{P} =(P_1,\ldots,P_K)$$, defined by $$P_k = \frac{X_k}{\sum_{j=1}^K X_j}$$ for $k=1,\ldots,K$, follows a Dirichlet distribution of order $$K$$ with parameter $$\bm{\alpha}$$ (or $\bm P \sim \text{Dir}(\bm \alpha)$):
 
 \begin{aligned}
 f(\bm p \mid \bm \alpha) &= \frac{\Gamma\bigl(\sum_{k=1}^K \alpha_k \bigr)}{\prod_{k=1}^K \Gamma(\alpha_k)} \prod_{k=1}^K p_k^{\alpha_k-1} .
 \end{aligned}
+
+Lemma 1.
+: Let $X \sim \text{Gamma}(\alpha,\theta)$. Then $\E[\log X] = \psi(\alpha) + \log \theta$, where $\psi(z) = \frac{d}{dz} \log \Gamma(z) = \frac{\Gamma'(z)}{\Gamma(z)}$ is the digamma function.
+
+Lemma 2.
+: Let $\bm X$ and $\bm P$ be random vectors defined as above. Given one observation $$\bm p=(p_1,\ldots,p_K)$$, we have 
+
+$$ X_k \mid \bm P,\bm \alpha \sim \text{Gamma}\Bigl(\sum_{k=1}^K \alpha_k, p_k \Bigr) . $$
 
 
 # 2. Single sample estimation
@@ -25,7 +33,13 @@ Let us first consider the problem of estimating the parameter $$\bm \alpha$$ of 
 
 $$ l(\bm \alpha; \bm p) = \log f(\bm p \mid \bm \alpha) = \sum_{k=1}^K \alpha_k \log p_k - \sum_{k=1}^K \log \Gamma(\alpha_k) + \log \Gamma\bigl(\sum_{k=1}^K \alpha_k \bigr) + const . $$
 
-It is non-trivial to maximize the incomplete log-likelihood as its gradient involves taking the derivative $\nabla_{\bm \alpha} \log \Gamma\bigl(\sum_{k=1}^K \alpha_k \bigr)$. We resort to expectation–maximization (EM) approach by considering the complete log likelihood instead: 
+One can try gradient ascent to maximize $l(\bm \alpha; \bm p)$ by computing its derivative:
+
+\begin{aligned}
+\frac{\partial l}{\partial \alpha_k} = n \bigg( t_k - \psi(\alpha_k) + \psi \bigl(\sum_{k=1}^K \alpha_k \bigr) \bigg) .
+\end{aligned}
+
+However, in this note we focus on an alternative approach that uses expectation–maximization (EM) algorithm. Consider the complete log likelihood instead: 
 
 \begin{aligned}
 l(\bm \alpha; \bm p, \bm x) &= \log f(\bm p, \bm x \mid \bm \alpha) = \log f(\bm p \mid \bm x) + \log f(\bm x \mid \bm \alpha) \\\\\\
@@ -35,20 +49,51 @@ l(\bm \alpha; \bm p, \bm x) &= \log f(\bm p, \bm x \mid \bm \alpha) = \log f(\bm
 
 In E-step, we identify the surrogate function as follows:
 
-\begin{aligned} Q(\bm \alpha \mid \bm \alpha') &= \E_{\bm X \mid \bm P,\bm \alpha'} [\log l(\bm \alpha; \bm p, \bm x)] \\\\\\
+\begin{aligned} Q(\bm \alpha \mid \bm \alpha') &= \E_{\bm X \mid \bm P,\bm \alpha'} [l(\bm \alpha; \bm p, \bm x)] \\\\\\
 &= \sum_{k=1}^K \alpha_k \E_{\bm X \mid \bm P,\bm \alpha'} [\log x_k] - \sum_{k=1}^K \log \Gamma(\alpha_k) + const \\\\\\
 &= \sum_{k=1}^K \alpha_k \E_{X_k \mid \bm P,\bm \alpha'} [\log x_k] - \sum_{k=1}^K \log \Gamma(\alpha_k) + const \\\\\\
-&= \sum_{k=1}^K \alpha_k \bigg( \psi\bigl(\sum_{k=1}^K \alpha_k^\prime \bigr) + \log p_k \bigg) - \sum_{k=1}^K \log \Gamma(\alpha_k) + const . \end{aligned}
+&= \sum_{k=1}^K \alpha_k \bigg( \psi\bigl(\sum_{k=1}^K \alpha_k^\prime \bigr) + \log p_k \bigg) - \sum_{k=1}^K \log \Gamma(\alpha_k) + const \\\\\\
+&= \sum_{k=1}^K \Bigl( \alpha_k \log p_k - \log \Gamma(\alpha_k) \Bigr) + \Bigl( \sum_{k=1}^K \alpha_k \Bigr) \psi\bigl(\sum_{k=1}^K \alpha_k^\prime \bigr) + const . \end{aligned}
 
-where $\psi$ the digamma function defined as $\psi(z) = \frac{d}{dz} \log \Gamma(z) = \frac{\Gamma'(z)}{\Gamma(z)}$, and the last equality stems from the following lemma:
+where the second last equality stems from the fact that $X_k \mid \bm P,\bm \alpha' \sim \text{Gamma}\Bigl(\sum_{k=1}^K \alpha_k^\prime, p_k \Bigr)$. This non-trivial fact is shown in Lemma 2.
 
-Lemma 1.
-: $$ \begin{align} \label{posterior}
-X_k \mid \bm P,\bm \alpha \sim \text{Gamma}\Bigl(\sum_{k=1}^K \alpha_k, p_k \Bigr) 
-\end{align} $$.
 
-Proof.
-: \begin{aligned}
+# 3. Multiple samples estimation
+Similarly, suppose there are $$n$$ observations $$\{ \bm p_1, \ldots, \bm p_n \}$$. We have
+
+\begin{aligned}
+l(\bm \alpha;\bm p) &= n\Bigg( \sum_{k=1}^K \bigg( \alpha_k t_k - \log \Gamma(\alpha_k) \bigg) + \log \Gamma(\sum_{k=1}^K \alpha_k) \Bigg) + const \\\\\\
+Q(\bm \alpha \mid \bm \alpha') &= n \sum_{k=1}^K \Bigg( \alpha_k \bigg( \psi \bigl(\sum_{k=1}^K \alpha_k^\prime \bigr) + t_k \bigg) - \log \Gamma(\alpha_k) \Bigg) + const \\\\\\
+&= n\Bigg( \sum_{k=1}^K \bigg( \alpha_k t_k - \log \Gamma(\alpha_k) \bigg) + \bigg( \sum_{k=1}^K \alpha_k \bigg) \psi \bigl(\sum_{k=1}^K \alpha_k^\prime \bigr) \Bigg) + const \\\\\\
+\end{aligned}
+
+where $$t_k = \frac{1}{n}\sum_{i=1}^n \log p_{ik}$$ is the *observed sufficient statistics*.
+
+Another way to construct the surrogate function is to use a lower bound on $$\Gamma(\sum_{k=1}^K \alpha_k)$$:
+
+\begin{aligned}
+\Gamma(x) \geq \Gamma(y) e^{(x-y)\psi(y)}.
+\end{aligned}
+
+This approach is known as the fixed-point iteration (see *[1]*).
+
+
+# 3. The Maximization Step
+In M-step, we maximize $$Q$$ by setting its gradient to zero.
+
+\begin{aligned}
+\frac{\partial Q}{\partial \alpha_k} &= n \bigg( t_k - \psi(\alpha_k) + \psi \bigl(\sum_{k=1}^K \alpha_k^\prime \bigr) \bigg) = 0 \\\\\\
+\Rightarrow \alpha_k &= \psi^{-1} \bigg( \psi \bigl(\sum_{k=1}^K \alpha_k^\prime \bigr) + t_k \bigg).
+\end{aligned}
+
+
+
+---
+# Appendix
+Proof of Lemma 2.
+: Without loss of generality, we assume that $k=1$. Then
+
+\begin{aligned}
 f(x_1, \bm p \mid \bm \alpha) &= \int_{x_2} \ldots \int_{x_K} f(x_1,\ldots,x_K,p_1,\ldots,p_K | \alpha_1,\ldots,\alpha_K) dx_2 \ldots dx_K \\\\\\
 &= \int_{x_2} \ldots \int_{x_K} \prod_{k=1}^K \bigg( f(x_k | \alpha_k) f(p_k \mid \bm x) \bigg) dx_2 \ldots dx_K \\\\\\
 &= \int_{x_2} \ldots \int_{x_K} \prod_{k=1}^K f(x_k | \alpha_k) \prod_{k=1}^K \delta \Bigg( p_k-\frac{x_k}{\sum_{k=1}^K x_k} \Bigg) dx_2 \ldots dx_K \\\\\\
@@ -73,39 +118,8 @@ f(x_1 \mid \bm p, \bm \alpha) &= \frac{f(x_1, \bm p \mid \bm \alpha)}{f(\bm p \m
 \end{aligned}
 
 
-# 3. Multiple samples estimation
-Similarly, suppose there are $$n$$ observations $$\{ \bm p_1, \ldots, \bm p_n \}$$. We have
-
-\begin{aligned}
-l(\bm \alpha;\bm p) &= n\Bigg( \sum_{k=1}^K \bigg( \alpha_k t_k - \log \Gamma(\alpha_k) \bigg) + \log \Gamma(\sum_{k=1}^K \alpha_k) \Bigg) + const \\\\\\
-Q(\bm \alpha \mid \bm \alpha') &= n \sum_{k=1}^K \Bigg( \alpha_k \bigg( \psi \bigl(\sum_{k=1}^K \alpha_k^\prime \bigr) + t_k \bigg) - \log \Gamma(\alpha_k) \Bigg) + const \\\\\\
-&= n\Bigg( \sum_{k=1}^K \bigg( \alpha_k t_k - \log \Gamma(\alpha_k) \bigg) + \bigg( \sum_{k=1}^K \alpha_k \bigg) \psi \bigl(\sum_{k=1}^K \alpha_k^\prime \bigr) \Bigg) + const \\\\\\
-\end{aligned}
-
-where $$t_k = \frac{1}{n}\sum_{i=1}^n \log p_{ik}$$ is the sufficient statistics.
-
-Another way to look at the $$Q$$ function is to use a lower bound on $$\Gamma(\sum_{k=1}^K \alpha_k)$$:
-
-\begin{aligned}
-\Gamma(x) \geq \Gamma(y) e^{(x-y)\psi(y)}.
-\end{aligned}
-
-
-# 3. The Maximization Step
-In M-step, we maximize $$Q$$ by setting its gradient to zero.
-
-\begin{aligned}
-\frac{\partial Q}{\partial \alpha_k} = n \bigg( t_k - \psi(\alpha_k) + \psi \bigl(\sum_{k=1}^K \alpha_k^\prime \bigr) \bigg) = 0 \Rightarrow \alpha_k = \psi^{-1} \bigg( \psi \bigl(\sum_{k=1}^K \alpha_k^\prime \bigr) + t_k \bigg).
-\end{aligned}
-
-On the other hand, using gradient ascent, we have
-
-\begin{aligned}
-\frac{\partial l}{\partial \alpha_k} = n \bigg( t_k - \psi(\alpha_k) + \psi \bigl(\sum_{k=1}^K \alpha_k \bigr) \bigg) .
-\end{aligned}
-
-
-
-
-
-
+---
+## References
+```
+1. T. Minka. Estimating a Dirichlet distribution, 2000.
+```
