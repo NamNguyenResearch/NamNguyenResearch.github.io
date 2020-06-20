@@ -4,7 +4,7 @@ collection: notes
 permalink: /notes/2017/DirichletDist
 date: 2017-01-12
 enable: true
-excerpt: This note describes the EM algorithm for estimating the parameters of Dirichlet distribution. 
+excerpt: This note describes the EM algorithm for estimating a Dirichlet distribution. One result that I found particularly interesting is the posterior distributions of gamma-distributed random variables given the observation of their corresponding Dirichlet distribution are also gamma-distributed.
 ---
 
 
