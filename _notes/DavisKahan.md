@@ -44,8 +44,8 @@ $$\mathcal{V}_A^* = \argmin_{\mathcal{V}_A: \text{dim}(\mathcal{V}_A)=n-i+1}\max
 
 Denote $\mathcal{V} = \mathcal{V}_A^* \cap \mathcal{V}_B^*$, where $\text{dim}(\mathcal{V}) \geq (n-i+1)+(n-j+1)-n = n+2-i-j$. We have
 
-$$\begin{aligned} \lambda_i(\bm A) + \lambda_j(\bm B) &\geq \max_{\bm x \in \mathcal{V}, \norm{\bm x}=1} \bm x^T (\bm A + \bm B) \bm x \\\\\\
-&\geq \min_{\mathcal{V}_{A+B}: \text{dim}(\mathcal{V}_A)=n+2-i-j} \max_{\bm x \in \mathcal{V}_A, \norm{\bm x}=1} \bm x^T (\bm A+\bm B) \bm x = \lambda_{i+j-1} (\bm A + \bm B) . \qquad \blacksquare \end{aligned}$$
+\begin{align} \lambda_i(\bm A) + \lambda_j(\bm B) &\geq \max_{\bm x \in \mathcal{V}, \norm{\bm x}=1} \bm x^T (\bm A + \bm B) \bm x \\\\\\\\
+&\geq \min_{\mathcal{V}_{A+B}: \text{dim}(\mathcal{V}_A)=n+2-i-j} \max_{\bm x \in \mathcal{V}_A, \norm{\bm x}=1} \bm x^T (\bm A+\bm B) \bm x = \lambda_{i+j-1} (\bm A + \bm B) . \qquad \blacksquare \end{align}
 
 
 
