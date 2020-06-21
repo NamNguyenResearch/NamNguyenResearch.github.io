@@ -59,7 +59,6 @@ $$ \nabla^2 l(\bm w) = \bigl(\bm D(\bm p) - \bm p \bm p^T \bigr) \otimes \bm x \
 It is straightforward to see from (\ref{bound_sigma}) that $l(\bm w)$ with bounded Hessian is a smooth convex function. Finally, when there are multiple observations the fomulas (\ref{gradient}) and (\ref{hessian}) can be extended to the sum over all observations.  
 
 
----
 ## References
 > 1. D. Böhning, “Multinomial logistic regression algorithm,” Annals of the Institute of Statistical Mathematics, vol. 44, no. 1, pp. 197–200, 1992.
 

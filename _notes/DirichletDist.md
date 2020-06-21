@@ -118,6 +118,5 @@ f(x_1 \mid \bm p, \bm \alpha) &= \frac{f(x_1, \bm p \mid \bm \alpha)}{f(\bm p \m
 \end{aligned}
 
 
----
 ## References
 > 1. T. Minka. Estimating a Dirichlet distribution, 2000.
