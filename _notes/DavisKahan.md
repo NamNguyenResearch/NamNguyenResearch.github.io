@@ -20,7 +20,8 @@ The submatrices $\bm U_1$ and $\bm U_2$ are called *semi-orthogonal* since $\bm 
 
 Now let $\bm \Delta \in \mathbb{R}^{n \times n}$ be a small perturbation (symmetric), we are interested in how the eigenvalues and eigenvectors of $\bm M$ change. Denote the eigensubspace decomposition of $\tilde{\bm M} = \bm M + \bm \Delta$ by
 
-$$ \tilde{\bm M} = \tilde{\bm U} \tilde{\bm \Lambda} \tilde{\bm U}^T = \begin{bmatrix} \tilde{\bm U}_1 & \tilde{\bm U}_2 \end{bmatrix} \begin{bmatrix} \tilde{\bm \Lambda}_1 & 0 \\\ 0 & \tilde{\bm \Lambda}_2 \end{bmatrix} \begin{bmatrix} \tilde{\bm U}_1^T \\\ \tilde{\bm U}_2^T \end{bmatrix} . $$ 
+\begin{align} \tilde{\bm M} = \tilde{\bm U} \tilde{\bm \Lambda} \tilde{\bm U}^T = \begin{bmatrix} \tilde{\bm U}_1 & \tilde{\bm U}_2 \end{bmatrix} \begin{bmatrix} \tilde{\bm \Lambda}_1 & 0 \\\ 0 & \tilde{\bm \Lambda}_2 \end{bmatrix} \begin{bmatrix} \tilde{\bm U}_1^T \\\ \tilde{\bm U}_2^T \end{bmatrix} . 
+\end{align} 
 
 The Weyl's theorem tells us that the eigenvalues are fairly stable under small perturbations:
 
@@ -45,8 +46,7 @@ $$\mathcal{V}_A^* = \argmin_{\mathcal{V}_A: \text{dim}(\mathcal{V}_A)=n-i+1}\max
 
 Denote $\mathcal{V} = \mathcal{V}_A^* \cap \mathcal{V}_B^*$, where $\text{dim}(\mathcal{V}) \geq (n-i+1)+(n-j+1)-n = n+2-i-j$. We have
 
-\begin{align} \lambda_i(\bm A) + \lambda_j(\bm B) &\geq \max_{\bm x \in \mathcal{V}, \norm{\bm x}=1} \bm x^T (\bm A + \bm B) \bm x \\\\\\\\
-&\geq \min_{\mathcal{V}_{A+B}: \text{dim}(\mathcal{V}_A)=n+2-i-j} \max_{\bm x \in \mathcal{V}_A, \norm{\bm x}=1} \bm x^T (\bm A+\bm B) \bm x = \lambda_{i+j-1} (\bm A + \bm B) . \qquad \blacksquare \end{align}
+$$\lambda_i(\bm A) + \lambda_j(\bm B) \geq \max_{\bm x \in \mathcal{V}, \norm{\bm x}=1} \bm x^T (\bm A + \bm B) \bm x \geq \min_{\mathcal{V}_{A+B}: \text{dim}(\mathcal{V}_A)=n+2-i-j} \max_{\bm x \in \mathcal{V}_A, \norm{\bm x}=1} \bm x^T (\bm A+\bm B) \bm x = \lambda_{i+j-1} (\bm A + \bm B) . \qquad \blacksquare $$
 
 
 
