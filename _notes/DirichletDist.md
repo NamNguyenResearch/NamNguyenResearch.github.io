@@ -78,7 +78,7 @@ Another way to construct the surrogate function is to use a lower bound on $$\Ga
 This approach is known as the fixed-point iteration (see *[1]*).
 
 
-# 3. The Maximization Step
+# 3. Maximization step
 In M-step, we maximize $$Q$$ by setting its gradient to zero.
 
 \begin{aligned}
@@ -90,8 +90,8 @@ In M-step, we maximize $$Q$$ by setting its gradient to zero.
 
 ---
 # Appendix
-Proof of Lemma 2.
-: Without loss of generality, we assume that $k=1$. Then
+
+**Proof of Lemma 2.** Without loss of generality, we assume that $k=1$. Then
 
 \begin{aligned}
 f(x_1, \bm p \mid \bm \alpha) &= \int_{x_2} \ldots \int_{x_K} f(x_1,\ldots,x_K,p_1,\ldots,p_K | \alpha_1,\ldots,\alpha_K) dx_2 \ldots dx_K \\\\\\
@@ -114,12 +114,10 @@ f(x_1, \bm p \mid \bm \alpha) &= \int_{x_2} \ldots \int_{x_K} f(x_1,\ldots,x_K,p
 Therefore, the probability density function is computed by
 
 \begin{aligned}
-f(x_1 \mid \bm p, \bm \alpha) &= \frac{f(x_1, \bm p \mid \bm \alpha)}{f(\bm p \mid \bm \alpha)} = \frac{x_1^{\sum_{k=1}^K \alpha_k-1} e^{-\frac{x_1}{p_1}}}{\Gamma(\sum_{k=1}^K \alpha_k) p_1^{\sum_{k=1}^K \alpha_k}}.
+f(x_1 \mid \bm p, \bm \alpha) &= \frac{f(x_1, \bm p \mid \bm \alpha)}{f(\bm p \mid \bm \alpha)} = \frac{x_1^{\sum_{k=1}^K \alpha_k-1} e^{-\frac{x_1}{p_1}}}{\Gamma(\sum_{k=1}^K \alpha_k) p_1^{\sum_{k=1}^K \alpha_k}}. \blacksquare
 \end{aligned}
 
 
 ---
 ## References
-```
-1. T. Minka. Estimating a Dirichlet distribution, 2000.
-```
+> 1. T. Minka. Estimating a Dirichlet distribution, 2000.

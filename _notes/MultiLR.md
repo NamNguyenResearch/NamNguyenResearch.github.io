@@ -21,6 +21,7 @@ Theorem 1.
 $$ 0 \preceq \nabla \bm \sigma \preceq \frac{1}{2} \Bigl( \bm I_C - \frac{1}{C} \bm 1_C \bm 1_C^T \Bigr) . \tag{1} \label{bound_sigma} $$
 
 **Proof.**
+
 For any $i,j = 1,\ldots,C$, we have
 
 $$ \frac{\partial \bigl( \bm \sigma(\bm z) \bigr)_i}{\partial z_j} = \frac{\delta_{ij} \exp(z_i) \sum_{k=1}^C \exp(z_k) - \exp(z_i) \exp(z_j)}{\Bigl(\sum_{k=1}^C \exp(z_k)\Bigr)^2} = \delta_{ij} \bigl( \bm \sigma(\bm z) \bigr)_i - \bigl( \bm \sigma(\bm z) \bigr)_i \bigl( \bm \sigma(\bm z) \bigr)_j . $$
@@ -29,11 +30,10 @@ In matrix form, we can rewrite as $\nabla \bm \sigma = \frac{\partial \bm \sigma
 
 $$ \abs{M_{ii}-\lambda} \abs{x_i} = \abs{\sum_{j \neq i} M_{ij} x_j} \leq \Bigl(\sum_{j \neq i} \abs{M_{ij}}\Bigr) \abs{x_i} \leq M_{ii} . $$
 
-The last inequality shows that $\lambda \geq 0$ or $\bm M$ is PSD. The upperbound in (\ref{bound_sigma}) can be found in *[1]*.
+The last inequality shows that $\lambda \geq 0$ or $\bm M$ is PSD. The upperbound in (\ref{bound_sigma}) can be found in *[1]*. $\blacksquare$
 
 
----
-# 2. Multinomial Logistic Regression (MLR)
+# 2. Multinomial logistic regression (MLR)
 For simplicity, let us consider the problem with just one observation including the input $\bm x \in \mathbb{R}^d$ and the one-hot output vector $\bm y \in \\{ 0,1 \\}^C$. The MLR model with parameter $\bm w = [\bm w_1^T, \ldots, \bm w_C^T]^T \in \mathbb{R}^{Cd}$ is given by 
 
 $$ p_i = Pr(y_i=1 \mid \bm x ; \bm w) = \frac{\exp(\bm w_i^T \bm x)}{\sum_{j=1}^C \exp(\bm w_j^T \bm x)} \text{ for } i=1,\ldots,C . $$
@@ -61,7 +61,5 @@ It is straightforward to see from (\ref{bound_sigma}) that $l(\bm w)$ with bound
 
 ---
 ## References
-```
-1. D. Böhning, “Multinomial logistic regression algorithm,” Annals of the Institute of Statistical Mathematics, vol. 44, no. 1, pp. 197–200, 1992.
-```
+> 1. D. Böhning, “Multinomial logistic regression algorithm,” Annals of the Institute of Statistical Mathematics, vol. 44, no. 1, pp. 197–200, 1992.
 

@@ -1,7 +1,7 @@
 ---
 title: "Some Useful Inequalities in Convex Optimization"
 collection: notes
-permalink: /notes/2019/ConvexOptimization
+permalink: /notes/2018/ConvexOptimization
 date: 2018-04-29
 excerpt: This note collects a set of inequalities that I found extremely useful in convex analysis. We will consider two simple applications of them in proofs of gradient descent and proximal gradient descent.
 enable: true
@@ -46,7 +46,7 @@ $$ \begin{align*}
 \end{align*}$$
 
 
-# 2. Convergence of Gradient Descent (GD)
+# 2. Convergence of gradient descent (GD)
 
 For simplicity, we consider fixed step size $$\eta_k=\frac{1}{L}$$:
 
@@ -86,7 +86,7 @@ Remark 1.
 - The proof for backtracking line search relies on the fact that the step size $$\eta_k \geq \min\{\beta, \frac{\eta_0}{L} \}$$.
 
 
-# 3. Convergence of Proximal Gradient Descent (PGD)
+# 3. Convergence of proximal gradient descent (PGD)
 Consider $$g(x)=f(x)+h(x)$$ where the regularization term $$h(x)$$ is convex. The PGD update is  
 
 $$ x^k= \text{prox}_{h/L} \Big(x^{k-1}-\frac{1}{L} \nabla f(x^{k-1})\Big) = x^{k-1} - \frac{1}{L} G(x^{k-1}) , $$ 
@@ -111,7 +111,5 @@ g^k &\leq g^{\star} + \langle G^{k-1}, x^k-x^{\star} \rangle + \frac{1}{2L} \nor
 
 
 ## References
-```
-1. Y. Nesterov, Introductory lectures on convex optimization: a basic course, Kluwer Academic Publishers, 2004.
-```
+> 1. Y. Nesterov, Introductory lectures on convex optimization: a basic course, Kluwer Academic Publishers, 2004.
 
