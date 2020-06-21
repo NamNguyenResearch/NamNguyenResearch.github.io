@@ -110,12 +110,9 @@ $$ \norm{\sin \bm \theta(\tilde{\bm U}_1, \bm U_1)}_F \leq \frac{\norm{\bm \Delt
 
 **Theorem 2. (Wedin theorem [2])**
 
-Let $\bm M$ and $\tilde{\bm M} \in \mathbb{R}^{m \times n}$ be two matrices with SVDs:
+Let $\bm M$ and $\tilde{\bm M} \in \mathbb{R}^{m \times n}$ be two matrices with rank-$r$ SVDs:
 
-\begin{align} \bm M = \begin{bmatrix} \bm U_1 & \bm U_2 \end{bmatrix} \begin{bmatrix} \bm \Sigma_1 & 0 \\\ 0 & \bm \Sigma_2 \end{bmatrix} \begin{bmatrix} \bm V_1^T \\\ \bm V_2^T \end{bmatrix}, 
-\end{align}
-
-\begin{align} \tilde{\bm M} = \begin{bmatrix} \tilde{\bm U}_1 & \tilde{\bm U}_2 \end{bmatrix} \begin{bmatrix} \tilde{\bm \Sigma}_1 & 0 \\\ 0 & \tilde{\bm \Sigma}_2 \end{bmatrix} \begin{bmatrix} \tilde{\bm V}_1^T \\\ \tilde{\bm V}_2^T \end{bmatrix} . 
+\begin{align} \bm M = \begin{bmatrix} \bm U_1 & \bm U_2 \end{bmatrix} \begin{bmatrix} \bm \Sigma_1 & 0 \\\ 0 & \bm \Sigma_2 \end{bmatrix} \begin{bmatrix} \bm V_1^T \\\ \bm V_2^T \end{bmatrix}, \quad \tilde{\bm M} = \begin{bmatrix} \tilde{\bm U}_1 & \tilde{\bm U}_2 \end{bmatrix} \begin{bmatrix} \tilde{\bm \Sigma}_1 & 0 \\\ 0 & \tilde{\bm \Sigma}_2 \end{bmatrix} \begin{bmatrix} \tilde{\bm V}_1^T \\\ \tilde{\bm V}_2^T \end{bmatrix} . 
 \end{align}
 
 If $\delta = \min\\{ \min_{1 \leq i \leq r, 1 \leq j \leq n-r} \abs{\sigma_i - \sigma_{r+j}}, \min_{1 \leq i \leq r} \sigma_i \\} > 0$, then
