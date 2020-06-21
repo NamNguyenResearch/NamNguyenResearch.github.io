@@ -3,7 +3,7 @@ title: "Matrix Perturbation and Davis-Kahan Theorem"
 collection: notes
 permalink: /notes/2020/DavisKahan
 date: 2020-06-20
-excerpt: In this note we will study what happens when adding small perturbations to a symmetric matrix. How much can the invariant subspace spanned by its eigenvectors change?  
+excerpt: In this note we will study matrix perturbation theory and find out the answer to some basic questions such as what happens when adding small perturbations to a symmetric matrix, or how much the invariant subspace spanned by its eigenvectors can change. Understanding the effect of small perturbation on matrices is the key to analysis of local convergence in many optimization algorithms.  
 enable: true
 ---
 
@@ -23,7 +23,7 @@ Now let $\bm \Delta \in \mathbb{R}^{n \times n}$ be a small perturbation (symmet
 \begin{align} \tilde{\bm M} = \tilde{\bm U} \tilde{\bm \Lambda} \tilde{\bm U}^T = \begin{bmatrix} \tilde{\bm U}_1 & \tilde{\bm U}_2 \end{bmatrix} \begin{bmatrix} \tilde{\bm \Lambda}_1 & 0 \\\ 0 & \tilde{\bm \Lambda}_2 \end{bmatrix} \begin{bmatrix} \tilde{\bm U}_1^T \\\ \tilde{\bm U}_2^T \end{bmatrix} . 
 \end{align} 
 
-The Weyl's theorem tells us that the eigenvalues are fairly stable under small perturbations:
+The [Weyl's theorem](https://en.wikipedia.org/wiki/Weyl%27s_inequality#Weyl's_inequality_in_matrix_theory) tells us that the eigenvalues are fairly stable under small perturbations:
 
 Theorem 1. 
 : $\norm{\tilde{\bm \Lambda} - \bm \Lambda}_2 \leq \norm{\bm \Delta}_2 .$
@@ -35,7 +35,7 @@ We will prove a more general result: let $\bm A, \bm B \in \mathbb{R}^{n \times 
 
 $$ \lambda_i(\bm A) + \lambda_j(\bm B) \geq \lambda_{i+j-1} (\bm A + \bm B) . $$
 
-In order to prove the above inequality, we use the min-max theorem as follows:
+In order to prove the above inequality, we use [the min-max theorem](https://en.wikipedia.org/wiki/Min-max_theorem) as follows:
 
 $$ \lambda_i(\bm A) = \min_{\mathcal{V}_A: \text{dim}(\mathcal{V}_A)=n-i+1} \max_{\bm x \in \mathcal{V}_A, \norm{\bm x}=1} \bm x^T \bm A \bm x \quad \text{ and } \quad \lambda_j(\bm B) = \min_{\mathcal{V}_B: \text{dim}(\mathcal{V}_B)=n-j+1} \max_{\bm x \in \mathcal{V}_B, \norm{\bm x}=1} \bm x^T \bm B \bm x .$$
 
@@ -46,19 +46,35 @@ $$\mathcal{V}_A^* = \argmin_{\mathcal{V}_A: \text{dim}(\mathcal{V}_A)=n-i+1}\max
 
 Denote $\mathcal{V} = \mathcal{V}_A^* \cap \mathcal{V}_B^*$, where $\text{dim}(\mathcal{V}) \geq (n-i+1)+(n-j+1)-n = n+2-i-j$. We have
 
-$$\lambda_i(\bm A) + \lambda_j(\bm B) \geq \max_{\bm x \in \mathcal{V}, \norm{\bm x}=1} \bm x^T (\bm A + \bm B) \bm x \geq \min_{\mathcal{V}_{A+B}: \text{dim}(\mathcal{V}_A)=n+2-i-j} \max_{\bm x \in \mathcal{V}_A, \norm{\bm x}=1} \bm x^T (\bm A+\bm B) \bm x = \lambda_{i+j-1} (\bm A + \bm B) . \qquad \blacksquare $$
-
+$$\lambda_i(\bm A) + \lambda_j(\bm B) \geq \max_{\bm x \in \mathcal{V}, \norm{\bm x}=1} \bm x^T (\bm A + \bm B) \bm x \geq \min_{\mathcal{V}: \text{dim}(\mathcal{V}_A)=n+2-i-j} \max_{\bm x \in \mathcal{V}, \norm{\bm x}=1} \bm x^T (\bm A+\bm B) \bm x = \lambda_{i+j-1} (\bm A + \bm B) . \qquad \blacksquare $$
 
 
 
 # 2. Principle angles between two subspaces
+Unlike the eigenvalues, the eigenvectors are not stalbe under perturbation, especially when the eigenvalues are not well-separated. In order to measure the change in the eigenvectors, you may first think about the distance between $\tilde{\bm U_1}$ and $\bm U_1$, say $\norm{\tilde{\bm U_1} - \bm U_1}_F$. However, this is a bad measure since $\tilde{\bm U_1}$ can be rotated after perturbation. Naturally, it is more convenient to measure the distance between the subspaces spanned by their columns since these subspaces are invariant with respect to rotation. Let us formally define this distance as follows. Consider two tall matrices $\bm A, \bm B \in \mathbb{R}^{n \times r}$ with orthonormal columns. Denote their ranges by $\mathcal{A}$ and $\mathcal{B}$, respectively. The principle angles between $\mathcal{A}$ and $\mathcal{B}$ are the angles $\theta_1,\ldots,\theta_r$ such that $\cos \theta_1,\ldots,\cos \theta_r$ are the singular values of $\bm A^T \bm B$. In other words, we have the singular value decomposition 
+
+$$ \bm A^T \bm B = \bm U \text{diag}(\cos \theta_1,\ldots,\cos \theta_r) \bm V^T = \bm U \cos \bm \theta \bm V^T. $$
+
+It is also possible to show that $\sin \theta_1, \ldots, \sin \theta_r$ are the singular values of $\bm P_A (\bm I_n - \bm P_B)$:
+
+$$ \bm P_A (\bm I_n - \bm P_B) = \bm A \bm U \text{diag}(\sin \theta_1,\ldots,\sin \theta_r) \bm V^T \bm B^T = \bm U \sin \bm \theta \bm V^T . $$
+
+Now we are ready to define the distance between $\mathcal{A}$ and $\mathcal{B}$ as
+
+$$ d(\mathcal{A},\mathcal{B}) = \norm{\sin \bm \theta}_F = \frac{1}{\sqrt{2}} \norm{\bm P_A - \bm P_B} = \norm{A^T \bar{\bm B}}_F  $$
+
+where $\bar{\bm B}$ is the orthogonal complement of $\bm B$, i.e., $\bm P_B + \bm P_{\bar B} = \bm I_n$. 
+
+
+
+
 
 
 
 # Orthogonal Procrustes theorem
 
 
-# The $\sin \theta$ theorem
+# The $\sin \bm \theta$ theorem
 
 
 ## References
