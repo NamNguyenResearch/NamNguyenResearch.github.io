@@ -13,6 +13,8 @@ enable: true
 
 Let $\DeclareMathOperator*{\argmin}{argmin} \newcommand{\norm}[1]{\left\lVert#1\right\rVert} \newcommand{\bm}[1]{\boldsymbol#1} \bm M \in \mathbb{R}^{n \times n}$ be a symmetric matrix with eigenvalue decomposition $\bm M=\bm U \bm \Lambda \bm U^T$. Here $\bm U \in \mathbb{R}^{n \times n}$ is an orthogonal matrix, i.e., $\bm U^T \bm U = \bm U \bm U^T = \bm I_n$, and $\bm \Lambda=\text{diag}(\lambda_1,\lambda_2,\ldots,\lambda_n)$ has the eigenvalues of $\bm M$ as its diagonal entries. Given an integer $r<n$, we can define the eigensubspace decomposition as the partition
 
+$$ \bm M = \begin{bmatrix} \bm U_1 \\\ \bm U_2 \end{bmatrix} $$
+
 $$ \bm M = \begin{bmatrix} \bm U_1 & \bm U_2 \end{bmatrix} \begin{bmatrix} \bm \Lambda_1 & 0 \\ 0 & \bm \Lambda_2 \end{bmatrix} \begin{bmatrix} \bm U_1^T \\ \bm U_2^T \end{bmatrix}, \quad \text{ where } \bm \Lambda_1 = \text{diag}(\lambda_1,\ldots,\lambda_r) , \bm \Lambda_2 = \text{diag}(\lambda_{r+1},\ldots,\lambda_n) . $$
 
 The submatrices $\bm U_1$ and $\bm U_2$ are called *semi-orthogonal* since $\bm U_1^T \bm U_1 = \bm I_r$ and $\bm U_2^T \bm U_2 = \bm I_{n-r}$. The orthogonal projections onto the subspaces spanned by the columns of $\bm U_1$ and $\bm U_2$ are $\bm P_{\bm U_1} = \bm U_1 \bm U_1^T$ and $\bm P_{\bm U_2} = \bm U_2 \bm U_2^T$, respectively. Since $\bm P_{\bm U_1} + \bm P_{\bm U_1} = \bm I_n$, the two corresponding subspaces are orthogonal complement.
