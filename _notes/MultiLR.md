@@ -3,7 +3,7 @@ title: "Multinomial Logistic Regression: Convexity and Smoothness"
 collection: notes
 permalink: /notes/2016/MLR
 date: 2016-10-29
-excerpt: Multinomial logistic regression is a generalization of binary logistic regression to multiclass problems. This note will explain the nice geometry of the likelihood function in estimating the model parameters, the key to understanding how multinomial logistic regression works. 
+excerpt: Multinomial logistic regression is a generalization of binary logistic regression to multiclass problems. This note will explain the nice geometry of the likelihood function in estimating the model parameters by looking at the second-order derivative of the MLR objective function. 
 enable: true
 ---
 
