@@ -86,7 +86,7 @@ But <span style="color: red">can we do better?</span> Indeed, there exists a tig
 
 **Theorem 5.** GD with fixed step size $1/L$ generates a sequence $\\{ \bm x^k \\}$ satisfies 
 
-$$\norm{\bm x^k - \bm x^\star} \leq \Bigl( 1 - \frac{2\mu}{L+\mu} \Bigr)^{k/2} \norm{\bm x^0 - \bm x^\star}, \qquad f^k - f^\star < \frac{L \norm{\bm x^0 - \bm x^\star}^2}{2(f^0-f^\star)} \Bigl( 1 - \frac{2\mu}{L+\mu} \Bigr)^k (f^0 - f^\star) . $$
+\begin{align} \norm{\bm x^k - \bm x^\star} \leq \Bigl( 1 - \frac{2\mu}{L+\mu} \Bigr)^{k/2} \norm{\bm x^0 - \bm x^\star}, \qquad f^k - f^\star < \frac{L \norm{\bm x^0 - \bm x^\star}^2}{2(f^0-f^\star)} \Bigl( 1 - \frac{2\mu}{L+\mu} \Bigr)^k (f^0 - f^\star) . \end{align}
 
 **Proof.**
 We follows the proof of Theorem 2.1.15 in [1]:
