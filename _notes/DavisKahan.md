@@ -13,14 +13,14 @@ enable: true
 
 Let $\DeclareMathOperator*{\argmin}{argmin} \newcommand{\norm}[1]{\left\lVert#1\right\rVert} \newcommand{\abs}[1]{\left\lvert#1\right\rvert} \newcommand{\bm}[1]{\boldsymbol#1} \bm M \in \mathbb{R}^{n \times n}$ be a symmetric matrix with eigenvalue decomposition (EVD) $\bm M=\bm U \bm \Lambda \bm U^T$. Here $\bm U \in \mathbb{R}^{n \times n}$ is an orthogonal matrix, i.e., $\bm U^T \bm U = \bm U \bm U^T = \bm I_n$, and $\bm \Lambda=\text{diag}(\lambda_1,\lambda_2,\ldots,\lambda_n)$ has the eigenvalues of $\bm M$ as its diagonal entries. Given an integer $r<n$, we can define the eigensubspace decomposition as the partition
 
-\begin{align} \bm M = \begin{bmatrix} \bm U_1 & \bm U_2 \end{bmatrix} \begin{bmatrix} \bm \Lambda_1 & 0 \\\ 0 & \bm \Lambda_2 \end{bmatrix} \begin{bmatrix} \bm U_1^T \\\ \bm U_2^T \end{bmatrix}, \tag{1} \label{M}
+\begin{align} \bm M = \begin{bmatrix} \bm U_1 & \bm U_2 \end{bmatrix} \begin{bmatrix} \bm \Lambda_1 & \bm 0 \\\ \bm 0 & \bm \Lambda_2 \end{bmatrix} \begin{bmatrix} \bm U_1^T \\\ \bm U_2^T \end{bmatrix}, \tag{1} \label{M}
 \end{align}
 
 where $\bm \Lambda_1 = \text{diag}(\lambda_1,\ldots,\lambda_r)$ and $\bm \Lambda_2 = \text{diag}(\lambda_{r+1},\ldots,\lambda_n)$. The submatrices $\bm U_1$ and $\bm U_2$ are called *semi-orthogonal* since $\bm U_1^T \bm U_1 = \bm I_r$ and $\bm U_2^T \bm U_2 = \bm I_{n-r}$. The orthogonal projections onto the subspaces spanned by the columns of $\bm U_1$ and $\bm U_2$ are $\bm P_{\bm U_1} = \bm U_1 \bm U_1^T$ and $\bm P_{\bm U_2} = \bm U_2 \bm U_2^T$, respectively. Since $\bm P_{\bm U_1} + \bm P_{\bm U_1} = \bm I_n$, the two corresponding subspaces are orthogonal complement.
 
 Now let $\bm \Delta \in \mathbb{R}^{n \times n}$ be a small perturbation (symmetric), we are interested in how the eigenvalues and eigenvectors of $\bm M$ change. Denote the eigensubspace decomposition of $\tilde{\bm M} = \bm M + \bm \Delta$ by
 
-\begin{align} \tilde{\bm M} = \tilde{\bm U} \tilde{\bm \Lambda} \tilde{\bm U}^T = \begin{bmatrix} \tilde{\bm U}_1 & \tilde{\bm U}_2 \end{bmatrix} \begin{bmatrix} \tilde{\bm \Lambda}_1 & 0 \\\ 0 & \tilde{\bm \Lambda}_2 \end{bmatrix} \begin{bmatrix} \tilde{\bm U}_1^T \\\ \tilde{\bm U}_2^T \end{bmatrix} . \tag{2} \label{Md} 
+\begin{align} \tilde{\bm M} = \tilde{\bm U} \tilde{\bm \Lambda} \tilde{\bm U}^T = \begin{bmatrix} \tilde{\bm U}_1 & \tilde{\bm U}_2 \end{bmatrix} \begin{bmatrix} \tilde{\bm \Lambda}_1 & \bm 0 \\\ \bm 0 & \tilde{\bm \Lambda}_2 \end{bmatrix} \begin{bmatrix} \tilde{\bm U}_1^T \\\ \tilde{\bm U}_2^T \end{bmatrix} . \tag{2} \label{Md} 
 \end{align} 
 
 The [Weyl's theorem](https://en.wikipedia.org/wiki/Weyl%27s_inequality#Weyl's_inequality_in_matrix_theory) tells us that the eigenvalues are fairly stable under small perturbations:
@@ -46,8 +46,9 @@ $$\mathcal{V}_A^* = \argmin_{\mathcal{V}_A: \text{dim}(\mathcal{V}_A)=n-i+1}\max
 
 Denote $\mathcal{V} = \mathcal{V}_A^* \cap \mathcal{V}_B^*$, where $\text{dim}(\mathcal{V}) \geq (n-i+1)+(n-j+1)-n = n+2-i-j$. We have
 
-$$\lambda_i(\bm A) + \lambda_j(\bm B) \geq \max_{\bm x \in \mathcal{V}, \norm{\bm x}=1} \bm x^T (\bm A + \bm B) \bm x \geq \min_{\mathcal{V}: \text{dim}(\mathcal{V}_A)=n+2-i-j} \max_{\bm x \in \mathcal{V}, \norm{\bm x}=1} \bm x^T (\bm A+\bm B) \bm x = \lambda_{i+j-1} (\bm A + \bm B) . \qquad \blacksquare $$
+$$\lambda_i(\bm A) + \lambda_j(\bm B) \geq \max_{\bm x \in \mathcal{V}, \norm{\bm x}=1} \bm x^T (\bm A + \bm B) \bm x \geq \min_{\mathcal{V}: \text{dim}(\mathcal{V}_A)=n+2-i-j} \max_{\bm x \in \mathcal{V}, \norm{\bm x}=1} \bm x^T (\bm A+\bm B) \bm x = \lambda_{i+j-1} (\bm A + \bm B) . $$
 
+This completes our proof. $\qquad \blacksquare$
 
 
 # 2. Principle angles between two subspaces
@@ -112,7 +113,7 @@ $$ \norm{\sin \bm \theta(\tilde{\bm U}_1, \bm U_1)}_F \leq \frac{\norm{\bm \Delt
 
 Let $\bm M$ and $\tilde{\bm M} \in \mathbb{R}^{m \times n}$ be two matrices with rank-$r$ SVDs:
 
-\begin{align} \bm M = \begin{bmatrix} \bm U_1 & \bm U_2 \end{bmatrix} \begin{bmatrix} \bm \Sigma_1 & 0 \\\ 0 & \bm \Sigma_2 \end{bmatrix} \begin{bmatrix} \bm V_1^T \\\ \bm V_2^T \end{bmatrix}, \quad \tilde{\bm M} = \begin{bmatrix} \tilde{\bm U}_1 & \tilde{\bm U}_2 \end{bmatrix} \begin{bmatrix} \tilde{\bm \Sigma}_1 & 0 \\\ 0 & \tilde{\bm \Sigma}_2 \end{bmatrix} \begin{bmatrix} \tilde{\bm V}_1^T \\\ \tilde{\bm V}_2^T \end{bmatrix} . 
+\begin{align} \bm M = \begin{bmatrix} \bm U_1 & \bm U_2 \end{bmatrix} \begin{bmatrix} \bm \Sigma_1 & \bm 0 \\\ \bm 0 & \bm \Sigma_2 \end{bmatrix} \begin{bmatrix} \bm V_1^T \\\ \bm V_2^T \end{bmatrix}, \quad \tilde{\bm M} = \begin{bmatrix} \tilde{\bm U}_1 & \tilde{\bm U}_2 \end{bmatrix} \begin{bmatrix} \tilde{\bm \Sigma}_1 & 0 \\\ 0 & \tilde{\bm \Sigma}_2 \end{bmatrix} \begin{bmatrix} \tilde{\bm V}_1^T \\\ \tilde{\bm V}_2^T \end{bmatrix} . 
 \end{align}
 
 If $\delta = \min\\{ \min_{1 \leq i \leq r, 1 \leq j \leq n-r} \abs{\sigma_i - \sigma_{r+j}}, \min_{1 \leq i \leq r} \sigma_i \\} > 0$, then
