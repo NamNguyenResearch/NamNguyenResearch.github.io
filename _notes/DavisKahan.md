@@ -105,7 +105,7 @@ The above leads to the following theorems:
 
 **Theorem 1. (Davis-Kahan theorem [1])**
 
-Let $\bm M$ and $\tilde{\bm M}$ be two symmetric matrices with EVDs (\ref{M}) and (\ref{Md}). If $\delta = \min_{1\leq i \leq r, 1 \leq j \leq n-r} \abs{\lambda_i - \lambda_{r+j}} > 0$, then
+Let $\bm M$ and $\tilde{\bm M}$ be two symmetric matrices with EVDs (\ref{M}) and (\ref{Md}). If $\delta = \min_{1\leq i \leq r, 1 \leq j \leq n-r} \abs{\lambda_i - \tilde{\lambda_{r+j}}} > 0$, then
 
 $$ \norm{\sin \bm \theta(\tilde{\bm U}_1, \bm U_1)}_F \leq \frac{\norm{\bm \Delta \bm U_1}_F}{\delta} . $$
 
@@ -116,7 +116,7 @@ Let $\bm M$ and $\tilde{\bm M} \in \mathbb{R}^{m \times n}$ be two matrices with
 \begin{align} \bm M = \begin{bmatrix} \bm U_1 & \bm U_2 \end{bmatrix} \begin{bmatrix} \bm \Sigma_1 & \bm 0 \\\ \bm 0 & \bm \Sigma_2 \end{bmatrix} \begin{bmatrix} \bm V_1^T \\\ \bm V_2^T \end{bmatrix}, \quad \tilde{\bm M} = \begin{bmatrix} \tilde{\bm U}_1 & \tilde{\bm U}_2 \end{bmatrix} \begin{bmatrix} \tilde{\bm \Sigma}_1 & 0 \\\ 0 & \tilde{\bm \Sigma}_2 \end{bmatrix} \begin{bmatrix} \tilde{\bm V}_1^T \\\ \tilde{\bm V}_2^T \end{bmatrix} . 
 \end{align}
 
-If $\delta = \min\\{ \min_{1 \leq i \leq r, 1 \leq j \leq n-r} \abs{\sigma_i - \sigma_{r+j}}, \min_{1 \leq i \leq r} \sigma_i \\} > 0$, then
+If $\delta = \min\\{ \min_{1 \leq i \leq r, 1 \leq j \leq n-r} \abs{\sigma_i - \tilde{\sigma_{r+j}}}, \min_{1 \leq i \leq r} \sigma_i \\} > 0$, then
 
 $$ \norm{\sin \bm \theta(\tilde{\bm U}_1, \bm U_1)}_F^2 \leq \frac{\norm{\bm U_1^T \bm \Delta}_F^2 + \norm{\bm \Delta \bm V_1}_F^2}{\delta^2} . $$
 
