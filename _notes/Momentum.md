@@ -129,7 +129,7 @@ $$ \norm{\bm y^{(k)}} = \norm{\bm T \bm y^{(k-1)}} = \norm{\bm T^k \bm y^{(0)}} 
 
 where $\rho(\bm T)$ is the [spectral radius](https://en.wikipedia.org/wiki/Spectral_radius) of $\bm T$ and the last inequality uses [Gelfand’s formula](https://en.wikipedia.org/wiki/Spectral_radius#Gelfand's_formula). Thus, in order to determine the convergence rate, we will need to find the eigenvalues of $\bm T$ and determine their maximum absolute value. By carefully looking at its special structure, one can show that $\bm T$ is permutation-similar to a block diagonal matrix:
 \begin{align}
-\bm T \sim \begin{bmatrix} \bm T_1 & \bm 0 & \ldots & \bm 0 \\ \bm 0 & \bm T_2 & \ldots & \bm 0 \\ \vdots & & \ldots & \vdots \\ \bm 0 & \bm 0 & \ldots & \bm T_n \end{bmatrix} \quad \text{where} \quad \bm T_j = \begin{bmatrix} 1+\beta-\alpha \lambda_j & -\beta \\ 0 & 1 \end{bmatrix} \text{ for } j=1,2,\ldots,n . 
+\bm T \sim \begin{bmatrix} \bm T_1 & \bm 0 & \ldots & \bm 0 \\\\\\ \bm 0 & \bm T_2 & \ldots & \bm 0 \\\\\\ \vdots & & \ldots & \vdots \\\\\\ \bm 0 & \bm 0 & \ldots & \bm T_n \end{bmatrix} \quad \text{where} \quad \bm T_j = \begin{bmatrix} 1+\beta-\alpha \lambda_j & -\beta \\\\\\ 0 & 1 \end{bmatrix} \text{ for } j=1,2,\ldots,n . 
 \end{align}
 Hence, the eigenvalues of $\bm T$ are the union of the eigenvalues of $\bm T_j$. For each $j$, the eigenvalues of $\bm T_j$ are the two roots of the equation
 
@@ -244,7 +244,7 @@ $$ \rho_{\alpha,\beta} = \rho(\bm T) = \max_j r_j = \max \{r_1, r_n\}, \quad \te
 
 In order to converge, we need 
 \begin{align}
-\rho_{\alpha,\beta} < 1 \quad \Leftrightarrow \quad \beta>0 \text{ and } \max \Bigl\{ 0, \frac{\beta-1}{\mu \beta} \Bigr\} < \alpha < \frac{2(\beta+1)}{L(2\beta+1)} . \tag{7} \label{equ:NAG_range} 
+\rho_{\alpha,\beta} < 1 \quad \Leftrightarrow \quad \beta>0 \text{ and } \max \Bigl\\{ 0, \frac{\beta-1}{\mu \beta} \Bigr\\} < \alpha < \frac{2(\beta+1)}{L(2\beta+1)} . \tag{7} \label{equ:NAG_range} 
 \end{align}
 
 Choosing the optimal step size in this range can be proceeded as follows. Let us first rewrite $\Delta_j$ as
