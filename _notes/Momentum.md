@@ -81,13 +81,13 @@ The inequality (\ref{equ:GD}) shows that GD converges linearly (or geometrically
 0 < \alpha < \frac{2}{L} . 
 \end{align}
 The optimal step size is chosen by solving
-
-$$ \alpha_{opt} = \argmin_{0 < \alpha < \frac{2}{L}} \max \Bigl\{ \abs{1-\alpha \mu}, \abs{1-\alpha L} \Bigr\} . $$
-
+\begin{align}
+\alpha_{opt} = \argmin_{0 < \alpha < \frac{2}{L}} \max \Bigl\{ \abs{1-\alpha \mu}, \abs{1-\alpha L} \Bigr\} . 
+\end{align}
 Although it can be observed that the solution happens at which the two quantities are equal, solving this minimization is non-trivial. First, it is noticeable that
-
-$$ \abs{1-\alpha \mu} < \abs{1-\alpha L} \Leftrightarrow \alpha > \frac{2}{L+\mu} . $$
-
+\begin{align}
+\abs{1-\alpha \mu} < \abs{1-\alpha L} \Leftrightarrow \alpha > \frac{2}{L+\mu} . 
+\end{align}
 Thus, we consider two cases:
 
 1. If $0 < \alpha \leq \frac{2}{L+\mu}$, then
@@ -102,9 +102,9 @@ The optimal step size in this case is $\frac{2}{L+\mu}$. Compared with the popul
 \end{align}
 
 In summary, we have $\alpha_{opt}=\frac{2}{L+\mu}$ and $\rho_{opt}=\frac{\kappa-1}{\kappa+1}$. At this optimal step size, the number of iterations to reach (relative) $\epsilon$-accuracy, i.e., $\frac{\norm{\bm x^{(k)}}}{\norm{\bm x^{(0)}}} < \epsilon \ll 1$, satisfies 
-
-$$ \rho_{opt}^k < \epsilon \Rightarrow k > \frac{\log 1/\epsilon}{\log \bigl(1 - \frac{2}{\kappa+1} \bigr)} \approx \frac{\kappa+1}{2} \log \frac{1}{\epsilon} . $$
-
+\begin{align}
+\rho_{opt}^k < \epsilon \Rightarrow k > \frac{\log 1/\epsilon}{\log \bigl(1 - \frac{2}{\kappa+1} \bigr)} \approx \frac{\kappa+1}{2} \log \frac{1}{\epsilon} . 
+\end{align}
 In other words, the iteration complexity of GD with optimal step size is $O(\kappa \log \frac{1}{\epsilon})$.
 
 
@@ -120,33 +120,33 @@ On a standard quadratic, the update can be further simplified as
 $$ \bm x^{(k+1)} = \bm x^{(k)} - \alpha \bm \Lambda \bm x^{(k)} + \beta (\bm x^{(k)} - \bm x^{(k-1)}) = \bigl( (1+\beta) \bm I_n - \alpha \bm \Lambda \bigr) \bm x^{(k)} - \beta \bm x^{(k+1)} . $$
 
 Stacking the current iterate and the previous one and taking the norm yield
-
-$$ \begin{bmatrix} \bm x^{(k+1)} \\ \bm x^{(k)} \end{bmatrix} = \begin{bmatrix} (1+\beta)\bm I_n - \alpha \bm \Lambda & -\beta \\ \bm 0 & \bm I_n \end{bmatrix} \begin{bmatrix} \bm x^{(k)} \\ \bm x^{(k-1)} \end{bmatrix} . $$
-
+\begin{align}
+\begin{bmatrix} \bm x^{(k+1)} \\ \bm x^{(k)} \end{bmatrix} = \begin{bmatrix} (1+\beta)\bm I_n - \alpha \bm \Lambda & -\beta \\ \bm 0 & \bm I_n \end{bmatrix} \begin{bmatrix} \bm x^{(k)} \\ \bm x^{(k-1)} \end{bmatrix} . 
+\end{align}
 Denote $\bm y^{(k)} = \begin{bmatrix} \bm x^{(k+1)} \\ \bm x^{(k)} \end{bmatrix}$ and $\bm T = \begin{bmatrix} (1+\beta)\bm I_n - \alpha \bm \Lambda & -\beta \\ \bm 0 & \bm I_n \end{bmatrix}$, we derive the exponential decrease in the norm of $\bm y$:
 
 $$ \norm{\bm y^{(k)}} = \norm{\bm T \bm y^{(k-1)}} = \norm{\bm T^k \bm y^{(0)}} \leq \norm{\bm T^k}_2 \norm{\bm y^{(0)}} \leq \bigl(\rho(\bm T) + o(1) \bigr)^k \norm{\bm y^{(0)}} , \tag{4} \label{equ:HB} $$
 
 where $\rho(\bm T)$ is the [spectral radius](https://en.wikipedia.org/wiki/Spectral_radius) of $\bm T$ and the last inequality uses [Gelfand’s formula](https://en.wikipedia.org/wiki/Spectral_radius#Gelfand's_formula). Thus, in order to determine the convergence rate, we will need to find the eigenvalues of $\bm T$ and determine their maximum absolute value. By carefully looking at its special structure, one can show that $\bm T$ is permutation-similar to a block diagonal matrix:
-
-$$ \bm T \sim \begin{bmatrix} \bm T_1 & \bm 0 & \ldots & \bm 0 \\ \bm 0 & \bm T_2 & \ldots & \bm 0 \\ \vdots & & \ldots & \vdots \\ \bm 0 & \bm 0 & \ldots & \bm T_n \end{bmatrix} \quad \text{where} \quad \bm T_j = \begin{bmatrix} 1+\beta-\alpha \lambda_j & -\beta \\ 0 & 1 \end{bmatrix} \text{ for } j=1,2,\ldots,n . $$
-
+\begin{align}
+\bm T \sim \begin{bmatrix} \bm T_1 & \bm 0 & \ldots & \bm 0 \\ \bm 0 & \bm T_2 & \ldots & \bm 0 \\ \vdots & & \ldots & \vdots \\ \bm 0 & \bm 0 & \ldots & \bm T_n \end{bmatrix} \quad \text{where} \quad \bm T_j = \begin{bmatrix} 1+\beta-\alpha \lambda_j & -\beta \\ 0 & 1 \end{bmatrix} \text{ for } j=1,2,\ldots,n . 
+\end{align}
 Hence, the eigenvalues of $\bm T$ are the union of the eigenvalues of $\bm T_j$. For each $j$, the eigenvalues of $\bm T_j$ are the two roots of the equation
 
 $$ r^2 - (1+\beta - \alpha \lambda_j) r + \beta = 0 \quad \text{with} \quad \Delta_j = (1+\beta - \alpha \lambda_j)^2 - 4\beta . $$
 
 Therefore, we can bound the convergence rate by
-
-$$ \rho_{\alpha,\beta} \approx \rho(\bm T) = \max_j r_j = \max \{r_1, r_n\}, \quad \text{where } r_j = \begin{cases} \frac{1}{2} \Bigl( \abs{1+\beta-\alpha \lambda_j} + \sqrt{\Delta_j} \Bigr) & \text{if } \Delta_j > 0, \\ \sqrt{\beta} & \text{otherwise.} \end{cases} $$
-
+\begin{align}
+\rho_{\alpha,\beta} \approx \rho(\bm T) = \max_j r_j = \max \{r_1, r_n\}, \quad \text{where } r_j = \begin{cases} \frac{1}{2} \Bigl( \abs{1+\beta-\alpha \lambda_j} + \sqrt{\Delta_j} \Bigr) & \text{if } \Delta_j > 0, \\ \sqrt{\beta} & \text{otherwise.} \end{cases} 
+\end{align}
 Here we can think of $r$ as a continuous and quasiconvex function of $\lambda$. The choice of step sizes must satisfy $\rho_{\alpha,\beta} < 1$, or equivalently,
-
-$$ \begin{cases} 0 \leq \beta < 1, \\ 0 < \alpha < \frac{2(1+\beta)}{L} . \tag{5} \label{equ:HB_range} \end{cases} $$
-
+\begin{align}
+\begin{cases} 0 \leq \beta < 1, \\ 0 < \alpha < \frac{2(1+\beta)}{L} . \tag{5} \label{equ:HB_range} \end{cases} 
+\end{align}
 The optimal step size is chosen by minimizing $\rho_{\alpha,\beta}$ over the aforementioned range. This optimization is more complicated than the one with GD. By observing that 
-
-$$ \Delta_j \leq 0 \Leftrightarrow \beta \geq \bigl(1-\sqrt{\alpha \lambda_j}\bigr)^2 \quad \text{and} \quad \abs{1-\sqrt{\alpha \mu}} < \abs{1-\sqrt{\alpha L}} \Leftrightarrow \alpha > \biggl( \frac{2}{\sqrt{L}+\sqrt{\mu}} \biggr)^2 , $$
-
+\begin{align}
+\Delta_j \leq 0 \Leftrightarrow \beta \geq \bigl(1-\sqrt{\alpha \lambda_j}\bigr)^2 \quad \text{and} \quad \abs{1-\sqrt{\alpha \mu}} < \abs{1-\sqrt{\alpha L}} \Leftrightarrow \alpha > \biggl( \frac{2}{\sqrt{L}+\sqrt{\mu}} \biggr)^2 , 
+\end{align}
 we can break it into $4$ cases:
 
 1. If $0 < \alpha \leq \Bigl( \frac{2}{\sqrt{L}+\sqrt{\mu}} \Bigr)^2$ and $\beta \geq (1-\sqrt{\alpha \mu})^2$, then
