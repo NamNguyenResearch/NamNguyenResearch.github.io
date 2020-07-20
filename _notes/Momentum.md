@@ -240,7 +240,7 @@ for $\cos \theta = \frac{1+\beta}{2} \sqrt{\frac{1-\alpha \lambda_j}{\beta}}$ an
 
 In all cases, we can bound the convergence rate by
 \begin{align}
-\rho_{\alpha,\beta} = \rho(\bm T) = \max_j r_j = \max \{r_1, r_n\}, \quad \text{where } r_j = \begin{cases} \frac{1}{2} \Bigl( (1+\beta)\abs{1-\alpha \lambda_j} + \sqrt{\Delta_j} \Bigr) & \text{if } \Delta_j > 0, \\ \sqrt{\beta \abs{1-\alpha \lambda_j}} & \text{otherwise.} \end{cases}
+\rho_{\alpha,\beta} = \rho(\bm T) = \max_j r_j = \max \{r_1, r_n\}, \quad \text{where } r_j = \begin{cases} \frac{1}{2} \Bigl( (1+\beta)\abs{1-\alpha \lambda_j} + \sqrt{\Delta_j} \Bigr) & \text{if } \Delta_j > 0, \\\\\\ \sqrt{\beta \abs{1-\alpha \lambda_j}} & \text{otherwise.} \end{cases}
 \end{align}
 In order to converge, we need 
 \begin{align}
