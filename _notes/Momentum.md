@@ -82,7 +82,7 @@ The inequality (\ref{equ:GD}) shows that GD converges linearly (or geometrically
 \end{align}
 The optimal step size is chosen by solving
 \begin{align}
-\alpha_{opt} = \argmin_{0 < \alpha < \frac{2}{L}} \max \Bigl\{ \abs{1-\alpha \mu}, \abs{1-\alpha L} \Bigr\} . 
+\alpha_{opt} = \argmin_{0 < \alpha < \frac{2}{L}} \max \Bigl\\{ \abs{1-\alpha \mu}, \abs{1-\alpha L} \Bigr\\} . 
 \end{align}
 Although it can be observed that the solution happens at which the two quantities are equal, solving this minimization is non-trivial. First, it is noticeable that
 \begin{align}
@@ -137,11 +137,11 @@ $$ r^2 - (1+\beta - \alpha \lambda_j) r + \beta = 0 \quad \text{with} \quad \Del
 
 Therefore, we can bound the convergence rate by
 \begin{align}
-\rho_{\alpha,\beta} \approx \rho(\bm T) = \max_j r_j = \max \{r_1, r_n\}, \quad \text{where } r_j = \begin{cases} \frac{1}{2} \Bigl( \abs{1+\beta-\alpha \lambda_j} + \sqrt{\Delta_j} \Bigr) & \text{if } \Delta_j > 0, \\ \sqrt{\beta} & \text{otherwise.} \end{cases} 
+\rho_{\alpha,\beta} \approx \rho(\bm T) = \max_j r_j = \max \{r_1, r_n\}, \quad \text{where } r_j = \begin{cases} \frac{1}{2} \Bigl( \abs{1+\beta-\alpha \lambda_j} + \sqrt{\Delta_j} \Bigr) & \text{if } \Delta_j > 0, \\\\\\ \sqrt{\beta} & \text{otherwise.} \end{cases} 
 \end{align}
 Here we can think of $r$ as a continuous and quasiconvex function of $\lambda$. The choice of step sizes must satisfy $\rho_{\alpha,\beta} < 1$, or equivalently,
 \begin{align}
-\begin{cases} 0 \leq \beta < 1, \\ 0 < \alpha < \frac{2(1+\beta)}{L} . \tag{5} \label{equ:HB_range} \end{cases} 
+\begin{cases} 0 \leq \beta < 1, \\\\\\ 0 < \alpha < \frac{2(1+\beta)}{L} . \tag{5} \label{equ:HB_range} \end{cases} 
 \end{align}
 The optimal step size is chosen by minimizing $\rho_{\alpha,\beta}$ over the aforementioned range. This optimization is more complicated than the one with GD. By observing that 
 \begin{align}
@@ -183,9 +183,9 @@ In summary, we have
 $$\alpha_{opt}=\biggl( \frac{2}{\sqrt{L}+\sqrt{\mu}} \biggr)^2, \quad \beta_{opt} = \biggl( \frac{\sqrt{\kappa}-1}{\sqrt{\kappa}+1} \biggr)^2 \quad \text{and} \quad \rho_{opt}=\frac{\sqrt{\kappa}-1}{\sqrt{\kappa}+1} . \tag{6} \label{equ:HB_optimal} $$
 
 With this optimal choice, the number of iterations to reach (relative) $\epsilon$-accuracy satisfies 
-
-$$ \rho_{opt}^k < \epsilon \Rightarrow k > \frac{\log 1/\epsilon}{\log \bigl(1 - \frac{2}{\sqrt{\kappa}+1} \bigr)} \approx \frac{\sqrt{\kappa}+1}{2} \log \frac{1}{\epsilon} . $$
-
+\begin{align}
+\rho_{opt}^k < \epsilon \Rightarrow k > \frac{\log 1/\epsilon}{\log \bigl(1 - \frac{2}{\sqrt{\kappa}+1} \bigr)} \approx \frac{\sqrt{\kappa}+1}{2} \log \frac{1}{\epsilon} . 
+\end{align}
 In other words, the iteration complexity of HB with optimal step size is $O(\sqrt{\kappa} \log \frac{1}{\epsilon})$.
 
 
@@ -239,11 +239,13 @@ x_j^{(k)} = \Bigl( \sqrt{\beta (1-\alpha \lambda_j)} \Bigr)^k \bigl( C_1 \cos(\t
 for $\cos \theta = \frac{1+\beta}{2} \sqrt{\frac{1-\alpha \lambda_j}{\beta}}$ and some constants $C_1$, $C_2$ depend on the initial point.
 
 In all cases, we can bound the convergence rate by
+
 $$ \rho_{\alpha,\beta} = \rho(\bm T) = \max_j r_j = \max \{r_1, r_n\}, \quad \text{where } r_j = \begin{cases} \frac{1}{2} \Bigl( (1+\beta)\abs{1-\alpha \lambda_j} + \sqrt{\Delta_j} \Bigr) & \text{if } \Delta_j > 0, \\ \sqrt{\beta \abs{1-\alpha \lambda_j}} & \text{otherwise.} \end{cases} $$
 
 In order to converge, we need 
-
-$$\rho_{\alpha,\beta} < 1 \quad \Leftrightarrow \quad \beta>0 \text{ and } \max \Bigl\{ 0, \frac{\beta-1}{\mu \beta} \Bigr\} < \alpha < \frac{2(\beta+1)}{L(2\beta+1)} . \tag{7} \label{equ:NAG_range} $$
+\begin{align}
+\rho_{\alpha,\beta} < 1 \quad \Leftrightarrow \quad \beta>0 \text{ and } \max \Bigl\{ 0, \frac{\beta-1}{\mu \beta} \Bigr\} < \alpha < \frac{2(\beta+1)}{L(2\beta+1)} . \tag{7} \label{equ:NAG_range} 
+\end{align}
 
 Choosing the optimal step size in this range can be proceeded as follows. Let us first rewrite $\Delta_j$ as
 
@@ -290,9 +292,9 @@ To conclude, the optimal choice of step sizes is given by
 $$ \alpha_{opt}=\frac{4}{3L+\mu}, \quad \beta_{opt}=\frac{\sqrt{3\kappa+1}-2}{\sqrt{3\kappa+1}+2}, \quad \rho_{opt}=1-\frac{2}{\sqrt{3\kappa+1}} . \tag{8} \label{equ:NAG_optimal} $$
 
 With this optimal choice, the number of iterations to reach (relative) $\epsilon$-accuracy satisfies
-
-$$ \rho_{opt}^k < \epsilon \Rightarrow k > \frac{\log 1/\epsilon}{\log \bigl( 1-\frac{2}{\sqrt{3\kappa+1}} \bigr)} \approx \frac{\sqrt{3\kappa+1}}{2} \log \frac{1}{\epsilon} . $$
-
+\begin{align}
+\rho_{opt}^k < \epsilon \Rightarrow k > \frac{\log 1/\epsilon}{\log \bigl( 1-\frac{2}{\sqrt{3\kappa+1}} \bigr)} \approx \frac{\sqrt{3\kappa+1}}{2} \log \frac{1}{\epsilon} . 
+\end{align}
 The iteration complexity of NAG with optimal step size is the same as HB - $O(\sqrt{\kappa} \log \frac{1}{\epsilon})$.
 
 > As a final note, HB generally does not converge when the objective is non-quadratic, strongly convex and smooth. On the other hand, NAG can be guaranteed to converge as long as the step sizes are chosen properly (see [2]). In the next note, we will study the proof of convergence of NAG on non-quadratic case.
