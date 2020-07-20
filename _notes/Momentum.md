@@ -77,9 +77,9 @@ where the last equality stems from fact that $\abs{1-\alpha \lambda}$ is a conti
 $$ \norm{\bm x^{(k)}} \leq \rho_\alpha^k \norm{\bm x^{(0)}} . \tag{3} \label{equ:GD}$$
 
 The inequality (\ref{equ:GD}) shows that GD converges linearly (or geometrically) to the optimal solution $\bm x^\star = \bm 0$ at rate $\rho_\alpha$. In order to converge, we need $\rho_\alpha < 1$. This is equivalent to having
-
-$$ 0 < \alpha < \frac{2}{L} . $$
-
+\begin{align}
+0 < \alpha < \frac{2}{L} . 
+\end{align}
 The optimal step size is chosen by solving
 
 $$ \alpha_{opt} = \argmin_{0 < \alpha < \frac{2}{L}} \max \Bigl\{ \abs{1-\alpha \mu}, \abs{1-\alpha L} \Bigr\} . $$
@@ -274,7 +274,7 @@ In this case, the equality holds at $\alpha = \frac{1}{L}$ and $\beta=\frac{\sqr
 	\begin{align}
 		\max \\{ r_1, r_n \\} = \max \biggl\\{ \frac{1}{2} \Bigl( (1+\beta)(\alpha L-1) + \sqrt{\Delta_1} \Bigr) , \frac{1}{2} \Bigl( (1+\beta)(1-\alpha \mu) + \sqrt{\Delta_n} \Bigr) \biggr\\} .
 	\end{align}
-	<span style="color: red;">We need to show that the maximum is always greater than $1-\sqrt{\frac{\mu}{L}}$, which is not straightforward to me though.</span>
+	We need to show that the maximum is always greater than $1-\frac{2\sqrt{\mu}}{\sqrt{3L+\mu}}$, <span style="color: red;">which is not straightforward to me though.</span>
 	3. The case $\beta > \frac{1+\sqrt{\alpha \mu}}{1-\sqrt{\alpha \mu}}$ does not converge since
 	\begin{align}
 	\max \\{ r_1, r_n \\} \geq \sqrt{\beta (1-\alpha \mu)} > \frac{1+\sqrt{\alpha \mu}}{1-\sqrt{\alpha \mu}} (1-\alpha \mu) > 1 .
