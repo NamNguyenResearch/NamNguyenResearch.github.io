@@ -1,8 +1,8 @@
 ---
 title: "Some Useful Inequalities in Convex Optimization"
 collection: notes
-permalink: /notes/2018/ConvexOptimization
-date: 2018-04-29
+permalink: /notes/2017/ConvexOptimization
+date: 2017-04-29
 excerpt: This note collects a set of inequalities related to the properties of smooth convex functions that I found extremely useful in convex analysis. We will consider two simple applications of them in proofs of gradient descent and proximal gradient descent.
 enable: true
 <!--tags:

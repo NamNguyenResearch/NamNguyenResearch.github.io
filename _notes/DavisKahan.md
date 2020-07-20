@@ -67,7 +67,7 @@ $$ d(\mathcal{A},\mathcal{B}) = \norm{\sin \bm \theta}_F = \frac{1}{\sqrt{2}} \n
 where $\bar{\bm B}$ is the orthogonal complement of $\bm B$, i.e., $\bm P_B + \bm P_{\bar B} = \bm I_n$. 
 
 
-# 3. Orthogonal Procrustes theorem
+# 3. Orthogonal Procrustes problem
 
 <p align="center">
   <img alt="Procrustes" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/The_Modern_Bed_of_Procustes_-_Punch_cartoon_-_Project_Gutenberg_eText_13961.png/440px-The_Modern_Bed_of_Procustes_-_Punch_cartoon_-_Project_Gutenberg_eText_13961.png">
