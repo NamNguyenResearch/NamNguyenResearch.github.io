@@ -239,9 +239,9 @@ x_j^{(k)} = \Bigl( \sqrt{\beta (1-\alpha \lambda_j)} \Bigr)^k \bigl( C_1 \cos(\t
 for $\cos \theta = \frac{1+\beta}{2} \sqrt{\frac{1-\alpha \lambda_j}{\beta}}$ and some constants $C_1$, $C_2$ depend on the initial point.
 
 In all cases, we can bound the convergence rate by
-
-$$ \rho_{\alpha,\beta} = \rho(\bm T) = \max_j r_j = \max \{r_1, r_n\}, \quad \text{where } r_j = \begin{cases} \frac{1}{2} \Bigl( (1+\beta)\abs{1-\alpha \lambda_j} + \sqrt{\Delta_j} \Bigr) & \text{if } \Delta_j > 0, \\ \sqrt{\beta \abs{1-\alpha \lambda_j}} & \text{otherwise.} \end{cases} $$
-
+\begin{align}
+\rho_{\alpha,\beta} = \rho(\bm T) = \max_j r_j = \max \{r_1, r_n\}, \quad \text{where } r_j = \begin{cases} \frac{1}{2} \Bigl( (1+\beta)\abs{1-\alpha \lambda_j} + \sqrt{\Delta_j} \Bigr) & \text{if } \Delta_j > 0, \\ \sqrt{\beta \abs{1-\alpha \lambda_j}} & \text{otherwise.} \end{cases}
+\end{align}
 In order to converge, we need 
 \begin{align}
 \rho_{\alpha,\beta} < 1 \quad \Leftrightarrow \quad \beta>0 \text{ and } \max \Bigl\\{ 0, \frac{\beta-1}{\mu \beta} \Bigr\\} < \alpha < \frac{2(\beta+1)}{L(2\beta+1)} . \tag{7} \label{equ:NAG_range} 
@@ -276,7 +276,7 @@ In this case, the equality holds at $\alpha = \frac{1}{L}$ and $\beta=\frac{\sqr
 	\begin{align}
 		\max \\{ r_1, r_n \\} = \max \biggl\\{ \frac{1}{2} \Bigl( (1+\beta)(\alpha L-1) + \sqrt{\Delta_1} \Bigr) , \frac{1}{2} \Bigl( (1+\beta)(1-\alpha \mu) + \sqrt{\Delta_n} \Bigr) \biggr\\} .
 	\end{align}
-	We need to show that the maximum is always greater than $1-\frac{2\sqrt{\mu}}{\sqrt{3L+\mu}}$, <span style="color: red;">which is not straightforward to me though.</span>
+	We need to show that the maximum is always greater than $1-\frac{2\sqrt{\mu}}{\sqrt{3L+\mu}}$, <span style="color: red;">which is not straightforward to me though!</span>
 	3. The case $\beta > \frac{1+\sqrt{\alpha \mu}}{1-\sqrt{\alpha \mu}}$ does not converge since
 	\begin{align}
 	\max \\{ r_1, r_n \\} \geq \sqrt{\beta (1-\alpha \mu)} > \frac{1+\sqrt{\alpha \mu}}{1-\sqrt{\alpha \mu}} (1-\alpha \mu) > 1 .
