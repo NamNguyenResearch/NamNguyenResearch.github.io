@@ -21,7 +21,7 @@ with $\bm \Lambda = \text{diag}(\lambda_1,\ldots,\lambda_n)$. The gradient and H
 
 $$ \nabla f(\bm x) = \bm \Lambda \bm x , \qquad \nabla^2 f(\bm x) = \bm \Lambda . $$
 
-Furthermore, we denote $\kappa=\frac{L}{\mu} \geq 1$ the condition number of the objective function. Intuitively, the higher $\kappa$ is, the harder it is to optimize $f$. When $\kappa$ approach $\infty$, problem (\ref{equ:standard}) is said to be *ill-conditioned*. Our goal in this note is to explain Proposition 1 in [3], given by the following table: 
+Furthermore, we denote $\kappa=\frac{L}{\mu} \geq 1$ the condition number of the objective function. Intuitively, the higher $\kappa$ is, the harder it is to optimize $f$. When $\kappa$ approaches $\infty$, problem (\ref{equ:standard}) is said to be *ill-conditioned*. Our goal in this note is to explain Proposition 1 in [3], given by the following table: 
 
 <table>
 	<caption>Worst-case rates for different algorithms when applied to a class of convex quadratic functions.</caption>

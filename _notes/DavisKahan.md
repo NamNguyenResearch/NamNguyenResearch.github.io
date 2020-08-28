@@ -62,7 +62,7 @@ $$ \bm P_A (\bm I_n - \bm P_B) = \bm A \bm U \text{diag}(\sin \theta_1,\ldots,\s
 
 Now we are ready to define the distance between $\mathcal{A}$ and $\mathcal{B}$ as
 
-$$ d(\mathcal{A},\mathcal{B}) = \norm{\sin \bm \theta}_F = \frac{1}{\sqrt{2}} \norm{\bm P_A - \bm P_B} = \norm{A^T \bar{\bm B}}_F  $$
+$$ d(\mathcal{A},\mathcal{B}) = \norm{\sin \bm \theta}_F = \frac{1}{\sqrt{2}} \norm{\bm P_A - \bm P_B}_F = \norm{\bm A^T \bar{\bm B}}_F  $$
 
 where $\bar{\bm B}$ is the orthogonal complement of $\bm B$, i.e., $\bm P_B + \bm P_{\bar B} = \bm I_n$. 
 

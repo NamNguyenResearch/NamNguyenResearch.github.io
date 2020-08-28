@@ -71,12 +71,12 @@ Thus, we can bound the distance on the function side by:
 $$ f^k-f^{\star} \leq \frac{L}{2} \bigg( \Big( 1-\frac{\mu}{L} \Big) \norm{\bm x^{k-1}- \bm x^{\star}}^2 - \norm{\bm x^{k}- \bm x^{\star}}^2 \bigg) . \tag{2} \label{bound_f} $$
 
 Since $f$ is convex, there are two possibilities:
-1. If $\mu=0$, then (\ref{bound_f}) is equivalent to $f^k-f^{\star} \leq \frac{L}{2} \biggl( \norm{\bm x^{k-1} - \bm x^{\star}}^2 - \norm{\bm x^{k}- \bm x^{\star}}^2 \biggr)$. Summing over all $i=1,\ldots,k$ yields the sublinear convergence
-\begin{align} f^k - f^{\star} \leq \frac{L}{2k} \norm{\bm x^0- \bm x^{\star}}^2 . \end{align}
-2. If $\mu>0$, then (\ref{bound_f}) implies $\big( 1-\frac{\mu}{L} \big) \norm{\bm x^{k-1}- \bm x^{\star}}^2 - \norm{\bm x^k- \bm x^{\star}}^2 \geq 0$. A simple recursion could lead to the linear convergence
+1. If $\mu=0$, then (\ref{bound_f}) is equivalent to $f^k-f^{\star} \leq \frac{L}{2} \biggl( \norm{\bm x^{k-1} - \bm x^{\star}}^2 - \norm{\bm x^{k}- \bm x^{\star}}^2 \biggr)$. Summing over all $k=1,\ldots,K$ yields the sublinear convergence
+\begin{align} f^K - f^{\star} \leq \frac{1}{K} \sum_{k=1}^K f^k - f^{\star} \leq \frac{L}{2K} \norm{\bm x^0- \bm x^{\star}}^2 . \end{align}
+2. If $\mu>0$, then (\ref{bound_f}) implies $\big( 1-\frac{\mu}{L} \big) \norm{\bm x^{k-1}- \bm x^{\star}}^2 - \norm{\bm x^k- \bm x^{\star}}^2 \geq 0$. A simple recursion can lead to the linear convergence
 \begin{align} \norm{\bm x^k- \bm x^{\star}} \leq \Bigl( 1-\frac{\mu}{L} \Bigr)^{k/2} \norm{\bm x^0- \bm x^{\star}} . \tag{3} \label{domain_side} \end{align}
 
-Let us focus a little more in the second case where linear convergence is obtained. If we try to bound the error on the function side instead of the domain side, a similar bound can be obtained by applying inequalities 3 in Theorem 3 to (\ref{descent}):
+Let us focus more in the second case where linear convergence is obtained. If we try to bound the error on the function side instead of the domain side, a similar bound can be obtained by applying inequalities 3 in Theorem 3 to (\ref{descent}):
 \begin{align} f^{k-1}-f^k &\geq \frac{1}{2L} \norm{\nabla f^{k-1}}^2 = \frac{1}{2L} \norm{\nabla f^{k-1} - \nabla f^\star}^2 \\\\\\
 &\geq \frac{1}{2L} 2\mu \Bigl( f^{k-1} - f^\star - \langle \nabla f^\star , \bm x^{k-1} - \bm x^\star \rangle \Bigr) = \frac{\mu}{L} (f^{k-1}-f^{\star}) , \end{align}
 where we use the optimality condition $\nabla f^\star = \bm 0$. Rearranging terms and performing a simple recursion yields
