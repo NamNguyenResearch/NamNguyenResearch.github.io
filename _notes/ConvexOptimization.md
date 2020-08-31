@@ -81,8 +81,8 @@ Let us focus more in the second case where linear convergence is obtained. If we
 &\geq \frac{1}{2L} 2\mu \Bigl( f^{k-1} - f^\star - \langle \nabla f^\star , \bm x^{k-1} - \bm x^\star \rangle \Bigr) = \frac{\mu}{L} (f^{k-1}-f^{\star}) , \end{align}
 where we use the optimality condition $\nabla f^\star = \bm 0$. Rearranging terms and performing a simple recursion yields
 \begin{align} f^k-f^{\star} &\leq \Bigl(1-\frac{\mu}{L}\Bigr)^k (f^0-f^{\star}) . \tag{4} \label{obj_side} \end{align}
-Notice the difference between the bound on the domain side (\ref{domain_side}) and the function side (\ref{obj_side}). While on the domain side is $\sqrt{1-\mu/L}$, its counterpart on the function side the rate of convergence is $1-\mu/L$. The order of $2$ stems from the fact that we are bounding the objective function by quadratics.
-But <span style="color: red">can we do better?</span> Indeed, there exists a tighter bound on GD with step size $1/L$ given by Nesterov in [1]:
+Notice the difference between the bounds on the domain side (\ref{domain_side}) and on the function side (\ref{obj_side}). While on the domain side the rate of convergence is $\sqrt{1-\mu/L}$, its counterpart on the function side is $1-\mu/L$. The order of $2$ stems from the fact that we are bounding the objective function by quadratics. Until here, the bound in (\ref{obj_side}) can be found in most notes on convergence of gradient descent.
+But <span style="color: red">can we do better?</span> Indeed, we can derive a tighter bound on GD with step size $1/L$ as follows.
 
 **Theorem 5.** GD with fixed step size $1/L$ generates a sequence $\\{ \bm x^k \\}$ satisfies 
 
@@ -95,15 +95,19 @@ We follows the proof of Theorem 2.1.15 in [1]:
 	&= \norm{\bm x^{k-1} - \bm x^\star}^2 - \frac{2}{L} \langle \bm x^{k-1} - \bm x^\star , \nabla f^{k-1} - \nabla f^\star \rangle + \frac{1}{L^2} \norm{\nabla f^{k-1}}^2 \\\\\\
 	&\leq \norm{\bm x^{k-1} - \bm x^\star}^2 - \frac{2}{L} \biggl( \frac{\mu L}{L+\mu} \norm{\bm x^k - \bm x^\star}^2 + \frac{1}{L+\mu} \norm{\nabla f^{k-1} - \nabla f^\star}^2 \biggr) + \frac{1}{L^2} \norm{\nabla f^{k-1}}^2 \\\\\\
 	&= \Bigl( 1 - \frac{2\mu}{L+\mu} \Bigr) \norm{\bm x^{k-1} - \bm x^\star}^2 - \frac{1}{L} \Bigl( \frac{2}{L+\mu} - \frac{1}{L} \Bigr) \norm{\nabla f^{k-1}}^2 \\\\\\
-	&\leq \Bigl( 1 - \frac{2\mu}{L+\mu} \Bigr) \norm{\bm x^{k-1} - \bm x^\star}^2 
+	&\leq \Bigl( 1 - \frac{2\mu}{L+\mu} \Bigr) \norm{\bm x^{k-1} - \bm x^\star}^2 ,
 \end{align}
-where in the first inequality we utilize Theorem 4.
+where in the first inequality we utilize Theorem 4. The proof for the function side follows from the fact that $f^k - f^\star \leq \frac{L}{2} \norm{\bm x^{k} - \bm x^\star}^2$. Note that the convergence rate on the domain side is $\sqrt{1 - \frac{2\mu}{L+\mu}}$.
 
 **Remark 1.** 
-- Choosing a larger step size $\eta=\frac{2}{L+\mu}$ results in the *optimal* rate of convergence for fixed stepsize GD:  
+- It is possible to show that the convergence rate on the domain side is $1-\mu/L$ [2]:
+\begin{align}
+&\norm{\bm x^k- \bm x^{\star}} \leq \Bigl(1-\frac{\mu}{L}\Bigr)^{k} \norm{\bm x^0- \bm x^{\star}}, \\ & f^k-f^{\star} \leq \frac{L}{2} \Bigl(1-\frac{\mu}{L}\Bigr)^{2k} \norm{\bm x^0- \bm x^{\star}}^2 .
+\end{align}
+- Following the same process as in Theorem 5, a larger step size $\eta=\frac{2}{L+\mu}$ results in the *optimal* rate of convergence for fixed step size GD:  
 \begin{align} &\norm{\bm x^k- \bm x^{\star}} \leq \Bigl(1-\frac{2\mu}{L+\mu}\Bigr)^k \norm{\bm x^0- \bm x^{\star}}, \\ &f^k-f^{\star} \leq \frac{L}{2} \Bigl(1-\frac{2\mu}{L+\mu}\Bigr)^{2k} \norm{\bm x^0- \bm x^{\star}}^2 . \end{align}
-- The following inequality intuitively describes the improvement in the rate of convergence we have seen in this section: 
-\begin{align} 1 - \frac{\mu}{L} > 1 - \frac{2\mu}{L+\mu} > \Bigl(1 - \frac{2\mu}{L+\mu}\Bigr)^2 . \end{align}
+- The following inequality intuitively describes the improvement in the rate of convergence (on the function side) we have seen in this section: 
+\begin{align} 1 - \frac{\mu}{L} > 1 - \frac{2\mu}{L+\mu} > \Bigl(1 - \frac{\mu}{L}\Bigr)^2 > \Bigl(1 - \frac{2\mu}{L+\mu}\Bigr)^2 . \end{align}
 
 
 # 3. Convergence of proximal gradient descent (PGD)
@@ -145,4 +149,5 @@ Here upon we recover the same analysis in Section 2.
 
 ## References
 > 1. Y. Nesterov, Introductory lectures on convex optimization: a basic course, Kluwer Academic Publishers, 2004.
+> 2. B. Polyak, Introduction to Optimization. Optimization Software. In Inc., Publications Division, New York (Vol. 1), 1987.
 
