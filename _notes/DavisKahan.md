@@ -118,7 +118,7 @@ Let $\bm M$ and $\tilde{\bm M} \in \mathbb{R}^{m \times n}$ be two matrices with
 
 If $$\delta = \min \{ \min_{1 \leq i \leq r, 1 \leq j \leq n-r} \abs{\sigma_i - \tilde{\sigma}_{r+j}}, \min_{1 \leq i \leq r} \sigma_i \} > 0$$, then
 
-$$ \norm{\sin \bm \theta(\tilde{\bm U}_1, \bm U_1)}_F^2 \leq \frac{\norm{\bm U_1^T \bm \Delta}_F^2 + \norm{\bm \Delta \bm V_1}_F^2}{\delta^2} . $$
+$$ \norm{\sin \bm \theta(\tilde{\bm U}_1, \bm U_1)}_F^2 + \norm{\sin \bm \theta(\tilde{\bm V}_1, \bm V_1)}_F^2 \leq \frac{\norm{\bm U_1^T \bm \Delta}_F^2 + \norm{\bm \Delta \bm V_1}_F^2}{\delta^2} . $$
 
 
 ## References
