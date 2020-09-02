@@ -76,7 +76,7 @@ where $\bar{\bm B}$ is the orthogonal complement of $\bm B$, i.e., $\bm P_B + \b
 There is an interesting relationship between the subspace distance and their corresponding basis matrix distance. In particular, we can show that 
 
 $$
-\min_{\bm R \in \mathbb{R}^{n \times r}: \bm R^T \bm R = \bm I_r} \norm{\bm A \bm R - \bm B}_F^2 = \max_{\bm R \in \mathbb{R}^{n \times r}: \bm R^T \bm R = \bm I_r} \text{tr}(\bm R^T \bm A^T \bm B) = \norm{\bm A \bm U \bm V^T - \bm B}_F^2 = 2 d^2(\mathcal{A},\mathcal{B})
+\min_{\bm R \in \mathbb{R}^{r \times r}: \bm R^T \bm R = \bm I_r} \norm{\bm A \bm R - \bm B}_F^2 = \max_{\bm R \in \mathbb{R}^{r \times r}: \bm R^T \bm R = \bm I_r} \text{tr}(\bm R^T \bm A^T \bm B) = \norm{\bm A \bm U \bm V^T - \bm B}_F^2 = 2 d^2(\mathcal{A},\mathcal{B})
 $$
 
 This result is known as the [orthogonal Procrustes problem](https://en.wikipedia.org/wiki/Orthogonal_Procrustes_problem). The minimizer of the LHS is given by
@@ -95,9 +95,9 @@ $$
 \norm{\tilde{\bm U}_2^T \bm \Delta \bm U_1}_F^2 = \norm{\tilde{\bm \Lambda}_2 \bm H - \bm H \bm \Lambda_1}_F^2 = tr(\tilde{\bm \Lambda}_2^2 \bm H \bm H^T) + tr(\bm \Lambda_1^2 \bm H^T \bm H) - 2 tr(\bm H^T \tilde{\bm \Lambda}_2 \bm H \bm \Lambda_1) 
 $$
 
-$$ = \sum_{i=1}^{n-r} \sum_{j=1}^r \bigl( \tilde{\lambda}_{2i}^2 + \lambda_{1j}^2 - 2 \tilde{\lambda}_{2i} \lambda_{1j} \bigr) H_{ij}^2 \geq \bigl( \min_{i,j} \abs{\lambda_{1j} - \tilde{\lambda}_{2i}} \bigr)^2 \sum_{i,j} H_{ij}^2 = \delta \norm{\bm H}_F^2 , $$
+$$ = \sum_{j=r}^{n} \sum_{i=1}^r \bigl( \tilde{\lambda}_{2j}^2 + \lambda_{1i}^2 - 2 \tilde{\lambda}_{2j} \lambda_{1i} \bigr) H_{ji}^2 \geq \bigl( \min_{i,j} \abs{\lambda_{1i} - \tilde{\lambda}_{2j}} \bigr)^2 \sum_{i,j} H_{ji}^2 = \delta \norm{\bm H}_F^2 , $$
 
-where $\delta = \min_{i,j} \abs{\lambda_{1j} - \tilde{\lambda}_{2i}}$ is the eigengap. Thus we obtain
+where $\delta = \min_{1 \leq i \leq r, r \leq j \leq n}  \abs{\lambda_{1i} - \tilde{\lambda}_{2j}}$ is the eigengap. Thus we obtain
 
 $$ \norm{\tilde{\bm U}_2^T \bm U_1}_F \leq \frac{\norm{\tilde{\bm U}_2^T \bm \Delta \bm U_1}_F}{\delta} . $$
 
@@ -105,7 +105,7 @@ The above leads to the following theorems:
 
 **Theorem 1. (Davis-Kahan theorem [1])**
 
-Let $\bm M$ and $\tilde{\bm M}$ be two symmetric matrices with EVDs (\ref{M}) and (\ref{Md}). If $\delta = \min_{1\leq i \leq r, 1 \leq j \leq n-r} \abs{\lambda_i - \tilde{\lambda}_{r+j}} > 0$, then
+Let $\bm M$ and $\tilde{\bm M}$ be two symmetric matrices with EVDs (\ref{M}) and (\ref{Md}). If $\delta = \min_{1 \leq i \leq r, r \leq j \leq n} \abs{\lambda_i - \tilde{\lambda}_j} > 0$, then
 
 $$ \norm{\sin \bm \theta(\tilde{\bm U}_1, \bm U_1)}_F \leq \frac{\norm{\bm \Delta \bm U_1}_F}{\delta} . $$
 
@@ -113,12 +113,14 @@ $$ \norm{\sin \bm \theta(\tilde{\bm U}_1, \bm U_1)}_F \leq \frac{\norm{\bm \Delt
 
 Let $\bm M$ and $\tilde{\bm M} \in \mathbb{R}^{m \times n}$ be two matrices with rank-$r$ SVDs:
 
-\begin{align} \bm M = \begin{bmatrix} \bm U_1 & \bm U_2 \end{bmatrix} \begin{bmatrix} \bm \Sigma_1 & \bm 0 \\\ \bm 0 & \bm \Sigma_2 \end{bmatrix} \begin{bmatrix} \bm V_1^T \\\ \bm V_2^T \end{bmatrix}, \quad \tilde{\bm M} = \begin{bmatrix} \tilde{\bm U}_1 & \tilde{\bm U}_2 \end{bmatrix} \begin{bmatrix} \tilde{\bm \Sigma}_1 & 0 \\\ 0 & \tilde{\bm \Sigma}_2 \end{bmatrix} \begin{bmatrix} \tilde{\bm V}_1^T \\\ \tilde{\bm V}_2^T \end{bmatrix} . 
+\begin{align} \bm M = \begin{bmatrix} \bm U_1 & \bm U_2 \end{bmatrix} \begin{bmatrix} \bm \Sigma_1 & \bm 0 \\\ \bm 0 & \bm \Sigma_2 \end{bmatrix} \begin{bmatrix} \bm V_1^T \\\ \bm V_2^T \end{bmatrix}, \quad \tilde{\bm M} = \bm M + \bm \Delta = \begin{bmatrix} \tilde{\bm U}_1 & \tilde{\bm U}_2 \end{bmatrix} \begin{bmatrix} \tilde{\bm \Sigma}_1 & 0 \\\ 0 & \tilde{\bm \Sigma}_2 \end{bmatrix} \begin{bmatrix} \tilde{\bm V}_1^T \\\ \tilde{\bm V}_2^T \end{bmatrix} . 
 \end{align}
 
-If $$\delta = \min \{ \min_{1 \leq i \leq r, 1 \leq j \leq n-r} \abs{\sigma_i - \tilde{\sigma}_{r+j}}, \min_{1 \leq i \leq r} \sigma_i \} > 0$$, then
+If $$\delta = \min \{ \min_{1 \leq i \leq r, r \leq j \leq n}  \abs{\sigma_i - \tilde{\sigma}_j}, \min_{1 \leq i \leq r} \sigma_i \} > 0$$, then
 
 $$ \norm{\sin \bm \theta(\tilde{\bm U}_1, \bm U_1)}_F^2 + \norm{\sin \bm \theta(\tilde{\bm V}_1, \bm V_1)}_F^2 \leq \frac{\norm{\bm U_1^T \bm \Delta}_F^2 + \norm{\bm \Delta \bm V_1}_F^2}{\delta^2} . $$
+
+In both theorems, note that no ordering on the eigenvalues/singular values is required. Furthermore, by Weyl's theorem, one can show that the sufficient (but not necessary) condition for $\delta > 0$ in Davis-Kahan theorem is $\norm{\bm \Delta}_2 < \min_{1\leq i \leq r, 1 \leq j \leq n-r} \abs{\lambda_i - \lambda_{r+j}}$.
 
 
 ## References
