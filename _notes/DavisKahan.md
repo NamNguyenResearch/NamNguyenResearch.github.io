@@ -76,7 +76,9 @@ where $\bar{\bm B}$ is the orthogonal complement of $\bm B$, i.e., $\bm P_B + \b
 There is an interesting relationship between the subspace distance and their corresponding basis matrix distance. In particular, we can show that 
 
 $$
-\min_{\bm R \in \mathbb{R}^{r \times r}: \bm R^T \bm R = \bm I_r} \norm{\bm A \bm R - \bm B}_F^2 = 2r - \max_{\bm R \in \mathbb{R}^{r \times r}: \bm R^T \bm R = \bm I_r} \text{tr}(\bm R^T \bm A^T \bm B) = 2r - \max_{\bm R \in \mathbb{R}^{r \times r}: \bm R^T \bm R = \bm I_r} \text{tr}\bigl( (\bm U^T \bm R \bm V)^T \bm \cos \theta \bigr) \leq 2 d^2(\mathcal{A},\mathcal{B}) .
+\min_{\bm R \in \mathbb{R}^{r \times r}: \bm R^T \bm R = \bm I_r} \norm{\bm A \bm R - \bm B}_F^2 = 2r - \max_{\bm R \in \mathbb{R}^{r \times r}: \bm R^T \bm R = \bm I_r} \text{tr}(\bm R^T \bm A^T \bm B)$$
+
+$$ = 2r - \max_{\bm R \in \mathbb{R}^{r \times r}: \bm R^T \bm R = \bm I_r} \text{tr}\bigl( (\bm U^T \bm R \bm V)^T \bm \cos \theta \bigr) \leq 2 d^2(\mathcal{A},\mathcal{B}) .
 $$
 
 This result is known as the [orthogonal Procrustes problem](https://en.wikipedia.org/wiki/Orthogonal_Procrustes_problem). The minimizer of the LHS is given by
@@ -120,7 +122,8 @@ If $$\delta = \min \{ \min_{1 \leq i \leq r, r \leq j \leq n}  \abs{\sigma_i - \
 
 $$ \norm{\sin \bm \theta(\tilde{\bm U}_1, \bm U_1)}_F^2 + \norm{\sin \bm \theta(\tilde{\bm V}_1, \bm V_1)}_F^2 \leq \frac{\norm{\bm U_1^T \bm \Delta}_F^2 + \norm{\bm \Delta \bm V_1}_F^2}{\delta^2} . $$
 
-In both theorems, note that no ordering on the eigenvalues/singular values is required. Furthermore, by Weyl's theorem, one can show that the sufficient (but not necessary) condition for $\delta > 0$ in Davis-Kahan theorem is $\norm{\bm \Delta}_2 < \min_{1 \leq i \leq r, r \leq j \leq n} \abs{\lambda_i - \tilde{\lambda}_j}$.
+In both theorems, note that no ordering on the eigenvalues/singular values is required. Furthermore, by Weyl's theorem, one can show that the sufficient (but not necessary) condition for $\delta > 0$ in Davis-Kahan theorem is 
+$$\norm{\bm \Delta}_2 < \min_{1 \leq i \leq r, r \leq j \leq n} \abs{\lambda_i - \tilde{\lambda}_j} .$$
 
 
 ## References
