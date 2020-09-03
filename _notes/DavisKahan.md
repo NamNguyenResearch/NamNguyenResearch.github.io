@@ -11,7 +11,7 @@ enable: true
 ---
 # 1. Eigensubspace decomposition and matrix perturbation
 
-Let $\DeclareMathOperator*{\argmin}{argmin} \DeclareMathOperator*{\argmax}{argmax} \newcommand{\norm}[1]{\left\lVert#1\right\rVert} \newcommand{\abs}[1]{\left\lvert#1\right\rvert} \newcommand{\bm}[1]{\boldsymbol#1} \bm M \in \mathbb{R}^{n \times n}$ be a symmetric matrix with eigenvalue decomposition (EVD) $\bm M=\bm U \bm \Lambda \bm U^T$. Here $\bm U \in \mathbb{R}^{n \times n}$ is an orthogonal matrix, i.e., $\bm U^T \bm U = \bm U \bm U^T = \bm I_n$, and $\bm \Lambda=\text{diag}(\lambda_1,\lambda_2,\ldots,\lambda_n)$ has the eigenvalues of $\bm M$ as its diagonal entries. Given an integer $r<n$, we can define the eigensubspace decomposition as the partition
+Let $\DeclareMathOperator*{\argmin}{argmin} \newcommand{\norm}[1]{\left\lVert#1\right\rVert} \newcommand{\abs}[1]{\left\lvert#1\right\rvert} \newcommand{\bm}[1]{\boldsymbol#1} \bm M \in \mathbb{R}^{n \times n}$ be a symmetric matrix with eigenvalue decomposition (EVD) $\bm M=\bm U \bm \Lambda \bm U^T$. Here $\bm U \in \mathbb{R}^{n \times n}$ is an orthogonal matrix, i.e., $\bm U^T \bm U = \bm U \bm U^T = \bm I_n$, and $\bm \Lambda=\text{diag}(\lambda_1,\lambda_2,\ldots,\lambda_n)$ has the eigenvalues of $\bm M$ as its diagonal entries. Given an integer $r<n$, we can define the eigensubspace decomposition as the partition
 
 \begin{align} \bm M = \begin{bmatrix} \bm U_1 & \bm U_2 \end{bmatrix} \begin{bmatrix} \bm \Lambda_1 & \bm 0 \\\ \bm 0 & \bm \Lambda_2 \end{bmatrix} \begin{bmatrix} \bm U_1^T \\\ \bm U_2^T \end{bmatrix}, \tag{1} \label{M}
 \end{align}
@@ -76,7 +76,7 @@ where $\bar{\bm B}$ is the orthogonal complement of $\bm B$, i.e., $\bm P_B + \b
 There is an interesting relationship between the subspace distance and their corresponding basis matrix distance. In particular, we can show that 
 
 $$
-\min_{\bm R \in \mathbb{R}^{r \times r}: \bm R^T \bm R =  = \bm I_r} \norm{\bm A \bm R - \bm B}_F^2 = 2r - \max_{\bm R \in \mathbb{R}^{r \times r}: \bm R^T \bm R = \bm I_r} \text{tr}(\bm R^T \bm A^T \bm B) = 2r - \max_{\bm R \in \mathbb{R}^{r \times r}: \bm R^T \bm R = \bm I_r} \text{tr}\bigl((\bm U^T \bm R \bm V)^T \bm \cos \theta \bigr) \leq 2 d^2(\mathcal{A},\mathcal{B}) .
+\min_{\bm R \in \mathbb{R}^{r \times r}: \bm R^T \bm R = \bm I_r} \norm{\bm A \bm R - \bm B}_F^2 = 2r - \max_{\bm R \in \mathbb{R}^{r \times r}: \bm R^T \bm R = \bm I_r} \text{tr}(\bm R^T \bm A^T \bm B) = 2r - \max_{\bm R \in \mathbb{R}^{r \times r}: \bm R^T \bm R = \bm I_r} \text{tr}\bigl( (\bm U^T \bm R \bm V)^T \bm \cos \theta \bigr) \leq 2 d^2(\mathcal{A},\mathcal{B}) .
 $$
 
 This result is known as the [orthogonal Procrustes problem](https://en.wikipedia.org/wiki/Orthogonal_Procrustes_problem). The minimizer of the LHS is given by
