@@ -11,7 +11,7 @@ enable: true
 ---
 # 1. Eigensubspace decomposition and matrix perturbation
 
-Let $\DeclareMathOperator*{\argmin}{argmin} \newcommand{\norm}[1]{\left\lVert#1\right\rVert} \newcommand{\abs}[1]{\left\lvert#1\right\rvert} \newcommand{\bm}[1]{\boldsymbol#1} \bm M \in \mathbb{R}^{n \times n}$ be a symmetric matrix with eigenvalue decomposition (EVD) $\bm M=\bm U \bm \Lambda \bm U^T$. Here $\bm U \in \mathbb{R}^{n \times n}$ is an orthogonal matrix, i.e., $\bm U^T \bm U = \bm U \bm U^T = \bm I_n$, and $\bm \Lambda=\text{diag}(\lambda_1,\lambda_2,\ldots,\lambda_n)$ has the eigenvalues of $\bm M$ as its diagonal entries. Given an integer $r<n$, we can define the eigensubspace decomposition as the partition
+Let $\DeclareMathOperator*{\argmin}{argmin} \DeclareMathOperator*{\argmax}{argmax} \newcommand{\norm}[1]{\left\lVert#1\right\rVert} \newcommand{\abs}[1]{\left\lvert#1\right\rvert} \newcommand{\bm}[1]{\boldsymbol#1} \bm M \in \mathbb{R}^{n \times n}$ be a symmetric matrix with eigenvalue decomposition (EVD) $\bm M=\bm U \bm \Lambda \bm U^T$. Here $\bm U \in \mathbb{R}^{n \times n}$ is an orthogonal matrix, i.e., $\bm U^T \bm U = \bm U \bm U^T = \bm I_n$, and $\bm \Lambda=\text{diag}(\lambda_1,\lambda_2,\ldots,\lambda_n)$ has the eigenvalues of $\bm M$ as its diagonal entries. Given an integer $r<n$, we can define the eigensubspace decomposition as the partition
 
 \begin{align} \bm M = \begin{bmatrix} \bm U_1 & \bm U_2 \end{bmatrix} \begin{bmatrix} \bm \Lambda_1 & \bm 0 \\\ \bm 0 & \bm \Lambda_2 \end{bmatrix} \begin{bmatrix} \bm U_1^T \\\ \bm U_2^T \end{bmatrix}, \tag{1} \label{M}
 \end{align}
@@ -52,7 +52,7 @@ This completes our proof. $\qquad \blacksquare$
 
 
 # 2. Principle angles between two subspaces
-Unlike the eigenvalues, the eigenvectors are not stable under perturbation, especially when the eigenvalues are not well-separated. In order to measure the change in the eigenvectors, one may first think about the distance between $\tilde{\bm U_1}$ and $\bm U_1$, say $\norm{\tilde{\bm U_1} - \bm U_1}_F$. However, this does not take into account the rotation after perturbation. Thus, it is more accurate to measure the distance between the invariant subspaces spanned by the columns of $\tilde{\bm U_1}$ and $\bm U_1$. Let us formally define this distance as follows. Consider two tall matrices $\bm A, \bm B \in \mathbb{R}^{n \times r}$ with orthonormal columns. Denote their ranges by $\mathcal{A}$ and $\mathcal{B}$, respectively. The principle angles between $\mathcal{A}$ and $\mathcal{B}$ are the angles $\theta_1,\ldots,\theta_r$ such that $\cos \theta_1,\ldots,\cos \theta_r$ are the singular values of $\bm A^T \bm B$. In other words, we have the singular value decomposition (SVD)
+Unlike the eigenvalues, the eigenvectors are not stable under perturbation, especially when the eigenvalues are not well-separated. In order to measure the change in the eigenvectors, one may first think about the distance between $\tilde{\bm U_1}$ and $\bm U_1$, say $\norm{\tilde{\bm U_1} - \bm U_1}_F$. However, this does not take into account the rotation after perturbation. Thus, it is more accurate to measure the distance between the invariant subspaces spanned by the columns of $\tilde{\bm U_1}$ and $\bm U_1$. Let us formally define this distance as follows. Consider two tall matrices $\bm A, \bm B \in \mathbb{R}^{n \times r}$ with orthonormal columns, i.e., $\bm A^T \bm A = \bm B^T \bm B = \bm I_r. Denote their ranges by $\mathcal{A}$ and $\mathcal{B}$, respectively. The principle angles between $\mathcal{A}$ and $\mathcal{B}$ are the angles $\theta_1,\ldots,\theta_r$ such that $\cos \theta_1,\ldots,\cos \theta_r$ are the singular values of $\bm A^T \bm B$. In other words, we have the singular value decomposition (SVD)
 
 $$ \bm A^T \bm B = \bm U \text{diag}(\cos \theta_1,\ldots,\cos \theta_r) \bm V^T = \bm U \cos \bm \theta \bm V^T. $$
 
@@ -76,7 +76,7 @@ where $\bar{\bm B}$ is the orthogonal complement of $\bm B$, i.e., $\bm P_B + \b
 There is an interesting relationship between the subspace distance and their corresponding basis matrix distance. In particular, we can show that 
 
 $$
-\min_{\bm R \in \mathbb{R}^{r \times r}: \bm R^T \bm R = \bm I_r} \norm{\bm A \bm R - \bm B}_F^2 = \max_{\bm R \in \mathbb{R}^{r \times r}: \bm R^T \bm R = \bm I_r} \text{tr}(\bm R^T \bm A^T \bm B) = \norm{\bm A \bm U \bm V^T - \bm B}_F^2 = 2 d^2(\mathcal{A},\mathcal{B})
+\min_{\bm R \in \mathbb{R}^{r \times r}: \bm R^T \bm R =  = \bm I_r} \norm{\bm A \bm R - \bm B}_F^2 = 2r - \max_{\bm R \in \mathbb{R}^{r \times r}: \bm R^T \bm R = \bm I_r} \text{tr}(\bm R^T \bm A^T \bm B) = 2r - \max_{\bm R \in \mathbb{R}^{r \times r}: \bm R^T \bm R = \bm I_r} \text{tr}\bigl((\bm U^T \bm R \bm V)^T \bm \cos \theta \bigr) \leq 2 d^2(\mathcal{A},\mathcal{B}) .
 $$
 
 This result is known as the [orthogonal Procrustes problem](https://en.wikipedia.org/wiki/Orthogonal_Procrustes_problem). The minimizer of the LHS is given by
@@ -120,7 +120,7 @@ If $$\delta = \min \{ \min_{1 \leq i \leq r, r \leq j \leq n}  \abs{\sigma_i - \
 
 $$ \norm{\sin \bm \theta(\tilde{\bm U}_1, \bm U_1)}_F^2 + \norm{\sin \bm \theta(\tilde{\bm V}_1, \bm V_1)}_F^2 \leq \frac{\norm{\bm U_1^T \bm \Delta}_F^2 + \norm{\bm \Delta \bm V_1}_F^2}{\delta^2} . $$
 
-In both theorems, note that no ordering on the eigenvalues/singular values is required. Furthermore, by Weyl's theorem, one can show that the sufficient (but not necessary) condition for $\delta > 0$ in Davis-Kahan theorem is $\norm{\bm \Delta}_2 < \min_{1\leq i \leq r, 1 \leq j \leq n-r} \abs{\lambda_i - \lambda_{r+j}}$.
+In both theorems, note that no ordering on the eigenvalues/singular values is required. Furthermore, by Weyl's theorem, one can show that the sufficient (but not necessary) condition for $\delta > 0$ in Davis-Kahan theorem is $\norm{\bm \Delta}_2 < \min_{1 \leq i \leq r, r \leq j \leq n} \abs{\lambda_i - \tilde{\lambda}_j}$.
 
 
 ## References
