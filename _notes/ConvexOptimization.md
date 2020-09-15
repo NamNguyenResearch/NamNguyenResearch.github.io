@@ -3,7 +3,7 @@ title: "Some Useful Inequalities in Convex Optimization"
 collection: notes
 permalink: /notes/2017/ConvexOptimization
 date: 2017-04-29
-excerpt: This note collects a set of inequalities related to the properties of smooth convex functions that I found extremely useful in convex analysis. We will consider two simple applications of them in proofs of gradient descent and proximal gradient descent.
+excerpt: This note collects a set of inequalities for smooth convex functions. As an introduction, we shall prove the convergence of gradient descent method using some of these inequalities. In particular, we show that gradient descent with fixed step size converges to a global minimum at a sublinear rate when the objective is smooth convex, and at a linear rate when strong convexity is added. It is also surprising to me that while the loose bound, $1-\mu/L$, is commonly used in standard convex analysis, the tight bound, $(1-\mu/L)^2$, is a lesser known fact and can hardly be found in notes/lectures on this topic.
 enable: true
 <!--tags:
   - convex optimization
@@ -14,7 +14,7 @@ enable: true
 ---
 # 1. Properties of smooth convex functions
 
-Let $\DeclareMathOperator*{\argmin}{argmin} \newcommand{\norm}[1]{\left\lVert#1\right\rVert} \newcommand{\bm}[1]{\boldsymbol#1} f: \mathbb{R}^n \rightarrow \mathbb{R}$ be a continuous and twice differentiable function and $\norm{\cdot}$ denote the Euclidean norm. For any points $\bm x, \bm y \in \mathbb{R}^n$ and a constant $\alpha \in [0,1]$, we have: 
+Let $\DeclareMathOperator*{\argmin}{argmin} \newcommand{\norm}[1]{\left\lVert#1\right\rVert} \newcommand{\bm}[1]{\boldsymbol#1} f: \mathbb{R}^n \rightarrow \mathbb{R}$ be a continuous and twice differentiable function and $\norm{\cdot}$ denote the Euclidean norm. In the following theorems, we assume $\bm x, \bm y \in \mathbb{R}^n$ and $\alpha \in [0,1]$ are arbitrary.
 
 Theorem 1.
 : $f$ is convex if and only if one of the following conditions holds:
@@ -45,21 +45,33 @@ Theorem 4.
 \langle \nabla f(\bm x)-\nabla f(\bm y),\bm x - \bm y  \rangle \geq \frac{\mu L}{L+\mu} \norm{\bm x - \bm y }^2+\frac{1}{L+\mu}\norm{\nabla f(\bm x)-\nabla f(\bm y)}^2. 
 \end{align}
 
-Proofs of the above theorems can be found in [1], Chapter 2. The most common inequalities we see in literature are the linear and quadratic bounds on the function. Let us consider two simple applications of those inequalities in the following sections.
+Proofs of the above theorems can be found in [1], Chapter 2. In the following section, we shall look at a simple application of some particular inequalities to the convergence gradient descent.
 
 # 2. Convergence of gradient descent (GD)
 
-In this section, we consider a fixed step size gradient descent method to minimize a smooth convex function $f$. At $k$-th iteration, the GD update is given by:
+We consider a fixed step size gradient descent method to minimize a smooth convex function $f$. At $k$-th iteration, the GD update is given by:
 
-$$ \bm x^k=\bm x^{k-1}- \frac{1}{L} \nabla f (\bm x^{k-1}) . $$
+$$ \bm x^k = \bm x^{k-1} - \frac{1}{L} \nabla f (\bm x^{k-1}) . $$
 
-Let $\bm x^\star = \argmin_{\bm x \in \mathbb{R}^n} f(\bm x)$. For notational simplicity, denote $f^k=f(\bm x^k)$, $\nabla f^k=\nabla f(\bm x^k)$ and $f^\star=f(\bm x^\star)$. Then by the smoothness of $f$ at $\bm x^k$, we obtain a descent guarantee of GD:
+For notational simplicity, denote $f^k=f(\bm x^k)$, $\nabla f^k=\nabla f(\bm x^k)$. Then by the smoothness of $f$ at $\bm x^k$, we obtain a descent guarantee of GD:
 
 \begin{align} f^k &\leq f^{k-1} + \langle \nabla f^{k-1}, \bm x^k- \bm x^{k-1} \rangle  + \frac{L}{2} \norm{\bm x^k- \bm x^{k-1}}^2 \\\\\\
 &= f^{k-1} - \langle \nabla f^{k-1}, \frac{1}{L} \nabla f^{k-1} \rangle  + \frac{L}{2} \norm{\frac{1}{L} \nabla f^{k-1}}^2 \\\\\\
 &= f^{k-1} - \frac{1}{2L} \norm{\nabla f^{k-1}}^2 . \tag{1} \label{descent} \end{align}
 
-Combining with the strong convexity of $f$ at $\bm x^{k-1}$ yields
+Rearranging terms in (\ref{descent}) yields
+
+$$ \norm{\nabla f^{k-1}}^2 \leq 2L(f^{k-1} - f^k) . $$
+
+Summing over all $k=1,\ldots,K$ (telescoping), we have
+
+$$ \sum_{k=1}^K \norm{\nabla f^{k-1}}^2 \leq 2L(f^0 - f^K) \leq 2L(f^0 - f^\star) . $$
+
+where $f^\star = \min_{\bm x \in \mathbb{R}^n} f(\bm x)$. It can be seen that $\lim_{k \to \infty} \norm{\nabla f^{k}} = 0$. Thus, GD converges to a first-order stationary point of $f$. Notice that the above analysis holds for any smooth functions and does not require convexity. After $K$ iterations, the minimum norm of the gradient is bounded by
+
+$$ \min_{k=1,\ldots,K} \norm{\nabla f^{k-1}} \leq \sqrt{\frac{2L(f^0 - f^\star)}{K}} . $$
+
+In other words, GD takes at most $O(1/\epsilon^2)$ iterations to reach shrink $\norm{\nabla f(\bm x)}$ to $\epsilon$. Now if we use the convexity of $f$, it must be the case that GD converges to a global minimizer of $\bm x^\star$ of $f$, i.e., $f(\bm x^\star) = f^\star$. If we think of the convexity as a special case of the strong convexity with $\mu=0$, then applying Theorem 3-3 to the first term on the RHS of (\ref{descent}) yields
 
 \begin{align} f^k &\leq \biggl( f^{\star} - \langle \nabla f^{k-1}, \bm x^{\star}- \bm x^{k-1} \rangle - \frac{\mu}{2} \norm{\bm x^{\star} - \bm x^{k-1}}^2 \biggr) - \frac{1}{2L} \norm{\nabla f^{k-1}}^2 \\\\\\
 &= f^{\star} + \langle \nabla f^{k-1}, \bm x^{k-1}- \bm x^{\star} \rangle - \frac{1}{2L} \norm{\nabla f^{k-1}}^2 - \frac{\mu}{2} \norm{\bm x^{\star}- \bm x^{k-1}}^2 \\\\\\
@@ -70,13 +82,17 @@ Thus, we can bound the distance on the function side by:
 
 $$ f^k-f^{\star} \leq \frac{L}{2} \bigg( \Big( 1-\frac{\mu}{L} \Big) \norm{\bm x^{k-1}- \bm x^{\star}}^2 - \norm{\bm x^{k}- \bm x^{\star}}^2 \bigg) . \tag{2} \label{bound_f} $$
 
-Since $f$ is convex, there are two possibilities:
-1. If $\mu=0$, then (\ref{bound_f}) is equivalent to $f^k-f^{\star} \leq \frac{L}{2} \biggl( \norm{\bm x^{k-1} - \bm x^{\star}}^2 - \norm{\bm x^{k}- \bm x^{\star}}^2 \biggr)$. Summing over all $k=1,\ldots,K$ yields the sublinear convergence
-\begin{align} f^K - f^{\star} \leq \frac{1}{K} \sum_{k=1}^K f^k - f^{\star} \leq \frac{L}{2K} \norm{\bm x^0- \bm x^{\star}}^2 . \end{align}
-2. If $\mu>0$, then (\ref{bound_f}) implies $\big( 1-\frac{\mu}{L} \big) \norm{\bm x^{k-1}- \bm x^{\star}}^2 - \norm{\bm x^k- \bm x^{\star}}^2 \geq 0$. A simple recursion can lead to the linear convergence
-\begin{align} \norm{\bm x^k- \bm x^{\star}} \leq \Bigl( 1-\frac{\mu}{L} \Bigr)^{k/2} \norm{\bm x^0- \bm x^{\star}} . \tag{3} \label{domain_side} \end{align}
+1. If $\mu=0$, then (\ref{bound_f}) is equivalent to $f^k-f^{\star} \leq \frac{L}{2} \Bigl( \norm{\bm x^{k-1} - \bm x^{\star}}^2 - \norm{\bm x^{k}- \bm x^{\star}}^2 \Bigr)$. Summing over all $k=1,\ldots,K$ yields
+\begin{align} f^K - f^{\star} \leq \frac{1}{K} \sum_{k=1}^K \bigl(f^k - f^{\star}\bigr) \leq \frac{L}{2K} \norm{\bm x^0- \bm x^{\star}}^2 . \end{align}
+Thus, GD takes at most $O(1/\epsilon)$ iterations to reach an $\epsilon$-optimal value, i.e., $f(\bm x)-f^\star \leq \epsilon$. This convergence is known as **sublinear**.
 
-Let us focus more in the second case where linear convergence is obtained. If we try to bound the error on the function side instead of the domain side, a similar bound can be obtained by applying inequalities 3 in Theorem 3 to (\ref{descent}):
+2. If $\mu>0$, $\bm x^\star$ is unique. Then (\ref{bound_f}) implies $\big( 1-\frac{\mu}{L} \big) \norm{\bm x^{k-1}- \bm x^{\star}}^2 - \norm{\bm x^k- \bm x^{\star}}^2 \geq 0$. A simple recursion can lead to an exponential bound
+\begin{align} \norm{\bm x^k- \bm x^{\star}} \leq \Bigl( 1-\frac{\mu}{L} \Bigr)^{k/2} \norm{\bm x^0- \bm x^{\star}} . \tag{3} \label{domain_side} \end{align}
+After $K$ iterations, in order to reach $\norm{\bm x^K- \bm x^{\star}} \leq \epsilon$, it is sufficient to have
+\begin{align} \Bigl( 1-\frac{\mu}{L} \Bigr)^{K/2} \norm{\bm x^0- \bm x^{\star}} \leq \epsilon \qquad \Leftrightarrow \qquad K \geq \frac{2\log(\norm{\bm x^0- \bm x^{\star}}/\epsilon)}{\log(1/(1-\mu/L))} . \end{align}
+Thus, GD takes at most $O(\log(1/\epsilon))$ to reach an $\epsilon$-optimal solution. This convergence is known as **linear**, which is a lot faster than the sublinear convergence in the former case without strong convexity. Since $\log(1/(1-\mu/L)) \approx \mu/L$ when the condition number $\kappa = L/\mu$ is large, a good estimation of the number of iterations is often obtained by $K \approx 2\kappa \log(\norm{\bm x^0- \bm x^{\star}}/\epsilon)$.
+
+Let us now carefully examine the second case where linear convergence is obtained. If we try to bound the error on the function side instead of the domain side, a similar bound can be obtained by applying inequalities 3 in Theorem 3 to (\ref{descent}):
 \begin{align} f^{k-1}-f^k &\geq \frac{1}{2L} \norm{\nabla f^{k-1}}^2 = \frac{1}{2L} \norm{\nabla f^{k-1} - \nabla f^\star}^2 \\\\\\
 &\geq \frac{1}{2L} 2\mu \Bigl( f^{k-1} - f^\star - \langle \nabla f^\star , \bm x^{k-1} - \bm x^\star \rangle \Bigr) = \frac{\mu}{L} (f^{k-1}-f^{\star}) , \end{align}
 where we use the optimality condition $\nabla f^\star = \bm 0$. Rearranging terms and performing a simple recursion yields
@@ -100,51 +116,35 @@ We follows the proof of Theorem 2.1.15 in [1]:
 where in the first inequality we utilize Theorem 4. The proof for the function side follows from the fact that $f^k - f^\star \leq \frac{L}{2} \norm{\bm x^{k} - \bm x^\star}^2$. Note that the convergence rate on the domain side is $\sqrt{1 - \frac{2\mu}{L+\mu}}$.
 
 **Remark 1.** 
-- It is possible to show that the convergence rate on the domain side is $1-\mu/L$ [2]:
+- It is possible to show that the convergence rate on the domain side is $1-\mu/L$. The following is the tightest result I know for GD with fixed step size $1/L$, proved by Polyak [2]:
 \begin{align}
-&\norm{\bm x^k- \bm x^{\star}} \leq \Bigl(1-\frac{\mu}{L}\Bigr)^{k} \norm{\bm x^0- \bm x^{\star}}, \\ & f^k-f^{\star} \leq \frac{L}{2} \Bigl(1-\frac{\mu}{L}\Bigr)^{2k} \norm{\bm x^0- \bm x^{\star}}^2 .
+&\norm{\bm x^k- \bm x^{\star}} \leq \Bigl(1-\frac{\mu}{L}\Bigr)^{k} \norm{\bm x^0- \bm x^{\star}}, \\ & f^k-f^{\star} \leq \frac{L}{2} \Bigl(1-\frac{\mu}{L}\Bigr)^{2k} \norm{\bm x^0- \bm x^{\star}}^2 . \tag{5} \label{tight} 
 \end{align}
 - Following the same process as in Theorem 5, a larger step size $\eta=\frac{2}{L+\mu}$ results in the *optimal* rate of convergence for fixed step size GD:  
 \begin{align} &\norm{\bm x^k- \bm x^{\star}} \leq \Bigl(1-\frac{2\mu}{L+\mu}\Bigr)^k \norm{\bm x^0- \bm x^{\star}}, \\ &f^k-f^{\star} \leq \frac{L}{2} \Bigl(1-\frac{2\mu}{L+\mu}\Bigr)^{2k} \norm{\bm x^0- \bm x^{\star}}^2 . \end{align}
 - The following inequality intuitively describes the improvement in the rate of convergence (on the function side) we have seen in this section: 
 \begin{align} 1 - \frac{\mu}{L} > 1 - \frac{2\mu}{L+\mu} > \Bigl(1 - \frac{\mu}{L}\Bigr)^2 > \Bigl(1 - \frac{2\mu}{L+\mu}\Bigr)^2 . \end{align}
 
+# 3. Proof of the tight bound in (\ref{tight}) 
 
-# 3. Convergence of proximal gradient descent (PGD)
-Following Section 2, suppose our goal instead is to minimize an objective function $g(\bm x)=f(\bm x)+h(\bm x)$ where the regularization term $h: \mathbb{R}^n \to \mathbb{R}$ is convex but potentially non-smooth. Without further algorithmic details, we will go straight to the analysis of PGD algorithm by considering the following update
+By [Newton-Leibniz formula](https://encyclopediaofmath.org/wiki/Newton-Leibniz_formula), $f$ is twice differentiable implies
 
-$$ \bm x^k = \text{prox}_{h/L} \Big(\bm x^{k-1}-\frac{1}{L} \nabla f(\bm x^{k-1})\Big) , $$ 
+$$ \nabla f(\bm x^k) = \nabla f(\bm x^\star) + \int_0^1 \nabla^2 f\bigl(\bm x^\star + \tau (\bm x^k - \bm x^\star)\bigr) (x^k - \bm x^\star) d\tau  = \bm A_k (\bm x^k - \bm x^\star) , $$
 
-where the proximal operator is given by
+for some symmetric $\bm A_k \in \mathbb{R}^{n \times n}$ whose eigenvalues lie between $\mu$ and $L$. Therefore, we have
 
-$$ \text{prox}_{h/L}(\bm x) = \argmin_{\bm z \in \mathbb{R}^n} \biggl( \frac{1}{L} h(\bm z) + \frac{1}{2} \norm{\bm z - \bm x}^2 \biggr) . \tag{5} \label{proximal} $$
+$$ \bm x^k - \bm x^\star = \bm x^{k-1} - \frac{1}{L} \nabla f (\bm x^{k-1}) - \bm x^\star = \bm x^{k-1} - \bm A_{k-1} (\bm x^{k-1} - \bm x^\star) - x^\star = (\bm I_n - \frac{1}{L} \bm A_{k-1}) (\bm x^{k-1} - \bm x^\star) . $$
 
-At first it may look a little trickier than analyzing the plain GD. However, one clever way to get around the proximal operator is to define the generalized gradient as
+Taking the norm and using the definition of [matrix norms induced by vector norms](https://en.wikipedia.org/wiki/Matrix_norm#Matrix_norms_induced_by_vector_norms), we obtain
 
-$$ \bm G(\bm x) = L \Bigl( \bm x - \text{prox}_{h/L} \bigl(\bm x-\frac{1}{L} \nabla f(\bm x) \bigr) \Bigr) . $$
+$$ \norm{\bm x^k - \bm x^\star} \leq \norm{\bm I_n - \frac{1}{L} \bm A_{k-1}}_2 \norm{\bm x^{k-1} - \bm x^\star} \leq \Bigl(1-\frac{\mu}{L}\Bigr) \norm{\bm x^{k-1} - \bm x^\star} , $$
 
-Now the PGD update becomes
+where the last inequality stems from all eigenvalues of $\bm I_n - \frac{1}{L} \bm A_{k-1}$ are of the form $1-\lambda/L$, with $\mu \leq \lambda \leq L$ being some eigenvalue of $\bm A_{k-1}$. 
 
-$$ \bm x^k = \bm x^{k-1} - \frac{1}{L} \bm G(\bm x^{k-1}) . $$
 
-We can perform similar derivation as follows
 
-\begin{align}
-g^k &= f^k+h^k \leq \bigg( f^{k-1} - \langle \nabla f^{k-1}, \frac{1}{L} \bm G^{k-1} \rangle + \frac{1}{2L} \norm{\bm G^{k-1}}^2 \bigg) + \bigg( h^{\star} + \langle \partial h^k, \bm x^k- \bm x^{\star} \rangle \bigg) \\\\\\
-&\leq \bigg( f^{\star} + \langle \nabla f^{k-1}, \bm x^{k-1}- \bm x^{\star} \rangle - \frac{\mu}{2} \norm{\bm x^{k-1}- \bm x^{\star}}^2 \bigg) - \langle \nabla f^{k-1}, \frac{1}{L} \bm G^{k-1} \rangle \\\\\\
-&\qquad + \frac{1}{2L} \norm{\bm G^{k-1}}^2 + h^{\star} + \langle \partial h^k, \bm x^k- \bm x^{\star} \rangle \\\\\\
-&= g^{\star} + \langle \nabla f^{k-1} + \partial h^k, \bm x^k- \bm x^{\star} \rangle + \frac{1}{2L} \norm{\bm G^{k-1}}^2 - \frac{\mu}{2} \norm{\bm x^{k-1}- \bm x^{\star}}^2 .
-\end{align}
 
-Using first-order optimality condition on (\ref{proximal}), we have $\bm G^{k-1}-\nabla f^{k-1} \in \partial h^{k}$. Substituting into the second term yields
 
-\begin{align}
-g^k &\leq g^{\star} + \langle \bm G^{k-1}, \bm x^k- \bm x^{\star} \rangle + \frac{1}{2L} \norm{\bm G^{k-1}}^2 - \frac{\mu}{2} \norm{\bm x^{k-1}- \bm x^{\star}}^2 \\\\\\
-&= g^{\star} + \langle \bm G^{k-1}, \bm x^{k-1}- \bm x^{\star} \rangle - \frac{1}{2L} \norm{\bm G^{k-1}}^2 - \frac{\mu}{2} \norm{\bm x^{k-1}- \bm x^{\star}}^2 \\\\\\
-\Rightarrow g^k - g^\star &\leq \frac{L}{2} \bigg( \big( 1-\frac{\mu}{L} \big) \norm{\bm x^{k-1}- \bm x^{\star}}^2 - \norm{\bm x^{k}- \bm x^{\star}}^2 \bigg) .
-\end{align}
-
-Here upon we recover the same analysis in Section 2. 
 
 
 ## References
