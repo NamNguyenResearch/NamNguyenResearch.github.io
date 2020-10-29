@@ -52,19 +52,23 @@ This completes our proof. $\qquad \blacksquare$
 
 
 # 2. Principle angles between two subspaces
-Unlike the eigenvalues, the eigenvectors are not stable under perturbation, especially when the eigenvalues are not well-separated. In order to measure the change in the eigenvectors, one may first think about the distance between $\tilde{\bm U_1}$ and $\bm U_1$, say $\norm{\tilde{\bm U_1} - \bm U_1}_F$. However, this does not take into account the rotation after perturbation. Thus, it is more accurate to measure the distance between the invariant subspaces spanned by the columns of $\tilde{\bm U_1}$ and $\bm U_1$. Let us formally define this distance as follows. Consider two tall matrices $\bm A, \bm B \in \mathbb{R}^{n \times r}$ with orthonormal columns, i.e., $\bm A^T \bm A = \bm B^T \bm B = \bm I_r$. Denote their ranges by $\mathcal{A}$ and $\mathcal{B}$, respectively. The principle angles between $\mathcal{A}$ and $\mathcal{B}$ are the angles $\theta_1,\ldots,\theta_r$ such that $\cos \theta_1,\ldots,\cos \theta_r$ are the singular values of $\bm A^T \bm B$. In other words, we have the singular value decomposition (SVD)
+Unlike the eigenvalues, the eigenvectors are not stable under perturbation, especially when the eigenvalues are not well-separated. In order to measure the change in the eigenvectors, one may first think about the distance between $\tilde{\bm U_1}$ and $\bm U_1$, say $\norm{\tilde{\bm U_1} - \bm U_1}_F$. However, this does not take into account the rotation after perturbation. Thus, it is more accurate to measure the distance between the invariant subspaces spanned by the columns of $\tilde{\bm U_1}$ and $\bm U_1$. Let us formally define this distance as follows. Consider two tall matrices $\bm A, \bm B \in \mathbb{R}^{n \times r}$ with orthonormal columns, i.e., $\bm A^T \bm A = \bm B^T \bm B = \bm I_r$. Denote their ranges by $\mathcal{A}$ and $\mathcal{B}$, respectively. The principle angles between $\mathcal{A}$ and $\mathcal{B}$ are the angles $\theta_1,\ldots,\theta_r$ such that $\cos \theta_1,\ldots,\cos \theta_r$ are the singular values of $\bm A^T \bm B$, which are at most $1$ since $\norm{\bm A^T \bm B}_2 \leq 1$. In other words, we have the singular value decomposition (SVD)
 
-$$ \bm A^T \bm B = \bm U \text{diag}(\cos \theta_1,\ldots,\cos \theta_r) \bm V^T = \bm U \cos \bm \theta \bm V^T. $$
+$$ \bm A^T \bm B = \bm U \text{diag}(\cos \theta_1,\ldots,\cos \theta_r) \bm V^T = \bm U \cos \bm \theta \bm V^T, $$
 
-It is also possible to show that $\sin \theta_1, \ldots, \sin \theta_r$ are the singular values of $\bm P_A (\bm I_n - \bm P_B)$:
+for some orthogonal matrices $\bm U, \bm V \in \mathbb{R}^{r \times r}$.
+Let $\bar{\bm B}$ is the orthogonal complement of $\bm B$, i.e., $\bm B \bm B^T + \bar{\bm B} \bar{\bm B}^T = \bm I_n$. Since 
 
-$$ \bm P_A (\bm I_n - \bm P_B) = \bm A \bm U \text{diag}(\sin \theta_1,\ldots,\sin \theta_r) \bm V^T \bm B^T = \bm U \sin \bm \theta \bm V^T . $$
+$$\bm A^T \bm B \bm B^T \bm A + \bm A^T \bar{\bm B} \bar{\bm B}^T \bm A = \bm A^T (\bm B \bm B^T + \bar{\bm B} \bar{\bm B}^T) \bm A = \bm A^T \bm A = \bm I_n , $$
 
-Now we are ready to define the distance between $\mathcal{A}$ and $\mathcal{B}$ as
+we have
 
-$$ d(\mathcal{A},\mathcal{B}) = \norm{\sin \bm \theta}_F = \frac{1}{\sqrt{2}} \norm{\bm P_A - \bm P_B}_F = \norm{\bm A^T \bar{\bm B}}_F  $$
+$$ \bm A^T \bar{\bm B} (\bm A^T \bar{\bm B})^T = \bm I_n - \bm U \cos^2 \bm \theta \bm U^T = \bm U \sin^2 \bm \theta \bm U^T \quad \text{ or } \quad \bm A^T \bar{\bm B} = \bm U \sin \bm \theta \bar{\bm V}^T , $$
 
-where $\bar{\bm B}$ is the orthogonal complement of $\bm B$, i.e., $\bm P_B + \bm P_{\bar B} = \bm I_n$. 
+for some semi-orthogonal matrix $\bar{\bm V} \in \mathbb{R}^{(n-r) \times r}$.
+Let $\bm P_A = \bm A \bm A^T$ and $\bm P_B = \bm B \bm B^T$. We can define the distance between $\mathcal{A}$ and $\mathcal{B}$ as
+
+$$ d(\mathcal{A},\mathcal{B}) = \norm{\sin \bm \theta}_F = \frac{1}{\sqrt{2}} \norm{\bm P_A - \bm P_B}_F = \norm{\bm A^T \bar{\bm B}}_F . $$
 
 
 # 3. Orthogonal Procrustes problem
@@ -73,17 +77,22 @@ where $\bar{\bm B}$ is the orthogonal complement of $\bm B$, i.e., $\bm P_B + \b
   <img alt="Procrustes" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/The_Modern_Bed_of_Procustes_-_Punch_cartoon_-_Project_Gutenberg_eText_13961.png/440px-The_Modern_Bed_of_Procustes_-_Punch_cartoon_-_Project_Gutenberg_eText_13961.png">
 </p>
 
-There is an interesting relationship between the subspace distance and their corresponding basis matrix distance. In particular, we can show that 
+There is an interesting relationship between the subspace distance and their corresponding basis matrices. In particular, by trying to map the basis of $\bm A$ to $\bm B$ using an orthogonal transformation, one can consider the following optimization problem:
 
+$$ \min_{\bm R \in \mathbb{R}^{r \times r}: \bm R^T \bm R = \bm I_r} \norm{\bm A \bm R - \bm B}_F^2 . $$
+
+Using the property of the Frobenius norm, we can compute
+
+$$ \norm{\bm A \bm R - \bm B}_F^2 = 2r - \text{tr}(\bm R^T \bm A^T \bm B) = 2r - \text{tr} (\bm R^T \bm U \cos \bm \theta \bm V^T) = 2r - \text{tr}\bigl( (\bm U^T \bm R \bm V)^T \bm \cos \theta \bigr) .
 $$
-\min_{\bm R \in \mathbb{R}^{r \times r}: \bm R^T \bm R = \bm I_r} \norm{\bm A \bm R - \bm B}_F^2 = 2r - \max_{\bm R \in \mathbb{R}^{r \times r}: \bm R^T \bm R = \bm I_r} \text{tr}(\bm R^T \bm A^T \bm B)$$
 
-$$ = 2r - \max_{\bm R \in \mathbb{R}^{r \times r}: \bm R^T \bm R = \bm I_r} \text{tr}\bigl( (\bm U^T \bm R \bm V)^T \bm \cos \theta \bigr) \leq 2 d^2(\mathcal{A},\mathcal{B}) .
-$$
-
-This result is known as the [orthogonal Procrustes problem](https://en.wikipedia.org/wiki/Orthogonal_Procrustes_problem). The minimizer of the LHS is given by
+The above is known as the [orthogonal Procrustes problem](https://en.wikipedia.org/wiki/Orthogonal_Procrustes_problem) and the minimizer satisfies $\bm U^T \bm R \bm V = \bm I_r$. Specifically, we have
 
 $$ \hat{\bm R} = \bm U \bm V^T = \bm C (\bm C^T \bm C)^{-\frac{1}{2}}, \quad \text{ where } \bm C = \bm A^T \bm B . $$
+
+It can be seen that at the optimum, 
+
+$$ \norm{\bm A \hat{\bm R} - \bm B}_F^2 = 2r - \sum_{i=1}^r \cos \theta_i \leq 2r - \sum_{i=1}^r \cos^2 \theta_i = 2 \sum_{i=1}^r \sin^2 \theta_i = 2 d^2(\mathcal{A},\mathcal{B}) . $$
 
 
 # 4. The $\sin \bm \theta$ theorem
@@ -111,6 +120,12 @@ Let $\bm M$ and $\tilde{\bm M}$ be two symmetric matrices with EVDs (\ref{M}) an
 
 $$ \norm{\sin \bm \theta(\tilde{\bm U}_1, \bm U_1)}_F \leq \frac{\norm{\bm \Delta \bm U_1}_F}{\delta} . $$
 
+By Weyl's theorem, one can show that the sufficient (but not necessary) condition for $\delta > 0$ in Davis-Kahan theorem is 
+
+$$\norm{\bm \Delta}_2 < \min_{1 \leq i \leq r, r \leq j \leq n} \abs{\lambda_i - \tilde{\lambda}_j} .$$
+
+When the matrices are not symmetric, there exists a generalized version of Theorem~1, called Wedin's theorem:
+
 **Theorem 2. (Wedin theorem [2])**
 
 Let $\bm M$ and $\tilde{\bm M} \in \mathbb{R}^{m \times n}$ be two matrices with rank-$r$ SVDs:
@@ -122,8 +137,7 @@ If $$\delta = \min \{ \min_{1 \leq i \leq r, r \leq j \leq n}  \abs{\sigma_i - \
 
 $$ \norm{\sin \bm \theta(\tilde{\bm U}_1, \bm U_1)}_F^2 + \norm{\sin \bm \theta(\tilde{\bm V}_1, \bm V_1)}_F^2 \leq \frac{\norm{\bm U_1^T \bm \Delta}_F^2 + \norm{\bm \Delta \bm V_1}_F^2}{\delta^2} . $$
 
-In both theorems, note that no ordering on the eigenvalues/singular values is required. Furthermore, by Weyl's theorem, one can show that the sufficient (but not necessary) condition for $\delta > 0$ in Davis-Kahan theorem is 
-$$\norm{\bm \Delta}_2 < \min_{1 \leq i \leq r, r \leq j \leq n} \abs{\lambda_i - \tilde{\lambda}_j} .$$
+In both theorems, note that no ordering on the eigenvalues/singular values is required. 
 
 
 ## References
