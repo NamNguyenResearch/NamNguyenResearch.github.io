@@ -17,11 +17,12 @@ Currently, I am working on the analysis of iterative hard thresholding for low-r
 
 > ## News and Updates
 * **2020**
+	* <span style='color: red'>**09/16**:</span> Check out our preprint ["Perturbation Expansions and Error Bounds for the Truncated Singular Value Decomposition"](https://arxiv.org/abs/2009.07542)!
 	* <span style='color: red'>**04/09**:</span> Our paper ["A Novel Attribute-based Symmetric Multiple Instance Learning for Histopathological Image Analysis"](https://ieeexplore.ieee.org/document/9067062) was accepted to [IEEE Transactions on Medical Imaging](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=42)!
 * **2019**
 	* **10/17**: I received the Student Paper Award (2nd place) at MLSP 2019, Pittsburgh!
 	* **08/01**: Our paper ["On Convergence of Projected Gradient Descent for Minimizing a Large-scale Quadratic over the Unit Sphere"](/publications#MLSP2019) has been accepted to [MLSP 2019](https://www.ieeemlsp.cc/)!
-	* **02/15**: I am fortunate to receive the [IEEE Signal Processing Society Travel Grant](https://signalprocessingsociety.org/events/sps-travel-grants) for [ICASSP 2019](https://2019.ieeeicassp.org). See you, London!
+	* **02/15**: I am fortunate to receive the [IEEE Signal Processing Society Travel Grant](https://signalprocessingsociety.org/events/sps-travel-grants) for [ICASSP 2019](https://2019.ieeeicassp.org).
 	* **02/01**: Our two papers ["Accelerating Iterative Hard Thresholding for Low-Rank Matrix Completion via Adaptive Restart"](/publications#ICASSP2019_NAG) and ["Local Convergence of the Heavy Ball method in Iterative Hard Thresholding for Low-Rank Matrix Completion"](/publications#ICASSP2019_HB) were accepted to [ICASSP 2019](https://2019.ieeeicassp.org)!
 * **2018**
 	* **03/27**: Our paper ["Adaptive Step Size Momentum Method for Deconvolution"](/publications#SSP2018) was accepted to [SSP 2018](https://ssp2018.org/). This is my ***first*** paper since I came to OSU. Check it out [here](https://ieeexplore.ieee.org/document/8450762)! 
