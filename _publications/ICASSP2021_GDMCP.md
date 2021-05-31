@@ -10,5 +10,6 @@ citation: 'Trung Vu, Raviv Raich. &quot;Exact Linear Convergence Rate Analysis f
 pdf: '/files/ICASSP21_GDMCP.pdf'
 slides: '/files/ICASSP21_Slides.pdf'
 poster: '/files/ICASSP21_Poster.pdf'
-paperurl: 'https://arxiv.org/abs/2102.02396'
+code: '/files/icassp21.m'
+paperurl: 'https://ieeexplore.ieee.org/document/9413419'
 ---
