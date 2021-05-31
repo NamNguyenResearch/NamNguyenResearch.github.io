@@ -16,9 +16,11 @@ Currently, I am working on the analysis of iterative hard thresholding for low-r
 
 
 > ## News and Updates
+* **2021**
+	* <span style='color: red'>**05/24**:</span> Our journal ["Perturbation Expansions and Error Bounds for the Truncated Singular Value Decomposition"](https://arxiv.org/abs/2009.07542) was accepted to [Linear Algebra and Its Applications](https://www.journals.elsevier.com/linear-algebra-and-its-applications)!
+	* <span style='color: red'>**01/29**:</span> Our paper ["Exact Linear Convergence Rate Analysis for Low-Rank Matrix Completion via Gradient Descent"](https://ieeexplore.ieee.org/document/9413419) was accepted to [ICASSP 2021](https://2021.ieeeicassp.org/)!	
 * **2020**
-	* <span style='color: red'>**09/16**:</span> Check out our preprint ["Perturbation Expansions and Error Bounds for the Truncated Singular Value Decomposition"](https://arxiv.org/abs/2009.07542)!
-	* <span style='color: red'>**04/09**:</span> Our paper ["A Novel Attribute-based Symmetric Multiple Instance Learning for Histopathological Image Analysis"](https://ieeexplore.ieee.org/document/9067062) was accepted to [IEEE Transactions on Medical Imaging](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=42)!
+	* **04/09**: Our paper ["A Novel Attribute-based Symmetric Multiple Instance Learning for Histopathological Image Analysis"](https://ieeexplore.ieee.org/document/9067062) was accepted to [IEEE Transactions on Medical Imaging](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=42)!
 * **2019**
 	* **10/17**: I received the Student Paper Award (2nd place) at MLSP 2019, Pittsburgh!
 	* **08/01**: Our paper ["On Convergence of Projected Gradient Descent for Minimizing a Large-scale Quadratic over the Unit Sphere"](/publications#MLSP2019) has been accepted to [MLSP 2019](https://www.ieeemlsp.cc/)!
