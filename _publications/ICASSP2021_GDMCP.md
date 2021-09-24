@@ -12,4 +12,12 @@ slides: '/files/ICASSP21_Slides.pdf'
 poster: '/files/ICASSP21_Poster.pdf'
 code: '/files/icassp21.m'
 paperurl: 'https://ieeexplore.ieee.org/document/9413419'
+bibtex: '@inproceedings{vu2021exact,<br />
+  &emsp;title={Exact Linear Convergence Rate Analysis for Low-Rank Symmetric Matrix Completion via Gradient Descent},<br />
+  &emsp;author={Vu, Trung and Raich, Raviv},<br />
+  &emsp;booktitle={IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},<br />
+  &emsp;pages={3240--3244},<br />
+  &emsp;year={2021},<br />
+  &emsp;organization={IEEE}<br />
+}'
 ---
