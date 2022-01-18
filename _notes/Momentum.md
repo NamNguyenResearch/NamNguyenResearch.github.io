@@ -123,7 +123,7 @@ Stacking the current iterate and the previous one and taking the norm yield
 \begin{align}
 \begin{bmatrix} \bm x^{(k+1)} \\\\\\ \bm x^{(k)} \end{bmatrix} = \begin{bmatrix} (1+\beta)\bm I_n - \alpha \bm \Lambda & -\beta \\\\\\ \bm 0 & \bm I_n \end{bmatrix} \begin{bmatrix} \bm x^{(k)} \\\\\\ \bm x^{(k-1)} \end{bmatrix} . 
 \end{align}
-Denote $\bm y^{(k)} = \begin{bmatrix} \bm x^{(k+1)} \\ \bm x^{(k)} \end{bmatrix}$ and $\bm T = \begin{bmatrix} (1+\beta)\bm I_n - \alpha \bm \Lambda & -\beta \\ \bm 0 & \bm I_n \end{bmatrix}$, we derive the exponential decrease in the norm of $\bm y$:
+Denote $\bm y^{(k)} = \begin{bmatrix} \bm x^{(k+1)} \\\\\\ \bm x^{(k)} \end{bmatrix}$ and $\bm T = \begin{bmatrix} (1+\beta)\bm I_n - \alpha \bm \Lambda & -\beta \\\\\\ \bm 0 & \bm I_n \end{bmatrix}$, we derive the exponential decrease in the norm of $\bm y$:
 
 $$ \norm{\bm y^{(k)}} = \norm{\bm T \bm y^{(k-1)}} = \norm{\bm T^k \bm y^{(0)}} \leq \norm{\bm T^k}_2 \norm{\bm y^{(0)}} \leq \bigl(\rho(\bm T) + o(1) \bigr)^k \norm{\bm y^{(0)}} , \tag{4} \label{equ:HB} $$
 
