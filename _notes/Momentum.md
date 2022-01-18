@@ -117,11 +117,11 @@ $$ \bm x^{(k+1)} = \bm x^{(k)} - \alpha \nabla f(\bm x^{(k)}) + \beta (\bm x^{(k
 
 On a standard quadratic, the update can be further simplified as
 
-$$ \bm x^{(k+1)} = \bm x^{(k)} - \alpha \bm \Lambda \bm x^{(k)} + \beta (\bm x^{(k)} - \bm x^{(k-1)}) = \bigl( (1+\beta) \bm I_n - \alpha \bm \Lambda \bigr) \bm x^{(k)} - \beta \bm x^{(k+1)} . $$
+$$ \bm x^{(k+1)} = \bm x^{(k)} - \alpha \bm \Lambda \bm x^{(k)} + \beta (\bm x^{(k)} - \bm x^{(k-1)}) = \bigl( (1+\beta) \bm I_n - \alpha \bm \Lambda \bigr) \bm x^{(k)} - \beta \bm x^{(k-1)} . $$
 
 Stacking the current iterate and the previous one and taking the norm yield
 \begin{align}
-\begin{bmatrix} \bm x^{(k+1)} \\ \bm x^{(k)} \end{bmatrix} = \begin{bmatrix} (1+\beta)\bm I_n - \alpha \bm \Lambda & -\beta \\ \bm 0 & \bm I_n \end{bmatrix} \begin{bmatrix} \bm x^{(k)} \\ \bm x^{(k-1)} \end{bmatrix} . 
+\begin{bmatrix} \bm x^{(k+1)} \\\\\\ \bm x^{(k)} \end{bmatrix} = \begin{bmatrix} (1+\beta)\bm I_n - \alpha \bm \Lambda & -\beta \\\\\\ \bm 0 & \bm I_n \end{bmatrix} \begin{bmatrix} \bm x^{(k)} \\\\\\ \bm x^{(k-1)} \end{bmatrix} . 
 \end{align}
 Denote $\bm y^{(k)} = \begin{bmatrix} \bm x^{(k+1)} \\ \bm x^{(k)} \end{bmatrix}$ and $\bm T = \begin{bmatrix} (1+\beta)\bm I_n - \alpha \bm \Lambda & -\beta \\ \bm 0 & \bm I_n \end{bmatrix}$, we derive the exponential decrease in the norm of $\bm y$:
 
