@@ -50,50 +50,50 @@ The maximum likelihood estimation aims to optimize the following objective funct
 
 $$ l(\bm w) = \log \prod_{i=1}^C p_i^{y_i} = \sum_{i=1}^C y_i \bm w_i^T \bm x - \log \Bigl( \sum_{i=1}^C e^{\bm w_i^T \bm x} \Bigr) . $$
 
-Thus we are interested in the gradient and the Hessian of $l(\bm w)$. The derivation of the two involves some simple but interesting algebra. First, let us begin with the derivative:
+For convenience, let us consider the minimization of the negative log likelihood $L(\bm w) = -l(\bm w)$. The derivation of the the gradient and the Hessian of $$L(\bm w)$ involves some simple but interesting algebra. First, we begin with the derivative:
 
-$$ \frac{\partial l(\bm w)}{\partial \bm w_i} = y_i \bm x_i - \frac{e^{\bm w_i^T \bm x}}{\sum_{j=1}^C e^{\bm w_j^T \bm x}} \bm x_i = (y_i - p_i) \bm x \quad \text{ for } i=1,\ldots,C . $$
+$$ \frac{\partial L(\bm w)}{\partial \bm w_i} = -y_i \bm x_i + \frac{e^{\bm w_i^T \bm x}}{\sum_{j=1}^C e^{\bm w_j^T \bm x}} \bm x_i = (p_i - y_i) \bm x \quad \text{ for } i=1,\ldots,C . $$
 
 In vector form, the gradient can be represented thanks to the notion of [Kronecker product](https://en.wikipedia.org/wiki/Kronecker_product):
 
-$$ \nabla l(\bm w) = (\bm y - \bm p) \otimes \bm x . \tag{2} \label{gradient} $$
+$$ \nabla L(\bm w) = (\bm p - \bm y) \otimes \bm x . \tag{2} \label{gradient} $$
 
 Now we compute the Hessian following a similar calculation of the gradient of the softargmax function in Section 1:
 
-$$ \frac{\partial^2 l(\bm w)}{\bm w_j \bm w_i^T} = \frac{\partial}{\partial \bm w_j} \big( (y_i - p_i) \bm x \bigr)^T = \frac{\partial p_i(\bm w)}{\partial \bm w_j} \bm x^T = \frac{\partial \bigl( \bm \sigma(\bm z) \bigr)_i}{\partial z_j} \frac{\bm w_j^T \bm x}{\bm w_j} \bm x^T = (p_i - p_i p_j) \bm x \bm x^T . $$
+$$ \frac{\partial^2 L(\bm w)}{\bm w_j \bm w_i^T} = \frac{\partial}{\partial \bm w_j} \big( (p_i - y_i) \bm x \bigr)^T = \frac{\partial p_i(\bm w)}{\partial \bm w_j} \bm x^T = \frac{\partial \bigl( \bm \sigma(\bm z) \bigr)_i}{\partial z_j} \frac{\bm w_j^T \bm x}{\bm w_j} \bm x^T = (p_i - p_i p_j) \bm x \bm x^T . $$
 
 From here, we come up with a lesser-known form of the Hessian
 
-$$ \nabla^2 l(\bm w) = \bigl(\bm D(\bm p) - \bm p \bm p^T \bigr) \otimes \bm x \bm x^T . \tag{3} \label{hessian} $$
+$$ \nabla^2 L(\bm w) = \bigl(\bm D(\bm p) - \bm p \bm p^T \bigr) \otimes \bm x \bm x^T . \tag{3} \label{hessian} $$
 
 Finally, when there are multiple observations the fomulas (\ref{gradient}) and (\ref{hessian}) can be extended to the average sum over all observations:
 
 \begin{align}
-	\nabla l(\bm w) &= \frac{1}{N} \sum_{n=1}^N (\bm y_n - \bm p_n) \otimes \bm x_n , \\\\\\
-	\nabla^2 l(\bm w) &=  \frac{1}{N} \sum_{n=1}^N \bigl(\bm D(\bm p_n) - \bm p_n \bm p_n^T \bigr) \otimes \bm x_n \bm x_n^T .
+	\nabla L(\bm w) &= \frac{1}{N} \sum_{n=1}^N (\bm y_n - \bm p_n) \otimes \bm x_n , \\\\\\
+	\nabla^2 L(\bm w) &=  \frac{1}{N} \sum_{n=1}^N \bigl(\bm D(\bm p_n) - \bm p_n \bm p_n^T \bigr) \otimes \bm x_n \bm x_n^T .
 \end{align}
 
-The following theorem asserts that $l(\bm w)$ is a smooth convex function and hence, explains why MLR enjoys a nice global geometry on appropriately normalized data. 
+The following theorem asserts that $L(\bm w)$ is a smooth convex function and hence, explains why MLR enjoys a nice global geometry on appropriately normalized data. 
 
 Theorem 1.
 : Let $\bm X = [\bm x_1,\ldots,\bm x_N]^T \in \mathbb{R}^{N \times d}$. Then
-\begin{align} 0 \preceq \nabla^2 l(\bm w) \preceq \frac{1}{2} \Bigl( \bm I_C - \frac{1}{C} \bm 1_C \bm 1_C^T \Bigr) \otimes \frac{1}{N} \bm X^T \bm X . \tag{4} \label{bound_hessian} \end{align}
+\begin{align} 0 \preceq \nabla^2 L(\bm w) \preceq \frac{1}{2} \Bigl( \bm I_C - \frac{1}{C} \bm 1_C \bm 1_C^T \Bigr) \otimes \frac{1}{N} \bm X^T \bm X . \tag{4} \label{bound_hessian} \end{align}
 
 **Proof.**
 
 We use the following [property of Kronecker product](https://en.wikipedia.org/wiki/Kronecker_product#Abstract_properties): if $\bm A$ and $\bm B$ are square matrices of size $n \times n$ and $m \times m$, respectively, then the eigenvalues of $\bm A \otimes \bm B$ are of the form $\alpha_i \beta_j$ for $i=1,\ldots,n$ and $j=1,\ldots,m$, where $\alpha_i$ and $\beta_j$ are eigenvalues of $\bm A$ and $\bm B$. Thus by Lemma 1,
 
-$$ \lambda_{\min} \bigl(\nabla^2 l(\bm w)\bigr) = \frac{1}{N} \sum_{n=1}^N \min \lambda \bigl(\bm D(\bm p_n) - \bm p_n \bm p_n^T \bigr) \lambda (\bm x_n \bm x_n^T) \geq 0 ,$$
+$$ \lambda_{\min} \bigl(\nabla^2 L(\bm w)\bigr) = \frac{1}{N} \sum_{n=1}^N \min \lambda \bigl(\bm D(\bm p_n) - \bm p_n \bm p_n^T \bigr) \lambda (\bm x_n \bm x_n^T) \geq 0 ,$$
 
 and
 
-$$ \lambda_{\max} \bigl(\nabla^2 l(\bm w)\bigr) = \frac{1}{N} \sum_{n=1}^N \max \lambda \bigl(\bm D(\bm p_n) - \bm p_n \bm p_n^T \bigr) \lambda (\bm x_n \bm x_n^T) $$
+$$ \lambda_{\max} \bigl(\nabla^2 L(\bm w)\bigr) = \frac{1}{N} \sum_{n=1}^N \max \lambda \bigl(\bm D(\bm p_n) - \bm p_n \bm p_n^T \bigr) \lambda (\bm x_n \bm x_n^T) $$
 
 $$ \leq \max \lambda \biggl(\frac{1}{2} \Bigl( \bm I_C - \frac{1}{C} \bm 1_C \bm 1_C^T \Bigr)\biggl) \lambda \biggl(\frac{1}{N} \sum_{n=1}^N \bm x_n \bm x_n^T \biggr) $$
 
 $$ = \lambda_{\max} \biggl(\frac{1}{2} \Bigl( \bm I_C - \frac{1}{C} \bm 1_C \bm 1_C^T \Bigr) \otimes \frac{1}{N} \sum_{n=1}^N \bm x_n \bm x_n^T \biggr) . $$
 
-The lower and upper bounds on the eigenvalues of $\nabla^2 l(\bm w)$ imply (\ref{bound_hessian}). $\qquad \blacksquare$  
+The lower and upper bounds on the eigenvalues of $\nabla^2 L(\bm w)$ imply (\ref{bound_hessian}). $\qquad \blacksquare$  
 
 The matrix $\bm R = \frac{1}{N} \bm X^T \bm X$ reminds us of the [autocorrelation matrix](https://en.wikipedia.org/wiki/Autocorrelation). Indeed, if the data is standardized to zero mean and unit variance, $\bm R$ gives an estimate on the matrix of [Pearson product-moment correlation coefficients](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient).  
 
