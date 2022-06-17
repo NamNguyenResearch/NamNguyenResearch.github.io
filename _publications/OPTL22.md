@@ -4,7 +4,7 @@ title: "A Closed-Form Bound on the Asymptotic Linear Convergence of Iterative Me
 author: "<strong>Trung Vu</strong> and Raviv Raich"
 collection: publications
 permalink: /publication/OPTL22
-date: 2022-06-16
+date: 2022-06-15
 venue: 'Linear Algebra and Its Applications'
 citation: 'Trung Vu and Raviv Raich. &quot;A Closed-Form Bound on the Asymptotic Linear Convergence of Iterative Methods via Fixed Point Analysis,&quot; Optim. Lett. (2022).'
 pdf: '/files/OPTL22.pdf'

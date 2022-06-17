@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 
-Hi, my name is Trung Vu. I am a fourth year Ph.D. candidate in [Computer Science](https://eecs.oregonstate.edu/) - AI / Machine Learning group - at [Oregon State University](https://oregonstate.edu/), advised by [Dr. Raviv Raich](https://web.engr.oregonstate.edu/~raich/). My research focuses on scalable optimization methods in machine learning and signal processing. I am passionate about the challenging problems that arise in the core of optimization methods such as the convergence properties and accommodation of acceleration. 
+Hi, my name is Trung Vu. I am a sixth year Ph.D. candidate in [Computer Science](https://eecs.oregonstate.edu/) - AI / Machine Learning group - at [Oregon State University](https://oregonstate.edu/), advised by [Dr. Raviv Raich](https://web.engr.oregonstate.edu/~raich/). My research focuses on scalable optimization methods in machine learning and signal processing. I am passionate about the challenging problems that arise in the core of optimization methods such as the convergence properties and accommodation of acceleration. 
 Currently, I am working on the analysis of iterative hard thresholding for low-rank matrix completion.
 {: .text-justify}
 
