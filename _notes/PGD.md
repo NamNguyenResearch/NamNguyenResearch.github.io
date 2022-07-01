@@ -1,7 +1,7 @@
 ---
 title: "Projected Gradient Descent"
 collection: notes
-permalink: /notes/2017/PGD
+permalink: /notes/2020/PGD
 date: 2020-09-13
 excerpt: As a follow-up from my previous note on convex optimization, this note studies the so-called projected gradient descent method and its sibling, proximal gradient descent. Using the fundamental inequalities from convex analysis, we shall show that both of the methods enjoy similar convergence properties to gradient descent for unconstrained optimization.
 enable: true
