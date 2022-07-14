@@ -16,9 +16,9 @@ Hi, my name is Trung Vu. I am a sixth-year Ph.D. candidate in [Computer Science]
 
 > ## News and Updates
 * **2022**
-	* <span style='color: red'>**07/12**:</span> Our paper ["On Asymptotic Linear Convergence of Projected Gradient Descent for Constrained Least Squares"](https://arxiv.org/abs/2112.11760) has been accepted to [IEEE Transactions on Signal Processing](https://signalprocessingsociety.org/publications-resources/ieee-transactions-signal-processing)!
+	* <span style='color: red'>**07/12**:</span> Our journal paper ["On Asymptotic Linear Convergence of Projected Gradient Descent for Constrained Least Squares"](https://arxiv.org/abs/2112.11760) has been accepted to [IEEE Transactions on Signal Processing](https://signalprocessingsociety.org/publications-resources/ieee-transactions-signal-processing)!
     * <span style='color: red'>**06/29**:</span> Our journal paper ["On Local Linear Convergence of Projected Gradient Descent for Unit-Modulus Least Squares"](https://arxiv.org/abs/2206.10832) is now available in arXiv!
-	* **06/16**:Our paper ["A Closed-Form Bound on the Asymptotic Linear Convergence of Iterative Methods via Fixed Point Analysis"](https://link.springer.com/article/10.1007/s11590-022-01893-7) has been accepted to [Optimization Letters](https://www.springer.com/journal/11590). The arXiv version is available [here](https://arxiv.org/abs/2112.10598).
+	* **06/16**: Our journal paper ["A Closed-Form Bound on the Asymptotic Linear Convergence of Iterative Methods via Fixed Point Analysis"](https://link.springer.com/article/10.1007/s11590-022-01893-7) has been accepted to [Optimization Letters](https://www.springer.com/journal/11590). The arXiv version is available [here](https://arxiv.org/abs/2112.10598).
 	* **01/29**: Our journal paper ["On Asymptotic Linear Convergence Rate of Iterative Hard Thresholding for Matrix Completion"](https://arxiv.org/abs/2112.14733) is now available in arXiv.
 * **2021**
 	* **05/24**: Our journal paper ["Perturbation Expansions and Error Bounds for the Truncated Singular Value Decomposition"](https://www.sciencedirect.com/science/article/pii/S0024379521002366) has been accepted to [Linear Algebra and Its Applications](https://www.journals.elsevier.com/linear-algebra-and-its-applications).
