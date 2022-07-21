@@ -9,7 +9,7 @@ venue: 'Linear Algebra and Its Applications'
 citation: 'Trung Vu, Evgenia Chunikhina, and Raviv Raich. &quot;Perturbation Expansions and Error Bounds for the Truncated Singular Value Decomposition,&quot; Linear Algebra and Its Applications (2021).'
 pdf: '/files/LAA21.pdf'
 code: '/files/laa21.m'
-paperurl: 'https://arxiv.org/abs/2009.07542'
+paperurl: 'https://www.sciencedirect.com/science/article/pii/S0024379521002366'
 bibtex: '@article{vu2021perturbation,<br />
   &emsp;title={Perturbation Expansions and Error Bounds for the Truncated Singular Value Decomposition},<br />
   &emsp;author={Vu, Trung and Chunikhina, Evgenia and Raich, Raviv},<br />
