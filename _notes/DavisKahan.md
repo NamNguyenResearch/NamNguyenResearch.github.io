@@ -25,7 +25,7 @@ Now let $\bm \Delta \in \mathbb{R}^{n \times n}$ be a small perturbation (symmet
 
 The [Weyl's theorem](https://en.wikipedia.org/wiki/Weyl%27s_inequality#Weyl's_inequality_in_matrix_theory) tells us that the eigenvalues are fairly stable under small perturbations:
 
-Theorem 1. 
+Theorem 1. (Weyl theorem) 
 : $\norm{\tilde{\bm \Lambda} - \bm \Lambda}_2 \leq \norm{\bm \Delta}_2 .$
 
 
@@ -112,7 +112,7 @@ where $\delta = \min_{1 \leq i \leq r, r \leq j \leq n}  \abs{\lambda_{1i} - \ti
 
 $$ \norm{\tilde{\bm U}_2^T \bm U_1}_F \leq \frac{\norm{\tilde{\bm U}_2^T \bm \Delta \bm U_1}_F}{\delta} . $$
 
-The above leads to the following theorems:
+The above leads to the following theorem:
 
 **Theorem 1. (Davis-Kahan theorem [1])**
 
@@ -120,11 +120,11 @@ Let $\bm M$ and $\tilde{\bm M}$ be two symmetric matrices with EVDs (\ref{M}) an
 
 $$ \norm{\sin \bm \theta(\tilde{\bm U}_1, \bm U_1)}_F \leq \frac{\norm{\bm \Delta \bm U_1}_F}{\delta} . $$
 
-By Weyl's theorem, one can show that the sufficient (but not necessary) condition for $\delta > 0$ in Davis-Kahan theorem is 
+By the Weyl's theorem, one can show that the sufficient (but not necessary) condition for $\delta > 0$ in Davis-Kahan theorem is 
 
-$$\norm{\bm \Delta}_2 < \min_{1 \leq i \leq r, r \leq j \leq n} \abs{\lambda_i - \tilde{\lambda}_j} .$$
+$$0 < \norm{\bm \Delta}_2 < \min_{1 \leq i \leq r, r \leq j \leq n} \abs{\lambda_i - \lambda_j} .$$
 
-When the matrices are not symmetric, there exists a generalized version of Theorem~1, called Wedin's theorem:
+When the matrices are not symmetric, we have a generalized version of Theorem~1, called the Wedin's theorem:
 
 **Theorem 2. (Wedin theorem [2])**
 
@@ -137,7 +137,11 @@ If $$\delta = \min \{ \min_{1 \leq i \leq r, r \leq j \leq n}  \abs{\sigma_i - \
 
 $$ \norm{\sin \bm \theta(\tilde{\bm U}_1, \bm U_1)}_F^2 + \norm{\sin \bm \theta(\tilde{\bm V}_1, \bm V_1)}_F^2 \leq \frac{\norm{\bm U_1^T \bm \Delta}_F^2 + \norm{\bm \Delta \bm V_1}_F^2}{\delta^2} . $$
 
-In both theorems, note that no ordering on the eigenvalues/singular values is required. 
+By the Weyl's theorem for singular values, one can show that the sufficient (but not necessary) conditions for $\delta > 0$ in Wedin theorem are 
+
+$$\sigma_r>0 \text{ and } 0 < \norm{\bm \Delta}_2 < \min_{1 \leq i \leq r, r \leq j \leq n} \abs{\sigma_i - \sigma_j} .$$
+
+Finally, in both theorems, it is noted that no ordering on the eigenvalues/singular values is required. 
 
 
 ## References
