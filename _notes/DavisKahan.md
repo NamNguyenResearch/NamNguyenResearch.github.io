@@ -124,7 +124,7 @@ By the Weyl's theorem, one can show that the sufficient (but not necessary) cond
 
 $$0 < \norm{\bm \Delta}_2 < \min_{1 \leq i \leq r, r \leq j \leq n} \abs{\lambda_i - \lambda_j} .$$
 
-When the matrices are not symmetric, we have a generalized version of Theorem~1, called the Wedin's theorem:
+When the matrices are not symmetric, we have a generalized version of Theorem 1, called the Wedin's theorem:
 
 **Theorem 2. (Wedin theorem [2])**
 
