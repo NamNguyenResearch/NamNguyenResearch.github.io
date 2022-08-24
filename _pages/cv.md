@@ -11,7 +11,7 @@ redirect_from:
 
 [[pdf]](/files/CV_TrungVu.pdf)
 
-Education
+<!-- Education
 ======
 * Ph.D in Computer Science, Oregon State University, September 2022 (expected)
 * B.S. in Computer Science, Hanoi University of Science and Technology, 2014
@@ -50,6 +50,6 @@ Teaching Assistant
 ======
   <ul>{% for post in site.teaching reversed %}
     {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+  {% endfor %}</ul> -->
   
 
