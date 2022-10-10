@@ -50,7 +50,7 @@ The maximum likelihood estimation aims to optimize the following objective funct
 
 $$ l(\bm w) = \log \prod_{i=1}^C p_i^{y_i} = \sum_{i=1}^C y_i \bm w_i^T \bm x - \log \Bigl( \sum_{i=1}^C e^{\bm w_i^T \bm x} \Bigr) . $$
 
-For convenience, let us consider the minimization of the negative log likelihood $L(\bm w) = -l(\bm w)$. The derivation of the the gradient and the Hessian of $$L(\bm w)$ involves some simple but interesting algebra. First, we begin with the derivative:
+For convenience, let us consider the minimization of the negative log likelihood $L(\bm w) = -l(\bm w)$. The derivation of the the gradient and the Hessian of $L(\bm w)$ involves some simple but interesting algebra. First, we begin with the derivative:
 
 $$ \frac{\partial L(\bm w)}{\partial \bm w_i} = -y_i \bm x_i + \frac{e^{\bm w_i^T \bm x}}{\sum_{j=1}^C e^{\bm w_j^T \bm x}} \bm x_i = (p_i - y_i) \bm x \quad \text{ for } i=1,\ldots,C . $$
 
@@ -60,7 +60,7 @@ $$ \nabla L(\bm w) = (\bm p - \bm y) \otimes \bm x . \tag{2} \label{gradient} $$
 
 Now we compute the Hessian following a similar calculation of the gradient of the softargmax function in Section 1:
 
-$$ \frac{\partial^2 L(\bm w)}{\bm w_j \bm w_i^T} = \frac{\partial}{\partial \bm w_j} \big( (p_i - y_i) \bm x \bigr)^T = \frac{\partial p_i(\bm w)}{\partial \bm w_j} \bm x^T = \frac{\partial \bigl( \bm \sigma(\bm z) \bigr)_i}{\partial z_j} \frac{\bm w_j^T \bm x}{\bm w_j} \bm x^T = (p_i - p_i p_j) \bm x \bm x^T . $$
+$$ \frac{\partial^2 L(\bm w)}{\bm w_j \bm w_i^T} = \frac{\partial}{\partial \bm w_j} \big( (p_i - y_i) \bm x \bigr)^T = \frac{\partial p_i(\bm w)}{\partial \bm w_j} \bm x^T = \frac{\partial \bigl( \bm \sigma(\bm z) \bigr)_i}{\partial z_j} \frac{\bm w_j^T \bm x}{\bm w_j} \bm x^T = (I_{i=j} p_i - p_i p_j) \bm x \bm x^T . $$
 
 From here, we come up with a lesser-known form of the Hessian
 
@@ -97,6 +97,9 @@ The lower and upper bounds on the eigenvalues of $\nabla^2 L(\bm w)$ imply (\ref
 
 The matrix $\bm R = \frac{1}{N} \bm X^T \bm X$ reminds us of the [autocorrelation matrix](https://en.wikipedia.org/wiki/Autocorrelation). Indeed, if the data is standardized to zero mean and unit variance, $\bm R$ gives an estimate on the matrix of [Pearson product-moment correlation coefficients](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient).  
 
+
+## Acknowledgement
+I would like to thank [Magnus Wiese](magnus.wiese@protonmail.com) and [Neelesh Verma](neverma@cs.stonybrook.edu) for their feedback on this note.
 
 ## References
 > 1. D. Böhning, “Multinomial logistic regression algorithm,” Annals of the Institute of Statistical Mathematics, vol. 44, no. 1, pp. 197–200, 1992.
