@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 
-Hi, my name is Trung Vu. I am a Postdoctoral Research Fellow at [Department of Computer Science and Electrical Engineering](https://www.csee.umbc.edu/), [University of Maryland, Baltimore County](https://umbc.edu/), working with [Dr. Tülay Adali](https://redirect.cs.umbc.edu/~adali/). I completed my Ph.D. in [Computer Science](https://eecs.oregonstate.edu/) at [Oregon State University](https://oregonstate.edu/), advised by [Dr. Raviv Raich](https://web.engr.oregonstate.edu/~raich/). My research focuses on optimization theory, matrix analysis, and machine learning for signal processing. 
+Hi, my name is Trung Vu. I am a Postdoctoral Research Associate at [Department of Computer Science and Electrical Engineering](https://www.csee.umbc.edu/), [University of Maryland, Baltimore County](https://umbc.edu/), working with [Dr. Tülay Adali](https://redirect.cs.umbc.edu/~adali/). I completed my Ph.D. in [Computer Science](https://eecs.oregonstate.edu/) at [Oregon State University](https://oregonstate.edu/), advised by [Dr. Raviv Raich](https://web.engr.oregonstate.edu/~raich/). My research focuses on optimization theory, matrix analysis, and machine learning for signal processing. 
 {: .text-justify}
 
 
