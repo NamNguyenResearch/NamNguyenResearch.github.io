@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Trung Vu"
 title_separator          : "-"
 name                     : &name "Trung Vu"
-description              : &description "PhD Candidate, Computer Science"
+description              : &description "PhD"
 url                      : https://trungvietvu.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "trungvietvu/trungvietvu.github.io"
@@ -78,13 +78,13 @@ analytics:
 
 # Site Author
 author:
-  name             : "Trung Vu"
+  name             : "Trung Vu, PhD"
   avatar           : "profile.jpg"
-  bio              : "PhD Candidate, Computer Science \n EECS, Oregon State University"
-  location         : "Corvallis, Oregon"
+  bio              : "Postdoctoral Researcher Associate, University of Maryland, Baltimore County"
+  location         : "Maryland"
   employer         :
   googlescholar    : https://scholar.google.com/citations?user=LefD5EUAAAAJ&hl=en
-  email            : &email vutru@oregonstate.edu
+  email            : &email trungvv@umbc.edu
   uri              :
   bitbucket        :
   codepen          :
