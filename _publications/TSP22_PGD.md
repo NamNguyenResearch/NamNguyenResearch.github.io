@@ -8,6 +8,8 @@ date: 2022-07-12
 venue: 'IEEE Transactions on Signal Processing'
 citation: 'Trung Vu and Raviv Raich. &quot;On Asymptotic Linear Convergence of Projected Gradient Descent for Constrained Least Squares,&quot; IEEE Transactions on Signal Processing (2022).'
 paperurl: 'https://ieeexplore.ieee.org/document/9833362'
+pdf: '/files/TSP22_PGD.pdf'
+appendix: '/files/TSP22_PGD_Appendix.pdf'
 bibtex: '@article{vu2020novel,<br />
   &emsp;title={On Asymptotic Linear Convergence of Projected Gradient Descent for Constrained Least Squares},<br />
   &emsp;author={Vu, Trung and Raich, Raviv},<br />
