@@ -16,6 +16,7 @@ Hi, my name is Trung Vu. I am a Postdoctoral Research Associate at [Department o
 
 > ## News and Updates
 * **2023**
+	* **11/10**: I presented our recent work "Constrained Independent Vector Analysis with Reference for Multi-Subject fMRI Analysis" at [IEEE Brain Discovery and Neurotechnology Workshop](https://brain.ieee.org/event/ieee-brain-discovery-and-neurotechnology-workshop), Washington DC, USA. The arXiv version is available [here](https://arxiv.org/abs/2311.05049).
 	* **10/28**: I presented two papers at [ASILOMAR 2023, Pacific Grove, California, USA](https://asilomarssc.org/).
 	* <span style='color: red'>**10/13**:</span> Our journal paper ["On Local Linear Convergence of Projected Gradient Descent for Unit-Modulus Least Squares"](https://ieeexplore.ieee.org/document/10284537) has been accepted to [IEEE Transactions on Signal Processing](https://signalprocessingsociety.org/publications-resources/ieee-transactions-signal-processing).
 	* **07/14**: Our paper ["On the Asymptotic Linear Convergence of Gradient Descent for Non-Symmetric Matrix Completion"](https://cmsworkshops.com/Asilomar2023/view_paper.php?PaperNum=1056) has been accepted to [ASILOMAR 2023](https://asilomarssc.org).
