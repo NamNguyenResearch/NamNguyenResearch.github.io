@@ -16,7 +16,7 @@ Let $\DeclareMathOperator*{\argmin}{argmin} \newcommand{\norm}[1]{\left\lVert#1\
 \begin{align} \bm M = \begin{bmatrix} \bm U_1 & \bm U_2 \end{bmatrix} \begin{bmatrix} \bm \Lambda_1 & \bm 0 \\\ \bm 0 & \bm \Lambda_2 \end{bmatrix} \begin{bmatrix} \bm U_1^T \\\ \bm U_2^T \end{bmatrix}, \tag{1} \label{M}
 \end{align}
 
-where $\bm \Lambda_1 = \text{diag}(\lambda_1,\ldots,\lambda_r)$ and $\bm \Lambda_2 = \text{diag}(\lambda_{r+1},\ldots,\lambda_n)$. The submatrices $\bm U_1$ and $\bm U_2$ are called *semi-orthogonal* since $\bm U_1^T \bm U_1 = \bm I_r$ and $\bm U_2^T \bm U_2 = \bm I_{n-r}$. The orthogonal projections onto the subspaces spanned by the columns of $\bm U_1$ and $\bm U_2$ are $\bm P_{\bm U_1} = \bm U_1 \bm U_1^T$ and $\bm P_{\bm U_2} = \bm U_2 \bm U_2^T$, respectively. Since $\bm P_{\bm U_1} + \bm P_{\bm U_1} = \bm I_n$, the two corresponding subspaces are orthogonal complement.
+where $\bm \Lambda_1 = \text{diag}(\lambda_1,\ldots,\lambda_r)$ and $\bm \Lambda_2 = \text{diag}(\lambda_{r+1},\ldots,\lambda_n)$. The submatrices $\bm U_1$ and $\bm U_2$ are called *semi-orthogonal* since $\bm U_1^T \bm U_1 = \bm I_r$ and $\bm U_2^T \bm U_2 = \bm I_{n-r}$. The orthogonal projections onto the subspaces spanned by the columns of $\bm U_1$ and $\bm U_2$ are $\bm P_{\bm U_1} = \bm U_1 \bm U_1^T$ and $\bm P_{\bm U_2} = \bm U_2 \bm U_2^T$, respectively. Since $\bm P_{\bm U_1} + \bm P_{\bm U_2} = \bm I_n$, the two corresponding subspaces are orthogonal complement.
 
 Now let $\bm \Delta \in \mathbb{R}^{n \times n}$ be a small perturbation (symmetric), we are interested in how the eigenvalues and eigenvectors of $\bm M$ change. Denote the eigensubspace decomposition of $\tilde{\bm M} = \bm M + \bm \Delta$ by
 
@@ -106,9 +106,9 @@ $$
 \norm{\tilde{\bm U}_2^T \bm \Delta \bm U_1}_F^2 = \norm{\tilde{\bm \Lambda}_2 \bm H - \bm H \bm \Lambda_1}_F^2 = tr(\tilde{\bm \Lambda}_2^2 \bm H \bm H^T) + tr(\bm \Lambda_1^2 \bm H^T \bm H) - 2 tr(\bm H^T \tilde{\bm \Lambda}_2 \bm H \bm \Lambda_1) 
 $$
 
-$$ = \sum_{j=r}^{n} \sum_{i=1}^r \bigl( \tilde{\lambda}_{2j}^2 + \lambda_{1i}^2 - 2 \tilde{\lambda}_{2j} \lambda_{1i} \bigr) H_{ji}^2 \geq \bigl( \min_{i,j} \abs{\lambda_{1i} - \tilde{\lambda}_{2j}} \bigr)^2 \sum_{i,j} H_{ji}^2 = \delta \norm{\bm H}_F^2 , $$
+$$ = \sum_{j=r+1}^{n} \sum_{i=1}^r \bigl( \tilde{\lambda}_{2j}^2 + \lambda_{1i}^2 - 2 \tilde{\lambda}_{2j} \lambda_{1i} \bigr) H_{ji}^2 \geq \bigl( \min_{i,j} \abs{\lambda_{1i} - \tilde{\lambda}_{2j}} \bigr)^2 \sum_{i,j} H_{ji}^2 = \delta \norm{\bm H}_F^2 , $$
 
-where $\delta = \min_{1 \leq i \leq r, r \leq j \leq n}  \abs{\lambda_{1i} - \tilde{\lambda}_{2j}}$ is the eigengap. Thus we obtain
+where $\delta = \min_{1 \leq i \leq r, r+1 \leq j \leq n}  \abs{\lambda_{1i} - \tilde{\lambda}_{2j}}$ is the eigengap. Thus we obtain
 
 $$ \norm{\tilde{\bm U}_2^T \bm U_1}_F \leq \frac{\norm{\tilde{\bm U}_2^T \bm \Delta \bm U_1}_F}{\delta} . $$
 
@@ -116,13 +116,13 @@ The above leads to the following theorem:
 
 **Theorem 1. (Davis-Kahan theorem [1])**
 
-Let $\bm M$ and $\tilde{\bm M}$ be two symmetric matrices with EVDs (\ref{M}) and (\ref{Md}). If $\delta = \min_{1 \leq i \leq r, r \leq j \leq n} \abs{\lambda_i - \tilde{\lambda}_j} > 0$, then
+Let $\bm M$ and $\tilde{\bm M}$ be two symmetric matrices with EVDs (\ref{M}) and (\ref{Md}). If $\delta = \min_{1 \leq i \leq r, r+1 \leq j \leq n} \abs{\lambda_i - \tilde{\lambda}_j} > 0$, then
 
 $$ \norm{\sin \bm \theta(\tilde{\bm U}_1, \bm U_1)}_F \leq \frac{\norm{\bm \Delta \bm U_1}_F}{\delta} . $$
 
 By the Weyl's theorem, one can show that the sufficient (but not necessary) condition for $\delta > 0$ in Davis-Kahan theorem is 
 
-$$0 < \norm{\bm \Delta}_2 < \min_{1 \leq i \leq r, r \leq j \leq n} \abs{\lambda_i - \lambda_j} .$$
+$$0 < \norm{\bm \Delta}_2 < \min_{1 \leq i \leq r, r+1 \leq j \leq n} \abs{\lambda_i - \lambda_j} .$$
 
 When the matrices are not symmetric, we have a generalized version of Theorem 1, called the Wedin's theorem:
 
@@ -133,13 +133,13 @@ Let $\bm M$ and $\tilde{\bm M} \in \mathbb{R}^{m \times n}$ be two matrices with
 \begin{align} \bm M = \begin{bmatrix} \bm U_1 & \bm U_2 \end{bmatrix} \begin{bmatrix} \bm \Sigma_1 & \bm 0 \\\ \bm 0 & \bm \Sigma_2 \end{bmatrix} \begin{bmatrix} \bm V_1^T \\\ \bm V_2^T \end{bmatrix}, \quad \tilde{\bm M} = \bm M + \bm \Delta = \begin{bmatrix} \tilde{\bm U}_1 & \tilde{\bm U}_2 \end{bmatrix} \begin{bmatrix} \tilde{\bm \Sigma}_1 & 0 \\\ 0 & \tilde{\bm \Sigma}_2 \end{bmatrix} \begin{bmatrix} \tilde{\bm V}_1^T \\\ \tilde{\bm V}_2^T \end{bmatrix} . 
 \end{align}
 
-If $$\delta = \min \{ \min_{1 \leq i \leq r, r \leq j \leq n}  \abs{\sigma_i - \tilde{\sigma}_j}, \min_{1 \leq i \leq r} \sigma_i \} > 0$$, then
+If $$\delta = \min \{ \min_{1 \leq i \leq r, r+1 \leq j \leq n}  \abs{\sigma_i - \tilde{\sigma}_j}, \min_{1 \leq i \leq r} \sigma_i \} > 0$$, then
 
 $$ \norm{\sin \bm \theta(\tilde{\bm U}_1, \bm U_1)}_F^2 + \norm{\sin \bm \theta(\tilde{\bm V}_1, \bm V_1)}_F^2 \leq \frac{\norm{\bm U_1^T \bm \Delta}_F^2 + \norm{\bm \Delta \bm V_1}_F^2}{\delta^2} . $$
 
 By the Weyl's theorem for singular values, one can show that the sufficient (but not necessary) conditions for $\delta > 0$ in Wedin theorem are 
 
-$$\sigma_r>0 \text{ and } 0 < \norm{\bm \Delta}_2 < \min_{1 \leq i \leq r, r \leq j \leq n} \abs{\sigma_i - \sigma_j} .$$
+$$\sigma_r>0 \text{ and } 0 < \norm{\bm \Delta}_2 < \min_{1 \leq i \leq r, r+1 \leq j \leq n} \abs{\sigma_i - \sigma_j} .$$
 
 Finally, in both theorems, it is noted that no ordering on the eigenvalues/singular values is required. 
 
