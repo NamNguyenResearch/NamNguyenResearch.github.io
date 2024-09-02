@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 
-Hi, my name is Trung Vu. I now work at LinkedIn. I was a Postdoctoral Research Associate at [Department of Computer Science and Electrical Engineering](https://www.csee.umbc.edu/), [University of Maryland, Baltimore County](https://umbc.edu/), working with [Dr. Tülay Adali](https://redirect.cs.umbc.edu/~adali/). I completed my Ph.D. in [Computer Science](https://eecs.oregonstate.edu/) at [Oregon State University](https://oregonstate.edu/), advised by [Dr. Raviv Raich](https://web.engr.oregonstate.edu/~raich/). My research focuses on optimization theory, matrix analysis, independent component analysis, and machine learning for signal processing. 
+Hi, my name is Trung Vu. I now work at [LinkedIn Corporation](https://linkedin.com). I was a Postdoctoral Research Associate at [Department of Computer Science and Electrical Engineering](https://www.csee.umbc.edu/), [University of Maryland, Baltimore County](https://umbc.edu/), working with [Dr. Tülay Adali](https://redirect.cs.umbc.edu/~adali/). I completed my Ph.D. in [Computer Science](https://eecs.oregonstate.edu/) at [Oregon State University](https://oregonstate.edu/), advised by [Dr. Raviv Raich](https://web.engr.oregonstate.edu/~raich/). My research focuses on optimization theory, matrix analysis, independent component analysis, and machine learning for signal processing. 
 {: .text-justify}
 
 
@@ -17,7 +17,7 @@ Hi, my name is Trung Vu. I now work at LinkedIn. I was a Postdoctoral Research A
 > ## News and Updates
 * **2024**
 	* <span style='color: red'>**07/14**:</span> Our journal paper ["Constrained Independent Vector Analysis with Reference for Multi-Subject fMRI Analysis"](https://ieeexplore.ieee.org/document/10607964) has been accepted to [IEEE Transactions on Biomedical Engineering](https://www.embs.org/tbme/).
-	* <span style='color': red>** 07/08**:</span> I start a new position at LinkedIn - Sunnyvale HQ, California, USA.
+	* <span style='color': red>**07/08**:</span> I start a new position at LinkedIn - Sunnyvale HQ, California, USA.
 	* **06/14**: Check out our recent paper ["Reproducibility And Replicability In Neuroimaging: Constrained IVA As An Effective Assessment Tool"](https://cmsworkshops.com/EUSIPCO2024/view_paper.php?PaperNum=1808) at [EUSIPCO 2024](https://eusipcolyon.sciencesconf.org/).
 * **2023**
 	* <span style='color: red'>**12/13**:</span> Our papers ["A Robust and Scalable Method with an Analytic Solution for Multi-Subject fMRI Data Analysis"](https://ieeexplore.ieee.org/document/10447397), ["Provable Randomized Coordinate Descent For Matrix Completion"](https://ieeexplore.ieee.org/document/10446340), and ["Subgroup Identification Through Multiplex Community Structure Within Functional Connectivity Networks"](https://2024.ieeeicassp.org) have been accepted to [ICASSP 2024](https://ieeexplore.ieee.org/document/10446076).

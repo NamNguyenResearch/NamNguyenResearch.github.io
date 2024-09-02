@@ -4,7 +4,7 @@ title: "On Local Linear Convergence of Projected Gradient Descent for Unit-Modul
 author: "<strong>Trung Vu</strong>, Raviv Raich, and Xiao Fu"
 collection: publications
 permalink: /publication/TSP22_UMLS
-date: 2023-10-28
+date: 2023-10-12
 venue: 'IEEE Transactions on Signal Processing'
 citation: 'Trung Vu, Raviv Raich, and Xiao Fu. &quot;On Local Linear Convergence of Projected Gradient Descent for Unit-Modulus Least Squares,&quot; IEEE Transactions on Signal Processing (2023).'
 paperurl: 'https://ieeexplore.ieee.org/document/10284537'
