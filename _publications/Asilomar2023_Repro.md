@@ -8,6 +8,7 @@ date: 2023-10-28
 venue: '57th Asilomar Conference on Signals, Systems, and Computers'
 citation: 'Francisco Laport, Trung Vu, Hanlu Yang, Vince D. Calhoun, and Tulay Adali. &quot;Reproducibility in Joint Blind Source Separation: Application to fMRI Analysis,&quot; In Proceedings of 57th Asilomar Conference on Signals, Systems, and Computers, Pacific Grove, CA, USA, October 27-30, 2024.'
 pdf: '/files/Asilomar2023_Repro.pdf'
+poster: '/files/Asilomar2023_Repro_poster.pdf'
 paperurl: 'https://ieeexplore.ieee.org/document/10477028'
 bibtex: '@inproceedings{vu2023asymptotic,<br />
   &emsp;title={Reproducibility in Joint Blind Source Separation: Application to fMRI Analysis},<br />
