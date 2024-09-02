@@ -10,7 +10,7 @@ citation: 'Trung Vu, Francisco Laport, Hanlu Yang, and Tulay Adali. &quot;Constr
 pdf: '/files/Asilomar2023_IVA.pdf'
 poster: '/files/Asilomar2023_IVA_poster.pdf'
 paperurl: 'https://ieeexplore.ieee.org/document/10476871'
-bibtex: '@inproceedings{vu2023asymptotic,<br />
+bibtex: '@inproceedings{vu2023constrained,<br />
   &emsp;title={Constrained Independent Vector Analysis with References: Algorithms and Performance Evaluation},<br />
   &emsp;author={Vu, Trung and Laport, Francisco and Yang, Hanlu and Adali, Tulay},<br />
   &emsp;booktitle={Asilomar Conference on Signals, Systems, and Computers},<br />
