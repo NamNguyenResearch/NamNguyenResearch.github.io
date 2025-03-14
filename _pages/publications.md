@@ -1,7 +1,7 @@
 ---
 layout: archive
 title: "Research"
-permalink: /publications/
+permalink: /research/
 author_profile: true
 ---
 
@@ -15,3 +15,9 @@ author_profile: true
   {% include archive-single.html %}
   {: .text-justify}
 {% endfor %}
+
+---
+## Interests and Goals
+My research interests are in the areas of wireless communications, information theory, and decentralized learning, with an emphasis on massive random access, privacy of federated learning, age of information, MIMO, and noncoherent communications.
+
+My goal is to gain fundamental insights into communication and learning systems and to leverage these insights for practical designs of communication and learning schemes.
