@@ -9,6 +9,6 @@ redirect_from:
 
 {% include base_path %}
 
-[[pdf]](/files/CV_TrungVu.pdf)
+[[pdf]](/files/CV_NamNguyen.pdf)
   
 
