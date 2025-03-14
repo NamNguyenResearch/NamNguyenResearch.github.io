@@ -24,13 +24,7 @@ Research Areas:
 **Duration:** Dec. 2022 – Present  
 **Location:** Corvallis, OR, US  
 **Advisors:** Prof. Thinh Nguyen and Prof. Bella Bose  
-**Topics:**  
-- Representation learning  
-- Neural data compression  
-- Statistical signal processing & Bayesian inference  
-- Non-convex optimization  
-- Wireless communications  
-- Physical layer security  
+**Topics:** Representation learning, Neural data compression, Statistical signal processing & Bayesian inference, Non-convex optimization, Wireless communications, Physical layer security  
 
 ### Project: Universal Rate-Distortion-Classification Representations for Lossy Compression  
 - Developed a universal representation framework in lossy compression to handle multiple distortion-classification tradeoffs with a single encoder.  
@@ -49,9 +43,7 @@ Research Areas:
 **Duration:** Mar. 2019 – Mar. 2023  
 **Location:** Hanoi, Vietnam  
 **Advisors:** Prof. Vuong Mai and Prof. Ngoc Dang  
-**Topics:**  
-- Free-space quantum key distribution (QKD) networks  
-- Optical communication systems  
+**Topics:** Free-space quantum key distribution (QKD) networks, Optical communication systems  
 
 ### Project: Design and Security Analysis of Satellite-Based Free-Space Quantum Key Distribution Systems for Wireless and Vehicular Networks  
 **Sponsor:** National Foundation for Science and Technology Development (NAFOSTED, Vietnam)  
