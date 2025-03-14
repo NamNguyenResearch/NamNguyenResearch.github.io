@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 
-Hi, my name is Nam Nguyen. I am a PhD student in Electrical and Computer Engineering at [Department of Electrical Engineering and Computer Science, Oregon State University](https://engineering.oregonstate.edu/EECS), advised by [Prof. Thinh Nguyen](https://web.engr.oregonstate.edu/~thinhq). My research focuses on information theory, machine learning, perceptual lossy compression, deep learning algorithms for classification-enhanced neural image compression, and wireless communication. 
+Hi, my name is Nam Nguyen. I am a PhD student in Electrical and Computer Engineering at [Department of Electrical Engineering and Computer Science, Oregon State University](https://engineering.oregonstate.edu/EECS), advised by [Prof. Thinh Nguyen](https://web.engr.oregonstate.edu/~thinhq). My research focuses on information theory, machine learning, rate-distortion-perception representation for lossy compression, deep learning algorithms for classification-enhanced neural image compression, and wireless communication. 
 {: .text-justify}
 
 
