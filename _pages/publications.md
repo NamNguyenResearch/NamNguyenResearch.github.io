@@ -22,3 +22,10 @@ author_profile: true
   {: .text-justify}
 {% endfor %}
 
+---
+## Theses
+
+* [M.Sc.] Nam Nguyen, “On Minimizing Symbol Error Probability Using Beamforming in MIMO Gaussian Wiretap
+Channels”, Department of Electrical Engineering and Computer Science, Oregon State University, United States, Dec. 2024. 
+
+* [B.Eng] Nam Nguyen, “Performance Enhancement of Satellite-based Free-Space Quantum Key Distribution Systems using Key Retransmission and Relaying Techniques”, Department of Telecommunications Engineering, Posts and Telecommunications Institute of Technology, Vietnam, Mar. 2021. 
