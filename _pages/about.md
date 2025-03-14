@@ -11,7 +11,13 @@ redirect_from:
 Ph.D. Student in Information Theory and Machine Learning at [Department of Electrical Engineering and Computer Science, Oregon State University](https://engineering.oregonstate.edu/EECS)\
 United States
 
-Hi, my name is Nam Nguyen. I am a PhD student in Electrical and Computer Engineering at [Department of Electrical Engineering and Computer Science, Oregon State University](https://engineering.oregonstate.edu/EECS), advised by [Prof. Thinh Nguyen](https://web.engr.oregonstate.edu/~thinhq). My research focuses on information theory, machine learning, rate-distortion-perception representation for lossy compression, deep learning algorithms for classification-enhanced neural image compression, and wireless communication. 
+---
+# About me
+
+I received the B.Eng. degree (Hons.) in Electronics and Communications Engineering from [Posts and Telecommunications Institute of Technology](https://english.ptit.edu.vn/), Hanoi, Vietnam, in 2021; and the M.Sc. degree (Hons.) in wireless communication from [Oregon State University](https://oregonstate.edu/), United States, in 2024. Currently, I am a PhD student in Electrical and Computer Engineering at [Department of Electrical Engineering and Computer Science, Oregon State University](https://engineering.oregonstate.edu/EECS), advised by [Prof. Thinh Nguyen](https://web.engr.oregonstate.edu/~thinhq). My research focuses on information theory, machine learning, rate-distortion-perception representation for lossy compression, deep learning algorithms for classification-enhanced neural image compression, and wireless communication. 
+
+Resume [[PDF]](https://namnguyenresearch.github.io//files/CV_NamNguyen.pdf)
+
 {: .text-justify}
 
 
