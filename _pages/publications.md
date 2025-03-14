@@ -32,13 +32,13 @@ Research Areas:
 - Wireless communications  
 - Physical layer security  
 
-#### Project: Universal Rate-Distortion-Classification Representations for Lossy Compression  
+### Project: Universal Rate-Distortion-Classification Representations for Lossy Compression  
 - Developed a universal representation framework in lossy compression to handle multiple distortion-classification tradeoffs with a single encoder.  
 - Proved the approximate achievability of the universal rate-distortion-classification function using theoretical information-theoretic methods.  
 - Implemented and evaluated novel deep learning algorithms for classification-enhanced neural image compression models (using Autoencoder + GAN + CNN Classifier) on MNIST and SVHN datasets with PyTorch, achieving performance comparable to designing separate encoders for each objective.  
 - **Outputs:** 1 conference paper submission and 1 journal paper manuscript.
 
-#### Project: Design and Security Analysis of Symbol Error Probability-Based Beamforming in MIMO Gaussian Wiretap Channels  
+### Project: Design and Security Analysis of Symbol Error Probability-Based Beamforming in MIMO Gaussian Wiretap Channels  
 - Served as the lead researcher and first author on a paper addressing low-complexity, high-performance beamforming for Gaussian MIMO Wiretap Channels.  
 - Formulated a mathematical model and PHY signal design (using binary antipodal signals and M-ary detection schemes) and proposed a novel low-complexity algorithm utilizing KKT conditions, generalized eigen decomposition, and projected gradient descent.  
 - Conducted numerical experiments in MATLAB to evaluate the proposed beamforming scheme, analyzed results, and authored the paper.  
@@ -55,7 +55,7 @@ Research Areas:
 - Free-space quantum key distribution (QKD) networks  
 - Optical communication systems  
 
-#### Project: Design and Security Analysis of Satellite-Based Free-Space Quantum Key Distribution Systems for Wireless and Vehicular Networks  
+### Project: Design and Security Analysis of Satellite-Based Free-Space Quantum Key Distribution Systems for Wireless and Vehicular Networks  
 **Sponsor:** National Foundation for Science and Technology Development (NAFOSTED, Vietnam)  
 - Led research and served as the first author on four papers related to satellite-based free-space QKD systems for wireless networks.  
 - Innovated by expanding terrestrial BPSK modulation/direct-detection QKD systems to satellite-based QPSK modulation/QKD systems.  
