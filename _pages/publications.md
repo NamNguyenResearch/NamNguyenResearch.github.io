@@ -11,6 +11,8 @@ My research interests are in the areas of wireless communications, information t
 
 My goal is to gain fundamental insights into communication and learning systems and to leverage these insights for practical designs of communication and learning schemes.
 
+---
+## Publications
 {% if author.googlescholar %}
   You can also find my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u>
 {% endif %}
