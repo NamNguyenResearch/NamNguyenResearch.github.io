@@ -3,6 +3,6 @@ title: "ENGR 201 - Electrical Fundamentals I"
 collection: teaching
 type: "Onsite Course"
 venue: "EECS, Oregon State University"
-terms: "4 quarters"
+terms: "Winter 2023, Spring 2023, Spring 2024, Fall 2024"
 location: "Corvallis, Oregon"
 ---
