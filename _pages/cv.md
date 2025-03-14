@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-[[pdf]](/files/CV_NamNguyen.pdf)
+Resume [[PDF]](https://namnguyenresearch.github.io//files/CV_NamNguyen.pdf)
   
 Education
 ======
