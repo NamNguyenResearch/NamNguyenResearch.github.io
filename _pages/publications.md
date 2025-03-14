@@ -44,8 +44,6 @@ Research Areas:
 - Conducted numerical experiments in MATLAB to evaluate the proposed beamforming scheme, analyzed results, and authored the paper.  
 - **Outputs:** 1 published conference paper and 1 journal paper submission [1], [2].
 
----
-
 ### Posts and Telecommunications Institute of Technology, Optical Communications Research Group  
 **Position:** Research Assistant  
 **Duration:** Mar. 2019 – Mar. 2023  
