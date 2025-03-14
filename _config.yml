@@ -80,9 +80,8 @@ analytics:
 author:
   name             : "Nam Nguyen"
   avatar           : "profile.jpg"
-  bio              : "| PhD Student,
-                        Electrical and Computer Engineering, 
-                        Oregon State University"
+  bio              : "PhD Student,\nElectrical and Computer Engineering, Oregon State University"
+
   location         : "Corvallis, Oregon"
   employer         :
   googlescholar    : https://scholar.google.com/citations?user=x5tr48QAAAAJ&hl=en
