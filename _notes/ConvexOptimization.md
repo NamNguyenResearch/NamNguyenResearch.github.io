@@ -12,6 +12,8 @@ enable: true
 
 
 ---
+Author: [Dr. Trung Vu](https://trungvietvu.github.io/)
+
 # 1. Properties of smooth convex functions
 
 Let $\DeclareMathOperator*{\argmin}{argmin} \newcommand{\norm}[1]{\left\lVert#1\right\rVert} \newcommand{\bm}[1]{\boldsymbol#1} f: \mathbb{R}^n \rightarrow \mathbb{R}$ be a continuous and twice differentiable function and $\norm{\cdot}$ denote the Euclidean norm. In the following theorems, we assume $\bm x, \bm y \in \mathbb{R}^n$ and $\alpha \in [0,1]$ are arbitrary.
