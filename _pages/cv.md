@@ -33,7 +33,6 @@ redirect_from:
 - **Research Assistant**  
   *Communications and Signal Processing Group, Oregon State University, United States*  
   (Dec. 2022 - Present)  
-  [Learn more](https://engineering.oregonstate.edu/EECS/research/communications-and-signal-processing)
 
 - **Teaching Assistant**  
   *Electrical Engineering and Computer Science, Oregon State University*  
