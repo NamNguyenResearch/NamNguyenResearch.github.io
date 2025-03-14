@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Nam Nguyen"
 title_separator          : "-"
 name                     : &name "Nam Nguyen"
-description              : &description "PhD Student"
+description              : &description "PhD Student in Information Theory and Machine Learning"
 url                      : https://namnguyenresearch.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "namnguyenresearch/namnguyenresearch.github.io"
@@ -81,9 +81,8 @@ author:
   name             : "Nam Nguyen"
   avatar           : "profile.jpg"
   bio              : "PhD Student,<br>Electrical and Computer Engineering,<br>Oregon State University"
-
   location         : "Corvallis, Oregon"
-  employer         :
+  employer         : Oregon State University
   googlescholar    : https://scholar.google.com/citations?user=x5tr48QAAAAJ&hl=en
   email            : &email nguynam4@oregonstate.edu
   uri              :
@@ -91,14 +90,14 @@ author:
   codepen          :
   dribbble         :
   flickr           :
-  facebook         :
+  facebook         : ""
   foursquare       :
   github           : "NamNguyenResearch"
   google_plus      :
   keybase          :
   instagram        :
   lastfm           :
-  linkedin         :
+  linkedin         : https://www.linkedin.com/in/nam-nguyen-osu/
   orcid            : 
   pinterest        :
   soundcloud       :
