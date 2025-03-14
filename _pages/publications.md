@@ -17,7 +17,7 @@ Research Areas:
 + **Free-space quantum key distribution networks:** Design, analysis, and optimization of link-layer retransmissions and relaying techniques.
 
 ---
-## Research Experience
+## Research Experiences
 
 ### Oregon State University, Communications and Signal Processing Group  
 **Position:** Research Assistant  
