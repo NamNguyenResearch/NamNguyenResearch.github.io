@@ -16,7 +16,6 @@ Hi, my name is Nam Nguyen. I am a PhD student in Electrical and Computer Enginee
 
 > ## News and Updates
 * **2024**
-	* <span style='color: red'>**07/14**:</span> Our journal paper ["Constrained Independent Vector Analysis with Reference for Multi-Subject fMRI Analysis"](https://ieeexplore.ieee.org/document/10607964) has been accepted to [IEEE Transactions on Biomedical Engineering](https://www.embs.org/tbme/).
-	* <span style='color: red'>**07/08**:</span> I start a new position at LinkedIn - Sunnyvale HQ, California, USA.
-	* **06/14**: Check out our recent paper ["Reproducibility And Replicability In Neuroimaging: Constrained IVA As An Effective Assessment Tool"](https://cmsworkshops.com/EUSIPCO2024/view_paper.php?PaperNum=1808) at [EUSIPCO 2024](https://eusipcolyon.sciencesconf.org/).
+	* <span style='color: red'>**12/05**:</span> I successfully passed my Qualifying Exam and defended my Master's thesis titled "On Minimizing Symbol Error Probability Using Beamforming in MIMO Gaussian Wiretap Channels". 
+	* <span style='color: red'>**10/07**:</span> Our conference paper ["On Minimizing Symbol Error Probability for Antipodal Beamforming in MIMO Gaussian Wiretap Channels"](https://ieeexplore-ieee-org.oregonstate.idm.oclc.org/document/10757455) has been published to [2024 IEEE 100th Vehicular Technology Conference (VTC2024-Fall)](https://events.vtsociety.org/vtc2024-fall/).
 {: .text-justify}
