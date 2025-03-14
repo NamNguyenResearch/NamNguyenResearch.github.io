@@ -4,7 +4,7 @@ title: "On Minimizing Symbol Error Probability for Antipodal Beamforming in Gaus
 author: "<strong>Nam Nguyen</strong>, An Vuong, Thuan Nguyen, and Thinh Nguyen"
 collection: publications
 permalink: /publication/VTC2024_Beamforming_WiretapChannel
-date: 2020-11-18
+date: 2024-10-07
 venue: ' 2024 IEEE 100th Vehicular Technology Conference (VTC2024-Fall)'
 citation: 'Nam Nguyen, An Vuong, Thuan Nguyen, and Thinh Nguyen. &quot;On Minimizing Symbol Error Probability for Antipodal Beamforming in Gaussian MIMO Wiretap Channels,&quot;  2024 IEEE 100th Vehicular Technology Conference (VTC2024-Fall).'
 paperurl: 'https://ieeexplore-ieee-org.oregonstate.idm.oclc.org/document/10757455'
