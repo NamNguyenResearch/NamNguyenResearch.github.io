@@ -9,31 +9,111 @@ redirect_from:
 
 {% include base_path %}
 
-Resume [[PDF]](https://namnguyenresearch.github.io//files/CV_NamNguyen.pdf)
-  
-Education
-======
-* Ph.D. in Electrical and Computer Engineering, Oregon State University, expected 2027
-* M.Sc. in Artificial Intelligence, Oregon State University, expected 2026
-* M.Sc. in Electrical and Computer Engineering, Oregon State University, Dec. 2024
-* B.Eng. in Electronics and Communications Engineering, Posts and Telecommunications Institute of Technology, Mar. 2021
+## Resume
 
-Experiences
-======
-* Research Assistant, [Communications and Signal Processing Group](https://engineering.oregonstate.edu/EECS/research/communications-and-signal-processing) - Oregon State University, United States (Dec. 2022 - Present)
-* Teaching Assistant, Electrical Engineering and Computer Science - Oregon State University (Mar. 2022 - Present)
-* Research Assistant, Optical Communications Research Group - Posts and Telecommunications Institute of Technology, Vietnam (Mar. 2019 - Mar. 2023)
-* Networking and Communication Engineer Intern - Mobifone Telecommunications Corporation, Vietnam (Sept. 2020 - Dec. 2020)
-* Research and Development Intern - Viettel High Technology Industries Corporation, Vietnam (Jun. 2019 - Sept. 2019)
-  
-Training Courses
-======
+[Download PDF](https://namnguyenresearch.github.io//files/CV_NamNguyen.pdf)
 
+---
 
-Technical Skills
-======
+## Education
 
-  
-Selected Awards and Honors
-======
+- **Ph.D. in Electrical and Computer Engineering**  
+  Oregon State University, expected 2027
+- **M.Sc. in Artificial Intelligence**  
+  Oregon State University, expected 2026
+- **M.Sc. in Electrical and Computer Engineering**  
+  Oregon State University, Dec. 2024
+- **B.Eng. in Electronics and Communications Engineering**  
+  Posts and Telecommunications Institute of Technology, Mar. 2021
 
+---
+
+## Experiences
+
+- **Research Assistant**  
+  *Communications and Signal Processing Group, Oregon State University, United States*  
+  (Dec. 2022 - Present)  
+  [Learn more](https://engineering.oregonstate.edu/EECS/research/communications-and-signal-processing)
+
+- **Teaching Assistant**  
+  *Electrical Engineering and Computer Science, Oregon State University*  
+  (Mar. 2022 - Present)
+
+- **Research Assistant**  
+  *Optical Communications Research Group, Posts and Telecommunications Institute of Technology, Vietnam*  
+  (Mar. 2019 - Mar. 2023)
+
+- **Networking and Communication Engineer Intern**  
+  *Mobifone Telecommunications Corporation, Vietnam*  
+  (Sept. 2020 - Dec. 2020)
+
+- **Research and Development Intern**  
+  *Viettel High Technology Industries Corporation, Vietnam*  
+  (Jun. 2019 - Sept. 2019)
+
+---
+
+## Training Courses
+
+- AI 539 – Introduction to Online Learning
+- AI 534 – Machine Learning
+- AI 535 – Deep Learning
+- ECE 599 – Information Theory
+- AI 586 – Applied Matrix Analysis
+- ECE 569 – Convex Optimization
+- ECE 565 – Estimation, Filtering, and Detection
+- CS 527 – Error-Correcting Codes
+- ECE 563 – Wireless Communications Networks
+- ECE 669 – Communications System Design
+- ECE 564 – Digital Signal Processing
+- ECE 560 – Stochastic Signals and Systems
+- ECE 550 – Linear Systems
+
+---
+
+## Technical Skills
+
+- **Quantitative Research:** Mathematical modeling, optimization, statistics, and probability theory  
+- **Programming:** Python, MATLAB, C/C++, LaTeX  
+- **Software Tools:** PyTorch, TensorFlow, NumPy, Pandas, SciPy, MATLAB Toolboxes, CVX  
+- **Research:** Project leadership, teamwork, communication, problem-solving, programming, simulations, performance evaluation, presenting findings, and academic writing
+
+---
+
+## Selected Awards and Honors
+
+- Graduate School’s Scholarly Presentation Award – Oregon State University (2024)
+- SVTECH Scholarship – SV Technologies JSC (2021)
+- Awarded to 5 outstanding students at the Posts and Telecommunications Institute of Technology
+- Participation Scholarship, 8th Vietnam School of Science – International Centre for Interdisciplinary Science and Education (2020)
+- Second Prize, National Scientific Research Contest – Vietnam Ministry of Education and Training (2020)
+- First Prize, Scientific Research Contest – Posts and Telecommunications Institute of Technology (2019)
+- Second Prize in Physics – Provincial Excellent Student Competition, Vietnam (2012)
+- First Prize in Physics – School Level Excellent Student Competition, Vietnam (2011, 2012, 2013)
+
+---
+
+## Reviewer Service
+
+- 2023 IEEE International Conference on Communications Workshops  
+- IEEE Wireless Communications Magazine (2024)  
+- IEEE Access (2024)
+
+---
+
+## References
+
+**Prof. Thinh Nguyen**  
+Professor of Electrical and Computer Engineering, Oregon State University, United States  
+Email: [thinh.nguyen@oregonstate.edu](mailto:thinh.nguyen@oregonstate.edu)  
+Tel: (+1) 541-737-3470
+
+**Prof. Bella Bose**  
+Professor of Electrical and Computer Engineering, Oregon State University, United States  
+Email: [bella.bose@oregonstate.edu](mailto:bella.bose@oregonstate.edu)  
+Tel: (+1) 541-737-5573
+
+**Prof. Vuong Mai**  
+Professor of Engineering and Digital Technologies, University of Bradford, United Kingdom  
+Email: [v.mai@bradford.ac.uk](mailto:v.mai@bradford.ac.uk)  
+Tel: (+44) 7771-559836
