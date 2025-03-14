@@ -27,7 +27,7 @@ Oregon State University \
 3130 Kelley Engineering Center \
 Corvallis, Oregon, United States 
 * **Emails:** nguynam4 [at] oregonstate [dot] edu (working) \
-          nguyendinhnam.working [at] gmail [dot] com (personal)
+              nguyendinhnam.working [at] gmail [dot] com (personal)
 {: .text-justify}
 
 > ## News 
