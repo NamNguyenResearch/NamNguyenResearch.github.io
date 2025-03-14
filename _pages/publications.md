@@ -6,10 +6,19 @@ author_profile: true
 ---
 
 ---
-## Interests and Goals
-My research interests are in the areas of wireless communications, information theory, and decentralized learning, with an emphasis on massive random access, privacy of federated learning, age of information, MIMO, and noncoherent communications.
+## Interests 
+My research interests lie at the intersection of Information Theory and Machine Learning, with an emphasis on rate-distortion-perception-classification representation for lossy compression. I am also deeply engaged in wireless communications, physical layer security, and advanced MIMO systems, combining theoretical insights with practical applications.
 
-My goal is to gain fundamental insights into communication and learning systems and to leverage these insights for practical designs of communication and learning schemes.
+Research Interests:
++ Intersection of information theory and machine learning: Rate-distortion-perception-classification representation for lossy compression, neural data compression, representation learning.
+
++ Wireless communications and networks: Channel capacity, signal processing, optimization, and machine learning for advanced MIMO communication systems, physical layer security for MIMO, beamforming techniques, wireless networking and technology for 5G/6G.
+
++ Free-space quantum key distribution networks: Design, analysis, and optimization of link-layer retransmissions and relaying techniques.
+
+---
+## Research Experience
+
 
 ---
 ## Publications
