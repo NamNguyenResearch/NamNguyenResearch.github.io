@@ -7,7 +7,7 @@ author_profile: true
 
 ---
 ## Interests 
-My research interests lie at the intersection of Information Theory and Machine Learning, with an emphasis on rate-distortion-perception-classification representation for lossy compression. I am also deeply engaged in wireless communications, physical layer security, and advanced MIMO systems, combining theoretical insights with practical applications.
+My research interests lie at the intersection of information theory and machine learning, with an emphasis on rate-distortion-perception-classification representation for lossy compression. I am also deeply engaged in wireless communications, physical layer security, and advanced MIMO systems, combining theoretical insights with practical applications.
 
 Research Areas:
 + **Intersection of information theory and machine learning:** Rate-distortion-perception-classification representation for lossy compression, neural data compression, representation learning.
