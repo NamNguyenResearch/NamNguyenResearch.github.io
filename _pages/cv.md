@@ -20,39 +20,20 @@ Education
 
 Experiences
 ======
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+* Research Assistant, [Communications and Signal Processing Group](https://engineering.oregonstate.edu/EECS/research/communications-and-signal-processing) - Oregon State University, United States (Dec. 2022 - Present)
+* Teaching Assistant, Electrical Engineering and Computer Science - Oregon State University (Mar. 2022 - Present)
+* Research Assistant, Optical Communications Research Group - Posts and Telecommunications Institute of Technology, Vietnam (Mar. 2019 - Mar. 2023)
+* Networking and Communication Engineer Intern - Mobifone Telecommunications Corporation, Vietnam (Sept. 2020 - Dec. 2020)
+* Research and Development Intern - Viettel High Technology Industries Corporation, Vietnam (Jun. 2019 - Sept. 2019)
+  
+Training Courses
+======
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
 
-Publications
+Technical Skills
 ======
-  <ul>{% for post in site.publications %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+
   
-Talks
+Selected Awards and Honors
 ======
-  <ul>{% for post in site.talks %}
-    {% include archive-single-talk-cv.html %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+
