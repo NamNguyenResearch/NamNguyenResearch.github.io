@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 
-Hi, my name is Trung Vu. I now work at [LinkedIn Corporation](https://linkedin.com). I was a Postdoctoral Research Associate at [Department of Computer Science and Electrical Engineering](https://www.csee.umbc.edu/), [University of Maryland, Baltimore County](https://umbc.edu/), working with [Dr. Tülay Adali](https://redirect.cs.umbc.edu/~adali/). I completed my Ph.D. in [Computer Science](https://eecs.oregonstate.edu/) at [Oregon State University](https://oregonstate.edu/), advised by [Dr. Raviv Raich](https://web.engr.oregonstate.edu/~raich/). My research focuses on optimization theory, matrix analysis, independent component analysis, and machine learning for signal processing. 
+Hi, my name is Nam Nguyen. I am a PhD student in Electrical and Computer Engineering at [Department of Electrical Engineering and Computer Science, Oregon State University](https://engineering.oregonstate.edu/EECS), advised by [Prof. Thinh Nguyen](https://web.engr.oregonstate.edu/~thinhq). My research focuses on information theory, machine learning, perceptual lossy compression, deep learning algorithms for classification-enhanced neural image compression, and wireless communication. 
 {: .text-justify}
 
 
