@@ -18,7 +18,6 @@ redirect_from:
 ## Education
 
 - **Ph.D. in Electrical and Computer Engineering**
-- **Minor in Artificial Intelligence** 
   Oregon State University, expected 2027
 - **M.Sc. in Artificial Intelligence**  
   Oregon State University, expected 2026
