@@ -54,14 +54,15 @@ redirect_from:
 
 ## Training Courses
 
+- AI 531 - Artificial Intelligence
 - AI 539 – Introduction to Online Learning
 - AI 534 – Machine Learning
 - AI 535 – Deep Learning
-- ECE 599 – Information Theory
+- AI 539 – Information Theory
 - AI 586 – Applied Matrix Analysis
-- ECE 569 – Convex Optimization
-- ECE 565 – Estimation, Filtering, and Detection
+- AI 539 – Convex Optimization
 - CS 527 – Error-Correcting Codes
+- ECE 565 – Estimation, Filtering, and Detection
 - ECE 563 – Wireless Communications Networks
 - ECE 669 – Communications System Design
 - ECE 564 – Digital Signal Processing
