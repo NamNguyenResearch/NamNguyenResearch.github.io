@@ -57,8 +57,7 @@ Research Areas:
 ---
 ## Publications
 
-1. **Khac-Hoang Ngo**, J. Östman, G. Durisi, and A. Graell i Amat, “Secure aggregation is not private against membership inference attacks,” in _European Conference on Machine Learning and Principles
-and Practice of Knowledge Discovery in Databases (ECML PKDD)_, Vilnius, Lithuania, Sep. 2024. [[arXiv]](https://arxiv.org/pdf/2403.17775)
+1. **Nam Nguyen**, An Vuong, Thuan Nguyen, Thinh Nguyen, “On Symbol Error Probability-based Beamforming in MIMO Gaussian Wiretap Channels,” 2025. [[arXiv]](https://arxiv.org/abs/2504.03960)
 
 1. **Khac-Hoang Ngo**, G. Durisi, A. Graell i Amat, A. Munari, and F. Lázaro, “Age of information in slotted ALOHA with energy harvesting,” in _IEEE Global Commun. Conf. (Globecom)_, Kuala Lumpur, Malaysia, Dec. 2023. [[arXiv]](https://arxiv.org/pdf/2310.00348.pdf) [[Simulation code]](https://github.com/khachoang1412/AoI_slottedALOHA_energyHarvesting)
 
