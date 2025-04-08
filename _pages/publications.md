@@ -59,7 +59,9 @@ Research Areas:
 
 1. **Nam Nguyen**, An Vuong, Thuan Nguyen, Thinh Nguyen, “On Symbol Error Probability-based Beamforming in MIMO Gaussian Wiretap Channels,” 2025. [[arXiv]](https://arxiv.org/abs/2504.03960)
 
-1. **Nam Nguyen**, An Vuong, Thuan Nguyen, and Thinh Nguyen, “On Minimizing Symbol Error Probability for Antipodal Beamforming in Gaussian MIMO Wiretap Channels,” 2024 IEEE 100th Vehicular Technology Conference (VTC2024-Fall), Washington, DC, USA, 2024, pp. 1-5. [[IEEE]](https://ieeexplore-ieee-org.oregonstate.idm.oclc.org/document/10757455) [[Simulation code]](https://github.com/NamNguyenResearch/SEP_Beamforming_GaussianWritapChannel)
+2. **Nam Nguyen**, An Vuong, Thuan Nguyen, and Thinh Nguyen, “On Minimizing Symbol Error Probability for Antipodal Beamforming in Gaussian MIMO Wiretap Channels,” 2024 IEEE 100th Vehicular Technology Conference (VTC2024-Fall), Washington, DC, USA, 2024, pp. 1-5. [[IEEE]](https://ieeexplore-ieee-org.oregonstate.idm.oclc.org/document/10757455) [[Simulation code]](https://github.com/NamNguyenResearch/SEP_Beamforming_GaussianWritapChannel)
+
+3. **Nam Nguyen**, Thang V. Nguyen, Vuong V. Mai, and Ngoc T. Dang, “Performance of Satellite Quantum Key Distribution under Atmospheric Turbulence-Induced Phase Fluctuations,” 40th International Communications Satellite Systems Conference (ICSSC 2023), Bradford, UK, 2023, pp. 84-88. [[IEEE]](https://ieeexplore-ieee-org.oregonstate.idm.oclc.org/document/10572249) [[Simulation code]](https://github.com/NamNguyenResearch/Satellite_QKD_PhaseFluctuations)
 
 
 ---
