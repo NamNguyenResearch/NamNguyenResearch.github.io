@@ -56,16 +56,12 @@ Research Areas:
 
 ---
 ## Publications
-{% if author.googlescholar %}
-  You can also find my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u>
-{% endif %}
 
-{% include base_path %}
+1. **Khac-Hoang Ngo**, J. Östman, G. Durisi, and A. Graell i Amat, “Secure aggregation is not private against membership inference attacks,” in _European Conference on Machine Learning and Principles
+and Practice of Knowledge Discovery in Databases (ECML PKDD)_, Vilnius, Lithuania, Sep. 2024. [[arXiv]](https://arxiv.org/pdf/2403.17775)
 
-{% for post in site.publications reversed %}
-  {% include archive-single.html %}
-  {: .text-justify}
-{% endfor %}
+1. **Khac-Hoang Ngo**, G. Durisi, A. Graell i Amat, A. Munari, and F. Lázaro, “Age of information in slotted ALOHA with energy harvesting,” in _IEEE Global Commun. Conf. (Globecom)_, Kuala Lumpur, Malaysia, Dec. 2023. [[arXiv]](https://arxiv.org/pdf/2310.00348.pdf) [[Simulation code]](https://github.com/khachoang1412/AoI_slottedALOHA_energyHarvesting)
+
 
 ---
 ## Theses
