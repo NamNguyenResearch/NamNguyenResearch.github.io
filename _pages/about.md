@@ -34,7 +34,8 @@ Corvallis, Oregon, United States
 
 > ## News
 * **2025**
-	* <span style='color: red'>**04/11**:</span> I have been awarded NSF student travel grant to attend the AERPAW Spring 2025 Workshop, taking place at North Carolina State University from May 27–30, 2025, [https://aerpaw.org](https://aerpaw.org). 
+	* <span style='color: red'>**04/12**:</span> Reviewed 4 papers for the ["Learn to Compress & Compress to Learn" workshop](https://learn-to-compress-workshop-isit.github.io/) at the 2025 IEEE International Symposium on Information Theory (ISIT). 	
+	* <span style='color: red'>**04/11**:</span> I have been awarded an NSF student travel grant to attend the [AERPAW Spring 2025 Workshop](https://aerpaw.org), taking place at North Carolina State University from May 27–30, 2025. 
 * **2024**
 	* <span style='color: red'>**12/05**:</span> I successfully passed my Qualifying Exam and defended my Master's thesis titled "On Minimizing Symbol Error Probability Using Beamforming in MIMO Gaussian Wiretap Channels". 
 	* <span style='color: red'>**10/07**:</span> Our conference paper ["On Minimizing Symbol Error Probability for Antipodal Beamforming in MIMO Gaussian Wiretap Channels"](https://ieeexplore-ieee-org.oregonstate.idm.oclc.org/document/10757455) has been published to [2024 IEEE 100th Vehicular Technology Conference (VTC2024-Fall)](https://events.vtsociety.org/vtc2024-fall/).
