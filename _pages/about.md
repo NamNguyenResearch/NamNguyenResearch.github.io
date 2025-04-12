@@ -30,7 +30,6 @@ Oregon State University \
 Corvallis, Oregon, United States 
 * **Emails:** nguynam4 [at] oregonstate [dot] edu (working) \
               nguyendinhnam.working [at] gmail [dot] com (personal)
-{: .text-justify}
 
 > ## News
 * **2025**
