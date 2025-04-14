@@ -75,6 +75,12 @@ of Satellite FSO/QKD Systems using HAP-based Relaying and ARQ,” 2020 Internati
 
 
 ---
+## Publications
+1. **Nam Nguyen**, “Universal Representations for Classification-enhanced Lossy Compression,” Department of Electrical and Computer Engineering and Computer Science, Oregon State University, AI 535 Deep Learning, Final Project, Mar. 2025. [[Report]]() [[Slide]]() [[Simulation]]()
+2. **Nam Nguyen**, “Reading report of Jeffreys Prior Regularization for Logistic Regression,” Department of Electrical and Computer Engineering and Computer Science, Oregon State University, ECE 565 Estimation, Filtering, and Detection, Final Project, De. 2023. [[Report]]() [[Slide]]() [[Simulation]](https://github.com/NamNguyenResearch/ECE565-Estimation-Filtering-Detection)
+
+
+---
 ## Theses
 
 + [M.Sc.] Nam Nguyen, “On Minimizing Symbol Error Probability Using Beamforming in MIMO Gaussian Wiretap
