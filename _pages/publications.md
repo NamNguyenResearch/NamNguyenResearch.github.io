@@ -77,7 +77,7 @@ of Satellite FSO/QKD Systems using HAP-based Relaying and ARQ,” 2020 Internati
 ---
 ## Publications
 1. **Nam Nguyen**, “Universal Representations for Classification-enhanced Lossy Compression,” Department of Electrical and Computer Engineering and Computer Science, Oregon State University, AI 535 Deep Learning, Final Project, Mar. 2025. [[Report]](https://namnguyenresearch.github.io//files/Universal_Representations_for_Classification_enhanced_Loss_Compression.pdf) [[Slide]](https://namnguyenresearch.github.io//files/Slide_Universal_Representations_for_Classification_enhanced_Lossy_Compression.pdf) [[Simulation]](https://github.com/NamNguyenResearch/AI-535-Deep-Learning)
-2. **Nam Nguyen**, “Reading report of Jeffreys Prior Regularization for Logistic Regression,” Department of Electrical and Computer Engineering and Computer Science, Oregon State University, ECE 565 Estimation, Filtering, and Detection, Final Project, De. 2023. [[Report]]() [[Slide]]() [[Simulation]](https://github.com/NamNguyenResearch/ECE565-Estimation-Filtering-Detection)
+2. **Nam Nguyen**, “Reading report of Jeffreys Prior Regularization for Logistic Regression,” Department of Electrical and Computer Engineering and Computer Science, Oregon State University, ECE 565 Estimation, Filtering, and Detection, Final Project, De. 2023. [[Report]](https://namnguyenresearch.github.io//files/Reading report of Jeffreys Prior Regularization for Logistic Regression.pdf) [[Slide]](https://namnguyenresearch.github.io//files/Slide_Reading report of Jeffreys Prior Regularization for Logistic Regression.pdf) [[Simulation]](https://github.com/NamNguyenResearch/ECE565-Estimation-Filtering-Detection)
 
 
 ---
