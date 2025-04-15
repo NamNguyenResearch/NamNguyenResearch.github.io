@@ -56,9 +56,9 @@ Research Areas:
 
 ---
 ## Publications
-1. **Nam Nguyen**, Thinh Nguyen, Bella Bose, “A Theory of Universal Rate-Distortion-Classification Representations for Lossy Compression,” 2025. [[Paper]]() 
+1. **Nam Nguyen**, Thinh Nguyen, Bella Bose, “A Theory of Universal Rate-Distortion-Classification Representations for Lossy Compression,” 2025. [[Paper]](https://arxiv.org/abs/2504.09932) 
 
-2. **Nam Nguyen**, Thinh Nguyen, Bella Bose, “Universal Rate-Distortion-Classification Representations for Lossy Compression,” 2025. [[Paper]]() 
+2. **Nam Nguyen**, Thinh Nguyen, Bella Bose, “Universal Rate-Distortion-Classification Representations for Lossy Compression,” 2025. [[Paper]](https://arxiv.org/abs/2504.09025) 
 
 3. **Nam Nguyen**, An Vuong, Thuan Nguyen, Thinh Nguyen, “On Symbol Error Probability-based Beamforming in MIMO Gaussian Wiretap Channels,” 2025. [[Paper]](https://arxiv.org/abs/2504.03960) [[Simulation]](https://github.com/NamNguyenResearch/SEP_Beamforming_GaussianWritapChannel)
 
