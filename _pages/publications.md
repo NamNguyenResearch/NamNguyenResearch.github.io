@@ -30,13 +30,13 @@ Research Areas:
 - Developed a universal representation framework in lossy compression to handle multiple distortion-classification tradeoffs with a single encoder.  
 - Proved the approximate achievability of the universal rate-distortion-classification function using theoretical information-theoretic methods.  
 - Implemented and evaluated novel deep learning algorithms for classification-enhanced neural image compression models (using Autoencoder + GAN + CNN Classifier) on MNIST and SVHN datasets with PyTorch, achieving performance comparable to designing separate encoders for each objective.  
-- **Outputs:** 1 conference paper submission and 1 journal paper manuscript.
+- **Outputs:** 1 conference paper submission and 1 journal paper manuscript [1], [2].
 
 ### Project: Design and Security Analysis of Symbol Error Probability-Based Beamforming in MIMO Gaussian Wiretap Channels  
 - Served as the lead researcher and first author on a paper addressing low-complexity, high-performance beamforming for Gaussian MIMO Wiretap Channels.  
 - Formulated a mathematical model and PHY signal design (using binary antipodal signals and M-ary detection schemes) and proposed a novel low-complexity algorithm utilizing KKT conditions, generalized eigen decomposition, and projected gradient descent.  
 - Conducted numerical experiments in MATLAB to evaluate the proposed beamforming scheme, analyzed results, and authored the paper.  
-- **Outputs:** 1 published conference paper and 1 journal paper submission.
+- **Outputs:** 1 published conference paper and 1 journal paper submission [3], [4].
 
 ### Posts and Telecommunications Institute of Technology, Optical Communications Research Group  
 **Position:** Research Assistant  
@@ -51,7 +51,7 @@ Research Areas:
 - Innovated by expanding terrestrial BPSK modulation/direct-detection QKD systems to satellite-based QPSK modulation/QKD systems.  
 - Designed and analyzed satellite-based QKD systems, including aspects such as link-layer retransmissions, relaying techniques, and performance evaluations under atmospheric turbulence-induced phase fluctuations.  
 - Executed numerical experiments in MATLAB to assess system performance, analyzed results, and authored multiple research papers.  
-- **Outputs:** 2 published conference papers and 2 published journal papers.
+- **Outputs:** 2 published conference papers and 2 published journal papers [5], [6], [7], [8].
 
 
 ---
