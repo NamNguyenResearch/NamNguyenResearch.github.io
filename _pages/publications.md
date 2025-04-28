@@ -56,7 +56,7 @@ Research Areas:
 
 ---
 ## Publications
-1. **Nam Nguyen**, Thinh Nguyen, Bella Bose, “A Theory of Universal Rate-Distortion-Classification Representations for Lossy Compression,” 2025. [[Paper]](https://arxiv.org/abs/2504.09932) 
+1. **Nam Nguyen**, Thuan Nguyen, Thinh Nguyen, Bella Bose, “A Theory of Universal Rate-Distortion-Classification Representations for Lossy Compression,” 2025. [[Paper]](https://arxiv.org/abs/2504.09932) 
 
 2. **Nam Nguyen**, Thuan Nguyen, Thinh Nguyen, Bella Bose, “Universal Rate-Distortion-Classification Representations for Lossy Compression,” submitted to IEEE Information Theory
 Workshop, 2025. [[Paper]](https://arxiv.org/abs/2504.09025) 
