@@ -95,10 +95,13 @@ redirect_from:
 
 ## Reviewer Service
 
-- 2023 IEEE International Conference on Communications Workshops: 1 paper.  
-- IEEE Wireless Communications Magazine, 2024: 1 paper.  
+- IEEE Wireless Communications Magazine, 2025: 1 paper. 
+- IEEE Wireless Communications Magazine, 2024: 1 paper. 
+- 2025 IEEE International Symposium on Information Theory: 4 papers.
 - IEEE Access, 2024: 1 paper.
-- 2025 IEEE International Symposium on Information Theory: 4 papers. 
+- IEEE Wireless Communications Magazine, 2024: 1 paper. 
+- 2023 IEEE International Conference on Communications Workshops: 1 paper.  
+
 
 ---
 
