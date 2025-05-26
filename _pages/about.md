@@ -27,7 +27,7 @@ Resume [[PDF]](https://namnguyenresearch.github.io//files/CV_NamNguyen.pdf)
 Department of Electrical Engineering and Computer Science \
 Oregon State University \
 3130 Kelley Engineering Center \
-Corvallis, Oregon, United States 
+Corvallis, Oregon, United States  
 * **Emails:** nguynam4 [at] oregonstate [dot] edu (working) \
               nguyendinhnam.working [at] gmail [dot] com (personal)
 
