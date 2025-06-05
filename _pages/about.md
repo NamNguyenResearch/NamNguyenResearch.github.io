@@ -33,9 +33,9 @@ Corvallis, Oregon, United States
 
 ## News
 
-* **2025**  
+* **2025**
+  * <span style='color: red'>**05/26**:</span> Reviewed 1 paper for the *IEEE Wireless Communications Magazine*. 
   * <span style='color: red'>**04/12**:</span> A paper has been submitted to the [2025 IEEE Information Theory Workshop](https://www.ieee-itw2025.org/).
-  * <span style='color: red'>**05/26**:</span> Reviewed 1 paper for the *IEEE Wireless Communications Magazine*.
   * <span style='color: red'>**04/12**:</span> Reviewed 4 papers for the ["Learn to Compress & Compress to Learn" workshop](https://learn-to-compress-workshop-isit.github.io/) at the 2025 IEEE International Symposium on Information Theory (ISIT).
   * <span style='color: red'>**04/11**:</span> Awarded an NSF student travel grant to attend the [AERPAW Spring 2025 Workshop](https://aerpaw.org), held at North Carolina State University from May 27–30, 2025.
 
