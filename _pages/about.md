@@ -40,6 +40,7 @@ Corvallis, Oregon, United States
   * <span style='color: red'>**04/12**:</span> A paper has been submitted to the [2025 IEEE Information Theory Workshop](https://www.ieee-itw2025.org/).
   * <span style='color: red'>**04/12**:</span> Reviewed 4 papers for the ["Learn to Compress & Compress to Learn" workshop](https://learn-to-compress-workshop-isit.github.io/) at the 2025 IEEE International Symposium on Information Theory (ISIT).
   * <span style='color: red'>**04/11**:</span> Awarded an NSF student travel grant to attend the [AERPAW Spring 2025 Workshop](https://aerpaw.org), held at North Carolina State University from May 27–30, 2025.
+  * <span style='color: red'>**04/04**:</span> A paper has been released on [Arxiv](https://arxiv.org/abs/2504.03960). 
 
 * **2024**  
   * <span style='color: red'>**12/05**:</span> Successfully passed my qualifying exam and defended my Master's thesis titled *"On Minimizing Symbol Error Probability Using Beamforming in MIMO Gaussian Wiretap Channels"*.
