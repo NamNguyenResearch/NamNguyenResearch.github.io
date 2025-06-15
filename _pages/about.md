@@ -34,7 +34,7 @@ Corvallis, Oregon, United States
 ## News
 
 * **2025**
-  * <span style='color: red'>**06/11**:</span> I will be participating in the [2025 North American School of Information Theory](https://sites.google.com/umn.edu/nasit-2025/home), taking place at the University of Minnesota Twin Cities from June 16 to 20, 2025.  
+  * <span style='color: red'>**06/11**:</span> I will be participating in the [2025 North American School of Information Theory](https://sites.google.com/umn.edu/nasit-2025/home), taking place at the University of Minnesota Twin Cities from June 16 to 20, 2025. [[Poster]](https://namnguyenresearch.github.io//files/NASIT2025_Universal_Rate_Distortion_Classification_Representations_for_Lossy_Compression.pdf)
   * <span style='color: red'>**05/26**:</span> Reviewed 1 paper for the IEEE Wireless Communications Magazine.
   * <span style='color: red'>**04/14**:</span> A new paper titled “A Theory of Universal Rate-Distortion-Classification Representations for Lossy Compression” has been released on [Arxiv](https://arxiv.org/abs/2504.09932). 
   * <span style='color: red'>**04/12**:</span> A paper has been submitted to the [2025 IEEE Information Theory Workshop](https://www.ieee-itw2025.org/).
