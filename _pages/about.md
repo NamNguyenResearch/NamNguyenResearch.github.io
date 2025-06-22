@@ -18,7 +18,7 @@ I received the B.Eng. degree (Hons.) in Electronics and Communications Engineeri
 
 For more details, please refer to [Publications](https://namnguyenresearch.github.io/publications) and [CV](https://namnguyenresearch.github.io/cv). If you are recruiting and are interested in my profile, feel free to send me an email at [nguynam4@oregonstate.edu]().
 
-Resume [[PDF]](https://namnguyenresearch.github.io//files/CV_NamNguyen.pdf)
+Resume [[PDF]](https://namnguyenresearch.github.io//files/Resume_Nam_Nguyen.pdf)
 
 ---
 # Contact
