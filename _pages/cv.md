@@ -50,7 +50,6 @@ redirect_from:
 
 ## Training Courses
 
-- AI 531 - Artificial Intelligence
 - AI 539 – Introduction to Online Learning
 - AI 534 – Machine Learning
 - AI 535 – Deep Learning
