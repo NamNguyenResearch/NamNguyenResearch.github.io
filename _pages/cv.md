@@ -11,7 +11,7 @@ redirect_from:
 
 ## Resume
 
-[Download PDF](https://namnguyenresearch.github.io//files/CV_NamNguyen.pdf)
+[Download PDF](https://namnguyenresearch.github.io//files/Resume_Nam_Nguyen.pdf)
 
 ---
 
