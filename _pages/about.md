@@ -13,16 +13,12 @@ United States
 
 ---
 # About me
-
 I received the B.Eng. degree (Hons.) in Electronics and Communications Engineering from [Posts and Telecommunications Institute of Technology](https://english.ptit.edu.vn/), Hanoi, Vietnam, in 2021; and the M.Sc. degree (Hons.) in wireless communications from [Oregon State University](https://oregonstate.edu/), United States, in 2024. Currently, I am a Ph.D. student in Electrical and Computer Engineering at [Department of Electrical Engineering and Computer Science, Oregon State University](https://engineering.oregonstate.edu/EECS), advised by [Prof. Thinh Nguyen](https://web.engr.oregonstate.edu/~thinhq). My research focuses on information theory, machine learning, rate-distortion-perception representation for lossy compression, deep learning algorithms for classification-enhanced neural image compression, and wireless communications. 
 
-For more details, please refer to [Publications](https://namnguyenresearch.github.io/publications) and [CV](https://namnguyenresearch.github.io/cv). If you are recruiting and are interested in my profile, feel free to send me an email at [nguynam4@oregonstate.edu]().
-
-Resume [[PDF]](https://namnguyenresearch.github.io//files/Resume_Nam_Nguyen.pdf)
+For more details, please refer to [Publications](https://namnguyenresearch.github.io/publications) and [CV](https://namnguyenresearch.github.io/cv). If you are recruiting and are interested in my profile, feel free to send me an email at [nguynam4@oregonstate.edu](). Resume [[PDF]](https://namnguyenresearch.github.io//files/Resume_Nam_Nguyen.pdf)
 
 ---
 # Contact
-
 * **Nam Nguyen** \
 Department of Electrical Engineering and Computer Science \
 Oregon State University \
@@ -32,8 +28,8 @@ Corvallis, Oregon, United States
               nguyendinhnam.working [at] gmail [dot] com (personal)
 
 ## News
-
 * **2025**
+  * <span style='color: red'>**06/24**:</span> I was offered a machine learning research internship this summer at Deakin University’s Applied Artificial Intelligence Initiative, working under the supervision of [Prof. Mohamed Abdelrazek](https://experts.deakin.edu.au/35646-mohamed-abdelrazek).
   * <span style='color: red'>**06/11**:</span> I will be participating in the [2025 North American School of Information Theory](https://sites.google.com/umn.edu/nasit-2025/home), taking place at the University of Minnesota Twin Cities from June 16 to 20, 2025. [[Poster]](https://namnguyenresearch.github.io//files/NASIT2025_Universal_Rate_Distortion_Classification_Representations_for_Lossy_Compression.pdf)
   * <span style='color: red'>**05/26**:</span> Reviewed 1 paper for the IEEE Wireless Communications Magazine.
   * <span style='color: red'>**04/14**:</span> A new paper titled “A Theory of Universal Rate-Distortion-Classification Representations for Lossy Compression” has been released on [Arxiv](https://arxiv.org/abs/2504.09932). 
