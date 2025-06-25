@@ -51,7 +51,6 @@ Research Areas:
 - Executed numerical experiments in MATLAB to assess system performance, analyzed results, and authored multiple research papers.  
 - **Outputs:** 2 published conference papers and 2 published journal papers [5], [6], [7], [8].
 
-
 ---
 ## Publications
 1. **Nam Nguyen**, Thuan Nguyen, Thinh Nguyen, Bella Bose, “A Theory of Universal Rate-Distortion-Classification Representations for Lossy Compression,” 2025. [[Paper]](https://arxiv.org/abs/2504.09932) 
@@ -65,13 +64,11 @@ Workshop, 2025. [[Paper]](https://arxiv.org/abs/2504.09025) [[Poster]](https://n
 8. **Nam D. Nguyen**, Hien T. T. Pham, Vuong V. Mai, and Ngoc T. Dang, “Performance Enhancement
 of Satellite FSO/QKD Systems using HAP-based Relaying and ARQ,” 2020 International Conference on Advanced Technologies for Communications, Nha Trang, Vietnam, pp. 12-17, 2020. [[Paper]](https://ieeexplore.ieee.org/document/9255472) [[Simulation]](https://github.com/NamNguyenResearch/Satellite_FSO-QKD_HAPandARQ)
 
-
 ---
 ## Technical Reports
 1. **Nam Nguyen**, “Universal Representations for Classification-enhanced Lossy Compression,” Department of Electrical and Computer Engineering and Computer Science, Oregon State University, AI535 Deep Learning, Final Project, Mar. 2025. [[Report]](https://arxiv.org/abs/2504.13191) [[Slide]](https://namnguyenresearch.github.io//files/Slide_Universal_Representations_for_Classification_enhanced_Lossy_Compression.pdf) [[Simulation]](https://github.com/NamNguyenResearch/AI-535-Deep-Learning)
 2. **Nam Nguyen**, “Reading Report of Jeffreys Prior Regularization for Logistic Regression,” Department of Electrical and Computer Engineering and Computer Science, Oregon State University, ECE565 Estimation, Filtering, and Detection, Final Project, De. 2023. [[Report]](https://namnguyenresearch.github.io//files/Reading report of Jeffreys Prior Regularization for Logistic Regression.pdf) [[Slide]](https://namnguyenresearch.github.io//files/Slide_Reading report of Jeffreys Prior Regularization for Logistic Regression.pdf) [[Simulation]](https://github.com/NamNguyenResearch/ECE565-Estimation-Filtering-Detection)
 3. **Nam Nguyen**, “Reading Report of A Khatri-Rao Subspace Approach to Blind Identification of Mixtures of Quasi-Stationary Sources,” Department of Electrical and Computer Engineering and Computer Science, Oregon State University, AI539 Matrix Analysis for Signal Processing and Machine Learning, Final Project, Jun. 2022. [[Report]](https://namnguyenresearch.github.io//files/Reading Report of A Khatri-Rao Subspace Approach to Blind Identification of Mixtures of Quasi-Stationary Sources.pdf) [[Simulation]](https://github.com/NamNguyenResearch/ECE-599-Matrix-Analysis-for-SP-and-ML)
-
 
 ---
 ## Theses
