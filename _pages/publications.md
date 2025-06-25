@@ -41,6 +41,7 @@ Research Areas:
 **Position:** Machine Learning Research Intern  
 **Duration:** July. 2025  
 **Location:** Burwood, Australia
+
 **Advisors:** Prof. Mohamed Abdelrazek  
 
 ### Project: AI Agentic Negotiation   
