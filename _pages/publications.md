@@ -43,8 +43,7 @@ Research Areas:
 **Location:** Burwood, Australia
 **Advisors:** Prof. Mohamed Abdelrazek  
 
-### Project: AI Agentic Negotiation  
-**Sponsor:** National Foundation for Science and Technology Development (NAFOSTED, Vietnam)  
+### Project: AI Agentic Negotiation   
 - Conduct research on AI agentic negotiation, focusing on how large language models (LLMs) perform in multi-agent bargaining and argumentation scenarios under uncertainty.
 - Identify and analyze key negotiation strategies from existing literature, and evaluate the capabilities of various LLMs in executing these strategies.
 - Design experimental setups to simulate negotiation dialogues, incorporating belief updates, offer-counteroffer dynamics, and strategic reasoning
