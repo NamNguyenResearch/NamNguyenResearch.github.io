@@ -62,7 +62,6 @@ redirect_from:
 
 ---
 ## Technical Skills
-
 - **Quantitative Research:** Mathematical modeling, optimization, statistics, and probability theory  
 - **Programming:** Python, MATLAB, C/C++, LaTeX  
 - **Software Tools:** PyTorch, TensorFlow, NumPy, Pandas, SciPy, MATLAB Toolboxes, CVX  
@@ -70,7 +69,8 @@ redirect_from:
 
 ---
 ## Selected Awards and Honors
-
+- Participant, North American School of Information Theory – University of Minnesota (2025)
+- NSF Student Travel Grant, AERPAW Spring Workshop – North Carolina State University (2025)
 - Graduate School’s Scholarly Presentation Award – Oregon State University (2024)
 - SVTECH Scholarship – SV Technologies JSC (2021)
 - Awarded to 5 outstanding students at the Posts and Telecommunications Institute of Technology
@@ -82,7 +82,6 @@ redirect_from:
 
 ---
 ## Reviewer Service
-
 - 2025 IEEE Wireless Communications Magazine: 1 paper.
 - 2025 IEEE International Symposium on Information Theory: 4 papers.
 - 2024 IEEE Wireless Communications Magazine: 1 paper. 
