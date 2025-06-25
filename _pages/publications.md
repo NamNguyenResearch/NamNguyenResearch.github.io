@@ -24,7 +24,8 @@ Research Areas:
 **Advisors:** Prof. Thinh Nguyen and Prof. Bella Bose  
 **Topics:** Representation learning, neural data compression, statistical signal processing & Bayesian inference, non-convex optimization, wireless communications, physical layer security  
 
-### Project: Universal Rate-Distortion-Classification Representations for Lossy Compression  
+### Project: Universal Rate-Distortion-Classification Representations for Lossy Compression
+**Sponsor:** National Science Foundation (NSF) under Grant No. CCF-2417898
 - Developed a universal representation framework in lossy compression to handle multiple distortion-classification tradeoffs with a single encoder.  
 - Proved the approximate achievability of the universal rate-distortion-classification function using theoretical information-theoretic methods.  
 - Implemented and evaluated novel deep learning algorithms for classification-enhanced neural image compression models (using Autoencoder + GAN + CNN Classifier) on MNIST and SVHN datasets with PyTorch, achieving performance comparable to designing separate encoders for each objective.  
@@ -35,6 +36,18 @@ Research Areas:
 - Formulated a mathematical model and PHY signal design (using binary antipodal signals and M-ary detection schemes) and proposed a novel low-complexity algorithm utilizing KKT conditions, generalized eigen decomposition, and projected gradient descent.  
 - Conducted numerical experiments in MATLAB to evaluate the proposed beamforming scheme, analyzed results, and authored the paper.  
 - **Outputs:** 1 published conference paper and 1 journal paper submission [3], [4].
+
+### Applied Artificial Intelligence Initiative, Deakin University  
+**Position:** Machine Learning Research Intern  
+**Duration:** July. 2025  
+**Location:** Burwood, Australia
+**Advisors:** Prof. Mohamed Abdelrazek  
+
+### Project: AI Agentic Negotiation  
+**Sponsor:** National Foundation for Science and Technology Development (NAFOSTED, Vietnam)  
+- Conduct research on AI agentic negotiation, focusing on how large language models (LLMs) perform in multi-agent bargaining and argumentation scenarios under uncertainty.
+- Identify and analyze key negotiation strategies from existing literature, and evaluate the capabilities of various LLMs in executing these strategies.
+- Design experimental setups to simulate negotiation dialogues, incorporating belief updates, offer-counteroffer dynamics, and strategic reasoning
 
 ### Posts and Telecommunications Institute of Technology, Optical Communications Research Group  
 **Position:** Research Assistant  
