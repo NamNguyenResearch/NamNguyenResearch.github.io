@@ -40,8 +40,7 @@ Research Areas:
 ### Applied Artificial Intelligence Initiative, Deakin University  
 **Position:** Machine Learning Research Intern  
 **Duration:** July. 2025  
-**Location:** Burwood, Australia
-    
+**Location:** Burwood, Australia   
 **Advisors:** Prof. Mohamed Abdelrazek  
 
 ### Project: AI Agentic Negotiation   
