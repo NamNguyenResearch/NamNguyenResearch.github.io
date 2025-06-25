@@ -10,7 +10,6 @@ redirect_from:
 {% include base_path %}
 
 ## Resume
-
 [Download PDF](https://namnguyenresearch.github.io//files/Resume_Nam_Nguyen.pdf)
 
 ---
@@ -28,7 +27,6 @@ redirect_from:
 ---
 
 ## Experiences
-
 - **Research Assistant**  
   *Communications and Signal Processing Group, Oregon State University, United States*  
   (Dec. 2022 - Present)  
@@ -48,7 +46,6 @@ redirect_from:
 ---
 
 ## Training Courses
-
 - AI 539 – Introduction to Online Learning
 - AI 534 – Machine Learning
 - AI 535 – Deep Learning
@@ -64,7 +61,6 @@ redirect_from:
 - ECE 550 – Linear Systems
 
 ---
-
 ## Technical Skills
 
 - **Quantitative Research:** Mathematical modeling, optimization, statistics, and probability theory  
@@ -73,7 +69,6 @@ redirect_from:
 - **Research:** Project leadership, teamwork, communication, problem-solving, programming, simulations, performance evaluation, presenting findings, and academic writing
 
 ---
-
 ## Selected Awards and Honors
 
 - Graduate School’s Scholarly Presentation Award – Oregon State University (2024)
@@ -86,7 +81,6 @@ redirect_from:
 - First Prize in Physics – School Level Excellent Student Competition, Vietnam (2011, 2012, 2013)
 
 ---
-
 ## Reviewer Service
 
 - 2025 IEEE Wireless Communications Magazine: 1 paper.
