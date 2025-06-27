@@ -29,7 +29,7 @@ Research Areas:
 - Developed a universal representation framework in lossy compression to handle multiple distortion-classification tradeoffs with a single encoder.  
 - Proved the approximate achievability of the universal rate-distortion-classification function using theoretical information-theoretic methods.  
 - Implemented and evaluated novel deep learning algorithms for classification-enhanced neural image compression models (using Autoencoder + GAN + CNN Classifier) on MNIST and SVHN datasets with PyTorch, achieving performance comparable to designing separate encoders for each objective.  
-- **Outputs:** 1 conference paper submission and 1 journal paper manuscript [1], [2].
+- **Outputs:** 1 accepted conference paper and 1 journal paper manuscript [1], [2].
 
 ### Project: Design and Security Analysis of Symbol Error Probability-Based Beamforming in MIMO Gaussian Wiretap Channels  
 - Served as the lead researcher and first author on a paper addressing low-complexity, high-performance beamforming for Gaussian MIMO Wiretap Channels.  
