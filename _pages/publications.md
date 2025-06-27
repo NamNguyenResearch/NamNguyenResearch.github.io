@@ -56,7 +56,7 @@ Research Areas:
 **Topics:** Free-space quantum key distribution (QKD) networks, optical communication systems  
 
 ### Project: Design and Security Analysis of Satellite-Based Free-Space Quantum Key Distribution Systems for Wireless and Vehicular Networks  
-**Sponsor:** National Foundation for Science and Technology Development (NAFOSTED, Vietnam)  
+**Sponsor:** National Foundation for Science and Technology Development (NAFOSTED, Vietnam), Grant No. 102.02-2019.08 
 - Led research and served as the first author on four papers related to satellite-based free-space QKD systems for wireless networks.  
 - Innovated by expanding terrestrial BPSK modulation/direct-detection QKD systems to satellite-based QPSK modulation/QKD systems.  
 - Designed and analyzed satellite-based QKD systems, including aspects such as link-layer retransmissions, relaying techniques, and performance evaluations under atmospheric turbulence-induced phase fluctuations.  
