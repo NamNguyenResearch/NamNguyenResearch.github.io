@@ -30,8 +30,7 @@ Corvallis, Oregon, United States
 ## News
 * **2025**
   * <span style='color: red'>**06/27**:</span> Our paper, <em>"Universal Rate-Distortion-Classification Representations for Lossy Compression"</em>, has been accepted to the [2025 IEEE Information Theory Workshop (ITW)](https://www.ieee-itw2025.org/). This marks my first publication in the field of Information Theory.
-  * <span style='color: red'>**06/24**:</span> I will be participating in the [Cohere Labs Open Science Community for ML Summer School](https://sites.google.com/cohere.com/coherelabs-community/community-programs/summer-school).
-  * <span style='color: red'>**06/24**:</span> I was offered a machine learning research internship this summer at Deakin University’s Applied Artificial Intelligence Initiative, working under the supervision of [Prof. Mohamed Abdelrazek](https://experts.deakin.edu.au/35646-mohamed-abdelrazek).
+  * <span style='color: red'>**06/24**:</span> I was offered a machine learning research internship this summer at Deakin University’s Applied Artificial Intelligence Initiative.
   * <span style='color: red'>**06/11**:</span> I will be participating in the [2025 North American School of Information Theory (NASIT)](https://sites.google.com/umn.edu/nasit-2025/home), taking place at the University of Minnesota Twin Cities from June 16 to 20, 2025. [[Poster]](https://namnguyenresearch.github.io//files/NASIT2025_Universal_Rate_Distortion_Classification_Representations_for_Lossy_Compression.pdf)
   * <span style='color: red'>**05/26**:</span> Reviewed 1 paper for the IEEE Wireless Communications Magazine.
   * <span style='color: red'>**04/14**:</span> A new paper titled <em>"A Theory of Universal Rate-Distortion-Classification Representations for Lossy Compression"<em> has been released on [Arxiv](https://arxiv.org/abs/2504.09932). 
