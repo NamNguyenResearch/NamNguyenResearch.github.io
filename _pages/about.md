@@ -30,6 +30,7 @@ Corvallis, Oregon, United States
 ## News
 
 * **2025**
+  *  <span style='color: red'>**06/27**:</span> I am happy to share that I have been selected as a [2025 Signal Processing Society Scholarship Program](https://signalprocessingsociety.org/community-involvement/sps-scholarship-program) recipient.
   * <span style='color: red'>**06/27**:</span> Our paper, <em>"Universal Rate-Distortion-Classification Representations for Lossy Compression"</em>, has been accepted to the [2025 IEEE Information Theory Workshop (ITW)](https://www.ieee-itw2025.org/). This marks my first publication in the field of Information Theory.
   * <span style='color: red'>**06/24**:</span> I was offered a machine learning research internship this summer at Deakin University’s Applied Artificial Intelligence Initiative.
   * <span style='color: red'>**06/11**:</span> I will be participating in the [2025 North American School of Information Theory (NASIT)](https://sites.google.com/umn.edu/nasit-2025/home), taking place at the University of Minnesota Twin Cities from June 16–20, 2025. [[Poster]](https://namnguyenresearch.github.io/files/NASIT2025_Universal_Rate_Distortion_Classification_Representations_for_Lossy_Compression.pdf)
