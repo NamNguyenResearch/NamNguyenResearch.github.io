@@ -12,7 +12,7 @@ My research interests lie at the intersection of information theory and machine 
 Research Areas:
 + **Information theory and machine learning:** Lossy compression, rate-distortion-perception theory,
 neural data compression, representation learning.
-+ **Wireless communications and networks:** Channel capacity, signal processing, optimization, and machine learning for advanced MIMO communication systems, physical layer security for MIMO, beamforming techniques, wireless networking and technology for 5G/6G.
++ **Wireless communications and networks:** Channel capacity, signal processing, optimization, and machine learning for advanced MIMO communication systems, physical layer security for MIMO, beamforming techniques, wireless networking, and technology for 5G/6G.
 + **Free-space quantum key distribution networks:** Design, analysis, and optimization of link-layer retransmissions and relaying techniques.
 
 ---
