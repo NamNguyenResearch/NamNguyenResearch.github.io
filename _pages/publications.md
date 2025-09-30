@@ -10,7 +10,8 @@ author_profile: true
 My research interests lie at the intersection of information theory and machine learning, with an emphasis on rate-distortion-perception-classification representation for lossy compression. I am also deeply engaged in wireless communications, physical layer security, and advanced MIMO systems, combining theoretical insights with practical applications.
 
 Research Areas:
-+ **Intersection of information theory and machine learning:** Rate-distortion-perception-classification representation for lossy compression, neural data compression, representation learning.
++ **Information theory and machine learning:** Lossy compression, rate-distortion-perception theory,
+neural data compression, representation learning.
 + **Wireless communications and networks:** Channel capacity, signal processing, optimization, and machine learning for advanced MIMO communication systems, physical layer security for MIMO, beamforming techniques, wireless networking and technology for 5G/6G.
 + **Free-space quantum key distribution networks:** Design, analysis, and optimization of link-layer retransmissions and relaying techniques.
 
@@ -23,6 +24,16 @@ Research Areas:
 **Location:** Corvallis, OR, US  
 **Advisors:** Prof. Thinh Nguyen and Prof. Bella Bose  
 **Topics:** Representation learning, neural data compression, statistical signal processing & Bayesian inference, non-convex optimization, wireless communications, physical layer security  
+
+### Project: Cross-Domain Lossy Compression via Rate- and Classification-constrained Optimal Transport (OT)
+**Sponsor:** National Science Foundation (NSF) under Grant No. CCF-2417898
+- Developed a novel compression framework integrating bit-rate, distortion, classification, and perception
+constraints to improve robustness across domains.  
+- Implemented deep learning models (VAE, W-GAN, CNN) with differentiable quantization and
+entropy-constrained losses for image super-resolution, denoising, and inpainting.
+- Validated on MNIST, SVHN, CIFAR-10, ImageNet, and KODAK datasets, achieving strong alignment
+between theoretical tradeoffs and real-world performance.  
+- **Outputs:** 1 submitted conference paper and 1 journal paper manuscript.
 
 ### Project: Universal Rate-Distortion-Classification Representations for Lossy Compression
 **Sponsor:** National Science Foundation (NSF) under Grant No. CCF-2417898
@@ -65,6 +76,8 @@ Research Areas:
 
 ---
 ## Publications
+**Nam Nguyen**, Thinh Nguyen, Bella Bose, “Cross-Domain Lossy Compression via Rate- and
+Classification-constrained Optimal Transport,” 2025.  
 1. **Nam Nguyen**, Thuan Nguyen, Thinh Nguyen, Bella Bose, “A Theory of Universal Rate-Distortion-Classification Representations for Lossy Compression,” 2025. [[Paper]](https://arxiv.org/abs/2504.09932) 
 2. **Nam Nguyen**, Thuan Nguyen, Thinh Nguyen, Bella Bose, “Universal Rate-Distortion-Classification Representations for Lossy Compression,” IEEE Information Theory
 Workshop, 2025 (Accepted). [[Paper]](https://arxiv.org/abs/2504.09025) [[Poster]](https://namnguyenresearch.github.io//files/NASIT2025_Universal_Rate_Distortion_Classification_Representations_for_Lossy_Compression.pdf) 
