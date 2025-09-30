@@ -46,6 +46,7 @@ redirect_from:
 ---
 
 ## Training Courses
+- AI 637 - Computer Vision II
 - AI 539 – Introduction to Online Learning
 - AI 534 – Machine Learning
 - AI 535 – Deep Learning
@@ -62,16 +63,18 @@ redirect_from:
 
 ---
 ## Technical Skills
+- **ML/AI:** Image/Video Compression, Computer Vision, Generative Models, Large Language Models,
+Multi-Agent AI
 - **Quantitative Research:** Mathematical modeling, optimization, statistics, and probability theory  
 - **Programming:** Python, MATLAB, C/C++, LaTeX  
-- **Software Tools:** PyTorch, TensorFlow, NumPy, Pandas, SciPy, MATLAB Toolboxes, CVX  
+- **Software Tools:** PyTorch, TensorFlow, CompressAI, NumPy, Pandas, SciPy, MATLAB Toolboxes, CVX  
 - **Research:** Project leadership, teamwork, communication, problem-solving, programming, simulations, performance evaluation, presenting findings, and academic writing
 
 ---
 ## Selected Awards and Honors
-- Participant, North American School of Information Theory – University of Minnesota (2025)
+- IEEE Signal Processing Society Scholarship (2025)
 - NSF Student Travel Grant, AERPAW Spring Workshop – North Carolina State University (2025)
-- Graduate School’s Scholarly Presentation Award – Oregon State University (2024)
+- Graduate School’s Scholarly Presentation Award – Oregon State University (2024, 2025)
 - SVTECH Scholarship – SV Technologies JSC (2021)
 - Awarded to 5 outstanding students at the Posts and Telecommunications Institute of Technology
 - Participation Scholarship, 8th Vietnam School of Science – International Centre for Interdisciplinary Science and Education (2020)
@@ -82,9 +85,10 @@ redirect_from:
 
 ---
 ## Reviewer Service
-- 2025 IEEE Wireless Communications Magazine: 1 paper.
-- 2025 IEEE International Symposium on Information Theory: 4 papers.
-- 2024 IEEE Wireless Communications Magazine: 1 paper. 
-- 2024 IEEE Access: 1 paper.
-- 2024 IEEE Wireless Communications Magazine: 1 paper. 
-- 2023 IEEE International Conference on Communications Workshops: 1 paper.  
+- 2025 IEEE Wireless Communications Magazine: 2 papers
+- NeurIPS 2025: 5 papers
+- 2025 IEEE International Symposium on Information Theory: 4 papers
+- 2024 IEEE Wireless Communications Magazine: 1 paper
+- 2024 IEEE Access: 1 paper
+- 2024 IEEE Wireless Communications Magazine: 1 paper 
+- 2023 IEEE International Conference on Communications Workshops: 1 paper  
