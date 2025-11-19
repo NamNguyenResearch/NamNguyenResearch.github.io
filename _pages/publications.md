@@ -78,8 +78,10 @@ between theoretical tradeoffs and real-world performance.
 
 ---
 ## Publications
+<!--
 1. **Nam Nguyen**, Thinh Nguyen, Bella Bose, “Cross-Domain Lossy Compression via Rate- and
-Classification-constrained Optimal Transport,” 2025.  
+Classification-constrained Optimal Transport,” 2025.
+-->
 2. **Nam Nguyen**, Thuan Nguyen, Thinh Nguyen, Bella Bose, “A Theory of Universal Rate-Distortion-Classification Representations for Lossy Compression,” 2025. [[Paper]](https://arxiv.org/abs/2504.09932) 
 3. **Nam Nguyen**, Thuan Nguyen, Thinh Nguyen, Bella Bose, “Universal Rate-Distortion-Classification Representations for Lossy Compression,” IEEE Information Theory
 Workshop, 2025 (Accepted). [[Paper]](https://arxiv.org/abs/2504.09025) [[Poster]](https://namnguyenresearch.github.io//files/NASIT2025_Universal_Rate_Distortion_Classification_Representations_for_Lossy_Compression.pdf) 
