@@ -45,21 +45,7 @@ redirect_from:
 
 ---
 
-## Training Courses
-- AI 637 - Computer Vision II
-- AI 539 – Introduction to Online Learning
-- AI 534 – Machine Learning
-- AI 535 – Deep Learning
-- AI 539 – Information Theory
-- AI 586 – Applied Matrix Analysis
-- AI 539 – Convex Optimization
-- CS 527 – Error-Correcting Codes
-- ECE 565 – Estimation, Filtering, and Detection
-- ECE 563 – Wireless Communications Networks
-- ECE 669 – Communications System Design
-- ECE 564 – Digital Signal Processing
-- ECE 560 – Stochastic Signals and Systems
-- ECE 550 – Linear Systems
+AI 637 - Computer Vision II · AI 539 – Introduction to Online Learning · AI 534 – Machine Learning · AI 535 – Deep Learning · AI 539 – Information Theory · AI 586 – Applied Matrix Analysis · AI 539 – Convex Optimization · CS 527 – Error-Correcting Codes · ECE 565 – Estimation, Filtering, and Detection · ECE 563 – Wireless Communications Networks · ECE 669 – Communications System Design · ECE 564 – Digital Signal Processing · ECE 560 – Stochastic Signals and Systems · ECE 550 – Linear Systems
 
 ---
 ## Technical Skills
