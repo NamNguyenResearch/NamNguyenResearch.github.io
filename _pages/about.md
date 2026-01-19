@@ -29,8 +29,10 @@ Corvallis, Oregon, United States
 
 ## News
 
-* **2025**
+* **2026**
   * <span style='color: red'>**01/16**:</span> Submitted a paper to the [2026 IEEE International Symposium on Information Theory (ISIT)](https://2026.ieee-isit.org/).
+    
+* **2025**
   * <span style="color: red">**09/27**:</span> Excited to share that I have been selected as a recipient of the [2025 IEEE Signal Processing Society Scholarship](https://signalprocessingsociety.org/community-involvement/sps-scholarship-program).
   * <span style='color: red'>**06/27**:</span> Our paper, <em>"Universal Rate-Distortion-Classification Representations for Lossy Compression"</em>, has been accepted to the [2025 IEEE Information Theory Workshop (ITW)](https://www.ieee-itw2025.org/). This marks my first publication in the field of Information Theory.
   * <span style='color: red'>**06/24**:</span> I was offered a machine learning research internship this summer at Deakin University’s Applied Artificial Intelligence Initiative.
