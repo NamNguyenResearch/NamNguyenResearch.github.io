@@ -44,4 +44,4 @@ Corvallis, Oregon, United States
 
 * **2024**
   * <span style='color: red'>**12/05**:</span> Successfully passed my qualifying exam and defended my Master’s thesis titled <em>"On Minimizing Symbol Error Probability Using Beamforming in MIMO Gaussian Wiretap Channels"</em>.
-  * <span style='color: red'>**10/07**:</span> Our conference paper <em>"On Minimizing Symbol Error Probability for Antipodal Beamforming in MIMO Gaussian Wiretap Channels"</em> was published in the [2024 IEEE 100th Vehicular Technology Conference (VTC2024-Fall)](https://events.vtsociety.org/vtc2024-fall/). [Read it on IEEE Xplore](https://ieeexplore-ieee-org.oregonstate.idm.oclc.org/document/10757455).
+  * <span style='color: red'>**10/07**:</span> Our conference paper [<em>"On Minimizing Symbol Error Probability for Antipodal Beamforming in MIMO Gaussian Wiretap Channels"</em>](https://ieeexplore-ieee-org.oregonstate.idm.oclc.org/document/10757455) was published in the [2024 IEEE 100th Vehicular Technology Conference (VTC2024-Fall)](https://events.vtsociety.org/vtc2024-fall/). [Read it on IEEE Xplore](https://ieeexplore-ieee-org.oregonstate.idm.oclc.org/document/10757455).
