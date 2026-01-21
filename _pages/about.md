@@ -30,7 +30,7 @@ Corvallis, Oregon, United States
 ## News
 
 * **2026**
-  * <span style='color: red'>01/21:</span> I’m excited to share that I’ve been selected as a member of the 2026 iREDEFINE Fellows cohort. I will attend the Electrical and Computer Engineering Department Heads Association (ECEDHA) Annual Conference & ECExpo in New Mexico this March.
+  * <span style='color: red'>01/21:</span> I’m excited to share that I’ve been selected as a member of the 2026 iREDEFINE Fellows cohort. I will attend the [Electrical and Computer Engineering Department Heads Association (ECEDHA) Annual Conference & ECExpo](https://www.ecedha.org/Meetings/2026-ECEDHA-Annual-Conference-and-ECExpo) in New Mexico this March.
   * <span style='color: red'>**01/16**:</span> A new paper titled <em>"Rate-Distortion-Classification Representation Theory for Bernoulli Sources"</em> has been released on [arXiv](https://arxiv.org/abs/2601.11919) and submitted to the [2026 IEEE International Symposium on Information Theory (ISIT)](https://2026.ieee-isit.org/).
     
 * **2025**
