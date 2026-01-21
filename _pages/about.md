@@ -30,7 +30,7 @@ Corvallis, Oregon, United States
 ## News
 
 * **2026**
-  * <span style='color: red'>**01/16**:</span> Submitted a paper to the [2026 IEEE International Symposium on Information Theory (ISIT)](https://2026.ieee-isit.org/).
+  * <span style='color: red'>**01/16**:</span> A new paper titled <em>"Rate-Distortion-Classification Representation Theory for Bernoulli Sources"</em> has been released on [arXiv](https://arxiv.org/abs/2601.11919) and submitted to the [2026 IEEE International Symposium on Information Theory (ISIT)](https://2026.ieee-isit.org/).
     
 * **2025**
   * <span style="color: red">**09/27**:</span> Excited to share that I have been selected as a recipient of the [2025 IEEE Signal Processing Society Scholarship](https://signalprocessingsociety.org/community-involvement/sps-scholarship-program).
