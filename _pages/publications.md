@@ -25,14 +25,11 @@ neural data compression, representation learning.
 **Advisors:** Prof. Thinh Nguyen and Prof. Bella Bose  
 **Topics:** Representation learning, neural data compression, statistical signal processing & Bayesian inference, non-convex optimization, wireless communications, physical layer security  
 
-### Project: Cross-Domain Lossy Compression via Rate- and Classification-constrained Optimal Transport (OT)
+### Project: Cross-Domain Lossy Compression via Rate- and Classification-constrained Optimal Transport 
 **Sponsor:** National Science Foundation (NSF) under Grant No. CCF-2417898
-- Developed a novel compression framework integrating bit-rate, distortion, classification, and perception
-constraints to improve robustness across domains.  
-- Implemented deep learning models (VAE, W-GAN, CNN) with differentiable quantization and
-entropy-constrained losses for image super-resolution, denoising, and inpainting.
-- Validated on MNIST, SVHN, CIFAR-10, ImageNet, and KODAK datasets, achieving strong alignment
-between theoretical tradeoffs and real-world performance.  
+- Developed a novel compression framework integrating bit-rate, distortion, classification, and perception constraints to improve robustness across domains.  
+- Implemented deep learning models (VAE, W-GAN, CNN) with differentiable quantization and entropy-constrained losses for image super-resolution, denoising, and inpainting.
+- Validated on MNIST, SVHN, CIFAR-10, ImageNet, and KODAK datasets, achieving strong alignment between theoretical tradeoffs and real-world performance.  
 - **Outputs:** 1 accepted conference paper and 1 journal paper manuscript [1].
 
 ### Project: Universal Rate-Distortion-Classification Representations for Lossy Compression
