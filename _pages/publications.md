@@ -93,7 +93,7 @@ of Satellite FSO/QKD Systems using HAP-based Relaying and ARQ,” 2020 Internati
 4. **Nam Nguyen**, “Reading Report of A Khatri-Rao Subspace Approach to Blind Identification of Mixtures of Quasi-Stationary Sources,” Department of Electrical and Computer Engineering and Computer Science, Oregon State University, AI539 Matrix Analysis for Signal Processing and Machine Learning, Final Project, Jun. 2022. [[Report]](https://namnguyenresearch.github.io//files/Reading Report of A Khatri-Rao Subspace Approach to Blind Identification of Mixtures of Quasi-Stationary Sources.pdf) [[Simulation]](https://github.com/NamNguyenResearch/ECE-599-Matrix-Analysis-for-SP-and-ML).
 
 ---
-## Theses
+## Thesis
 
 + [M.Sc.] Nam Nguyen, “On Minimizing Symbol Error Probability Using Beamforming in MIMO Gaussian Wiretap
 Channels”, Department of Electrical Engineering and Computer Science, Oregon State University, United States, Dec. 2024. 
