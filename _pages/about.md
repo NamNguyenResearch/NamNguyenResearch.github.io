@@ -31,7 +31,7 @@ Corvallis, Oregon, United States
 
 * **2026**
   * <span style='color: red'>**01/26**:</span> Our paper, [<em>"Cross-Domain Lossy Compression via Rate- and Classification-Constrained Optimal Transport"</em>](https://openreview.net/forum?id=mUIGdUTtk2&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DICLR.cc%2F2026%2FConference%2FAuthors%23your-submissions)), has been accepted to [The Fourteenth International Conference on Learning Representations 2026](https://iclr.cc/). This work represents my first publication in the field of Machine Learning.
-  * <span style='color: red'>**01/21**:</span> I’m excited to share that I’ve been selected as a member of the 2026 iREDEFINE Fellows cohort. I will attend the [Electrical and Computer Engineering Department Heads Association (ECEDHA) Annual Conference & ECExpo](https://www.ecedha.org/Meetings/2026-ECEDHA-Annual-Conference-and-ECExpo) in New Mexico this March.
+  * <span style='color: red'>**01/21**:</span> I’m excited to share that I’ve been selected as a member of the 2026 iREDEFINE Fellows cohort by the [Electrical and Computer Engineering Department Heads Association (ECEDHA)]((https://www.ecedha.org/Meetings/2026-ECEDHA-Annual-Conference-and-ECExpo)). I will attend the [ECEDHA Annual Conference & ECExpo](https://www.ecedha.org/Meetings/2026-ECEDHA-Annual-Conference-and-ECExpo) in New Mexico this March.
   * <span style='color: red'>**01/16**:</span> A new paper titled <em>"Rate-Distortion-Classification Representation Theory for Bernoulli Sources"</em> has been released on [arXiv](https://arxiv.org/abs/2601.11919) and submitted to the [2026 IEEE International Symposium on Information Theory (ISIT)](https://2026.ieee-isit.org/).
     
 * **2025**
