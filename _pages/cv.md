@@ -59,8 +59,8 @@ Multi-Agent AI
 
 ---
 ## Selected Awards and Honors
-- 2026 iREDEFINE Fellows (2026)
-- IEEE Signal Processing Society Scholarship (2025)
+- NSF iREDEFINE Fellow – ECE Department Heads Association (2026)
+- Signal Processing Society Scholarship – IEEE Signal Processing Society (2025)
 - NSF Student Travel Grant, AERPAW Spring Workshop – North Carolina State University (2025)
 - Graduate School’s Scholarly Presentation Award – Oregon State University (2024, 2025)
 - SVTECH Scholarship – SV Technologies JSC (2021)
