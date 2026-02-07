@@ -25,25 +25,32 @@ neural data compression, representation learning.
 **Advisors:** Prof. Thinh Nguyen and Prof. Bella Bose  
 **Topics:** Representation learning, neural data compression, statistical signal processing & Bayesian inference, non-convex optimization, wireless communications, physical layer security  
 
+### Project: Perception-based Image Denoising via Generative Compression
+**Sponsor:** National Science Foundation (NSF) under Grant No. CCF-2417898
+- Designed a perception-driven denoising framework using entropy-coded latent representations to control the rate-distortion-perception tradeoff.
+- Developed two conditional generative-compression denoisers using GAN- and diffusion-based reconstruction to improve perceptual image quality.
+- Built a PyTorch training and evaluation pipeline and benchmarked on Kodak/DIV2K (synthetic noise) and FMD/SIDD (real noise) using PSNR/SSIM and perceptual metrics.
+- **Outputs:** 1 conference paper submission [1].
+
 ### Project: Cross-Domain Lossy Compression via Rate- and Classification-constrained Optimal Transport 
 **Sponsor:** National Science Foundation (NSF) under Grant No. CCF-2417898
 - Developed a novel compression framework integrating bit-rate, distortion, classification, and perception constraints to improve robustness across domains.  
 - Implemented deep learning models (VAE, W-GAN, CNN) with differentiable quantization and entropy-constrained losses for image super-resolution, denoising, and inpainting.
 - Validated on MNIST, SVHN, CIFAR-10, ImageNet, and KODAK datasets, achieving strong alignment between theoretical tradeoffs and real-world performance.  
-- **Outputs:** 1 accepted conference paper and 1 journal paper manuscript [1].
+- **Outputs:** 1 accepted conference paper and 1 journal paper manuscript [2].
 
 ### Project: Universal Rate-Distortion-Classification Representations for Lossy Compression
 **Sponsor:** National Science Foundation (NSF) under Grant No. CCF-2417898
 - Developed a universal representation framework in lossy compression to handle multiple distortion-classification tradeoffs with a single encoder.  
 - Proved the approximate achievability of the universal rate-distortion-classification function using theoretical information-theoretic methods.  
 - Implemented and evaluated novel deep learning algorithms for classification-enhanced neural image compression models (using Autoencoder + GAN + CNN Classifier) on MNIST and SVHN datasets with PyTorch, achieving performance comparable to designing separate encoders for each objective.  
-- **Outputs:** 1 accepted conference paper, 1 conference paper submission, and 1 journal paper submission [2], [3], [4].
+- **Outputs:** 1 accepted conference paper, 1 conference paper submission, and 1 journal paper submission [3], [4], [5].
 
 ### Project: Design and Security Analysis of Symbol Error Probability-Based Beamforming in MIMO Gaussian Wiretap Channels  
 - Served as the lead researcher and first author on a paper addressing low-complexity, high-performance beamforming for Gaussian MIMO Wiretap Channels.  
 - Formulated a mathematical model and PHY signal design (using binary antipodal signals and M-ary detection schemes) and proposed a novel low-complexity algorithm utilizing KKT conditions, generalized eigen decomposition, and projected gradient descent.  
 - Conducted numerical experiments in MATLAB to evaluate the proposed beamforming scheme, analyzed results, and authored the paper.  
-- **Outputs:** 1 published conference paper and 1 journal paper submission [5], [6].
+- **Outputs:** 1 published conference paper and 1 journal paper submission [6], [7].
 
 ### Applied Artificial Intelligence Initiative, Deakin University  
 **Position:** Machine Learning Research Intern  
@@ -69,20 +76,21 @@ neural data compression, representation learning.
 - Innovated by expanding terrestrial BPSK modulation/direct-detection QKD systems to satellite-based QPSK modulation/QKD systems.  
 - Designed and analyzed satellite-based QKD systems, including aspects such as link-layer retransmissions, relaying techniques, and performance evaluations under atmospheric turbulence-induced phase fluctuations.  
 - Executed numerical experiments in MATLAB to assess system performance, analyzed results, and authored multiple research papers.  
-- **Outputs:** 2 published conference papers and 2 published journal papers [7], [8], [9], [10].
+- **Outputs:** 2 published conference papers and 2 published journal papers [8], [9], [10], [11].
 
 ---
 ## Publications
-1. **Nam Nguyen**, Thinh Nguyen, Bella Bose, “Cross-Domain Lossy Compression via Rate- and Classification-constrained Optimal Transport,” accepted at The Fourteenth International Conference on Learning Representations (ICLR), 2026. [[Paper]](https://openreview.net/forum?id=mUIGdUTtk2&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DICLR.cc%2F2026%2FConference%2FAuthors%23your-submissions))  
-2. **Nam Nguyen**, Thinh Nguyen, Bella Bose, “Rate-Distortion-Classification Representation Theory for Bernoulli Sources,” submitted to IEEE International Symposium on Information Theory (ISIT), 2026. [[Paper]](https://arxiv.org/abs/2601.11919) 
-3. **Nam Nguyen**, Thuan Nguyen, Thinh Nguyen, Bella Bose, “Universal Rate-Distortion-Classification Representations for Lossy Compression,” submitted to IEEE Journal on Selected Areas in Information Theory, 2025. [[Paper]](https://arxiv.org/abs/2504.09932) 
-4. **Nam Nguyen**, Thuan Nguyen, Thinh Nguyen, Bella Bose, “Universal Rate-Distortion-Classification Representations for Lossy Compression,” 2025 IEEE Information Theory Workshop (ITW), Sydney, Australia, 2025, pp. 1-6. [[Paper]](https://ieeexplore-ieee-org.oregonstate.idm.oclc.org/document/11240384) [[Poster]](https://namnguyenresearch.github.io//files/NASIT2025_Universal_Rate_Distortion_Classification_Representations_for_Lossy_Compression.pdf) [[Slide]](https://namnguyenresearch.github.io//files/ITW2025_Universal_Rate_Distortion_Classification_Representations_for_Lossy_Compression.pdf)
-5. **Nam Nguyen**, An Vuong, Thuan Nguyen, Thinh Nguyen, “On Symbol Error Probability-based Beamforming in MIMO Gaussian Wiretap Channels,” submitted to IEEE Transactions on Vehicular Technology, 2024. [[Paper]](https://arxiv.org/abs/2504.03960) [[Simulation]](https://github.com/NamNguyenResearch/SEP_Beamforming_GaussianWritapChannel)
-6. **Nam Nguyen**, An Vuong, Thuan Nguyen, and Thinh Nguyen, “On Minimizing Symbol Error Probability for Antipodal Beamforming in Gaussian MIMO Wiretap Channels,” 2024 IEEE 100th Vehicular Technology Conference (VTC2024-Fall), Washington, DC, USA, 2024, pp. 1-5. [[Paper]](https://ieeexplore-ieee-org.oregonstate.idm.oclc.org/document/10757455) [[Simulation]](https://github.com/NamNguyenResearch/SEP_Beamforming_GaussianWritapChannel)
-7. **Nam Nguyen**, Thang V. Nguyen, Vuong V. Mai, and Ngoc T. Dang, “Performance of Satellite Quantum Key Distribution under Atmospheric Turbulence-Induced Phase Fluctuations,” 40th International Communications Satellite Systems Conference (ICSSC 2023), Bradford, UK, 2023, pp. 84-88. [[Paper]](https://ieeexplore-ieee-org.oregonstate.idm.oclc.org/document/10572249) [[Simulation]](https://github.com/NamNguyenResearch/Satellite_QKD_PhaseFluctuations)
-8. **Nam D. Nguyen**, Hang T. T. Phan, Hien T. T. Pham, Vuong V. Mai, and Ngoc T. Dang, “Reliability Improvement of Satellite-based Quantum Key Distribution Systems using Retransmission Scheme,” Photonic Network Communications, 42, 27–39, 2021. [[Paper]](https://link.springer.com/article/10.1007/s11107-021-00934-y) [[Simulation]](https://github.com/NamNguyenResearch/Reliability_SatelliteQKD_RetransmissionScheme)
-9. **Nam D. Nguyen**, Hien T. T. Pham, Vuong V. Mai, and Ngoc T. Dang, “Comprehensive Performance Analysis of Satellite-to-Ground FSO/QKD Systems using Key Retransmission,” Optical Engineering, Vol. 59, No. 12, pp. 126102-1-25, Dec. 2020. [[Paper]](https://doi.org/10.1117/1.OE.59.12.126102) [[Simulation]](https://github.com/NamNguyenResearch/Satellite_FSO-QKD_KeyRetransmission)
-10. **Nam D. Nguyen**, Hien T. T. Pham, Vuong V. Mai, and Ngoc T. Dang, “Performance Enhancement
+1. **Nam Nguyen**, Thinh Nguyen, Bella Bose, “Perception-based Image Denoising via Generative Compression,” submitted to The IEEE International Conference on Image Processing (ICIP), 2026. [[Paper]]() 
+2. **Nam Nguyen**, Thinh Nguyen, Bella Bose, “Cross-Domain Lossy Compression via Rate- and Classification-constrained Optimal Transport,” accepted at The Fourteenth International Conference on Learning Representations (ICLR), 2026. [[Paper]](https://openreview.net/forum?id=mUIGdUTtk2&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DICLR.cc%2F2026%2FConference%2FAuthors%23your-submissions))  
+3. **Nam Nguyen**, Thinh Nguyen, Bella Bose, “Rate-Distortion-Classification Representation Theory for Bernoulli Sources,” submitted to IEEE International Symposium on Information Theory (ISIT), 2026. [[Paper]](https://arxiv.org/abs/2601.11919) 
+4. **Nam Nguyen**, Thuan Nguyen, Thinh Nguyen, Bella Bose, “Universal Rate-Distortion-Classification Representations for Lossy Compression,” submitted to IEEE Journal on Selected Areas in Information Theory, 2025. [[Paper]](https://arxiv.org/abs/2504.09932) 
+5. **Nam Nguyen**, Thuan Nguyen, Thinh Nguyen, Bella Bose, “Universal Rate-Distortion-Classification Representations for Lossy Compression,” 2025 IEEE Information Theory Workshop (ITW), Sydney, Australia, 2025, pp. 1-6. [[Paper]](https://ieeexplore-ieee-org.oregonstate.idm.oclc.org/document/11240384) [[Poster]](https://namnguyenresearch.github.io//files/NASIT2025_Universal_Rate_Distortion_Classification_Representations_for_Lossy_Compression.pdf) [[Slide]](https://namnguyenresearch.github.io//files/ITW2025_Universal_Rate_Distortion_Classification_Representations_for_Lossy_Compression.pdf)
+6. **Nam Nguyen**, An Vuong, Thuan Nguyen, Thinh Nguyen, “On Symbol Error Probability-based Beamforming in MIMO Gaussian Wiretap Channels,” submitted to IEEE Transactions on Vehicular Technology, 2024. [[Paper]](https://arxiv.org/abs/2504.03960) [[Simulation]](https://github.com/NamNguyenResearch/SEP_Beamforming_GaussianWritapChannel)
+7. **Nam Nguyen**, An Vuong, Thuan Nguyen, and Thinh Nguyen, “On Minimizing Symbol Error Probability for Antipodal Beamforming in Gaussian MIMO Wiretap Channels,” 2024 IEEE 100th Vehicular Technology Conference (VTC2024-Fall), Washington, DC, USA, 2024, pp. 1-5. [[Paper]](https://ieeexplore-ieee-org.oregonstate.idm.oclc.org/document/10757455) [[Simulation]](https://github.com/NamNguyenResearch/SEP_Beamforming_GaussianWritapChannel)
+8. **Nam Nguyen**, Thang V. Nguyen, Vuong V. Mai, and Ngoc T. Dang, “Performance of Satellite Quantum Key Distribution under Atmospheric Turbulence-Induced Phase Fluctuations,” 40th International Communications Satellite Systems Conference (ICSSC 2023), Bradford, UK, 2023, pp. 84-88. [[Paper]](https://ieeexplore-ieee-org.oregonstate.idm.oclc.org/document/10572249) [[Simulation]](https://github.com/NamNguyenResearch/Satellite_QKD_PhaseFluctuations)
+9. **Nam D. Nguyen**, Hang T. T. Phan, Hien T. T. Pham, Vuong V. Mai, and Ngoc T. Dang, “Reliability Improvement of Satellite-based Quantum Key Distribution Systems using Retransmission Scheme,” Photonic Network Communications, 42, 27–39, 2021. [[Paper]](https://link.springer.com/article/10.1007/s11107-021-00934-y) [[Simulation]](https://github.com/NamNguyenResearch/Reliability_SatelliteQKD_RetransmissionScheme)
+10. **Nam D. Nguyen**, Hien T. T. Pham, Vuong V. Mai, and Ngoc T. Dang, “Comprehensive Performance Analysis of Satellite-to-Ground FSO/QKD Systems using Key Retransmission,” Optical Engineering, Vol. 59, No. 12, pp. 126102-1-25, Dec. 2020. [[Paper]](https://doi.org/10.1117/1.OE.59.12.126102) [[Simulation]](https://github.com/NamNguyenResearch/Satellite_FSO-QKD_KeyRetransmission)
+11. **Nam D. Nguyen**, Hien T. T. Pham, Vuong V. Mai, and Ngoc T. Dang, “Performance Enhancement
 of Satellite FSO/QKD Systems using HAP-based Relaying and ARQ,” 2020 International Conference on Advanced Technologies for Communications, Nha Trang, Vietnam, pp. 12-17, 2020. [[Paper]](https://ieeexplore.ieee.org/document/9255472) [[Simulation]](https://github.com/NamNguyenResearch/Satellite_FSO-QKD_HAPandARQ)
 
 ---
