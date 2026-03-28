@@ -20,7 +20,7 @@ neural data compression, representation learning.
 
 ### Oregon State University, Communications and Signal Processing Group  
 **Position:** Research Assistant  
-**Duration:** Dec. 2022 – Present  
+**Duration:** Mar. 2022 – Present  
 **Location:** Corvallis, OR, US  
 **Advisors:** Prof. Thinh Nguyen and Prof. Bella Bose  
 **Topics:** Representation learning, neural data compression, statistical signal processing & Bayesian inference, non-convex optimization, wireless communications, physical layer security  
