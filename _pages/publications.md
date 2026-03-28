@@ -32,6 +32,14 @@ neural data compression, representation learning.
 - Built a PyTorch training and evaluation pipeline and benchmarked on Kodak/DIV2K (synthetic noise) and FMD/SIDD (real noise) using PSNR/SSIM and perceptual metrics.
 - **Outputs:** 1 conference paper submission [1].
 
+### Project: Rate-Distortion-Classification Representation Theory for Bernoulli Sources
+**Sponsor:** National Science Foundation (NSF) under Grant No. CCF-2417898
+- Developed a theoretical framework for task-oriented lossy compression by analyzing rate–distortion–classification (RDC) tradeoffs for Bernoulli sources under Hamming distortion.
+- Derived closed-form expressions for one-shot RDC and distortion-rate-classification (DRC) functions using common randomness, enabling explicit characterization of optimal tradeoffs.
+- Formulated the distortion–classification achievable region via representation-based analysis and solved its lower boundary using linear programming.
+- Established universal encoder representation theory, deriving computable bounds on the minimum rate and quantifying the rate penalty for supporting multiple task objectives with a single encoder.
+- **Outputs:** 1 accepted conference paper.
+
 ### Project: Cross-Domain Lossy Compression via Rate- and Classification-constrained Optimal Transport 
 **Sponsor:** National Science Foundation (NSF) under Grant No. CCF-2417898
 - Developed a novel compression framework integrating bit-rate, distortion, classification, and perception constraints to improve robustness across domains.  
