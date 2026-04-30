@@ -15,7 +15,7 @@ United States
 # About me
 I received the B.Eng. degree (Hons.) in Electronics and Communications Engineering from [Posts and Telecommunications Institute of Technology](https://english.ptit.edu.vn/), Hanoi, Vietnam, in 2021; and the M.Sc. degree (Hons.) in wireless communications from [Oregon State University](https://oregonstate.edu/), United States, in 2024. I am currently pursuing a Ph.D. in Electrical and Computer Engineering, with a minor in Artificial Intelligence, at [Department of Electrical Engineering and Computer Science, Oregon State University](https://engineering.oregonstate.edu/EECS), advised by [Prof. Thinh Nguyen](https://web.engr.oregonstate.edu/~thinhq) and [Prof. Bella Bose](https://engineering.oregonstate.edu/people/bella-bose). My research focuses on neural data compression (image/video coding), machine learning, information theory, rate-distortion-classification representation for lossy compression, and perception-based image denoising via generative compression. 
 
-For more details, please refer to [Publications](https://namnguyenresearch.github.io/publications) and [CV](https://namnguyenresearch.github.io/cv). If you are recruiting and are interested in my profile, feel free to send me an email at [nguynam4@oregonstate.edu](). Resume [[PDF]](https://namnguyenresearch.github.io//files/Resume_Nam_Nguyen.pdf)
+For more details, please refer to [Publications](https://namnguyenresearch.github.io/publications) and [CV](https://namnguyenresearch.github.io/cv). If you are recruiting and are interested in my profile, feel free to send me an email at [nguynam4@oregonstate.edu](). Resume [[PDF]](https://namnguyenresearch.github.io//files/Resume_Nam_Nguyen.pdf).
 
 --- 
 # Contact
@@ -30,6 +30,7 @@ Corvallis, Oregon, United States
 ## News
 
 * **2026**
+  * <span style='color: red'>**04/30**:</span> Our paper, [<em>"Perception-based Image Denoising via Generative Compression"</em>](https://arxiv.org/abs/2602.11553), has been accepted to the [IEEE International Conference on Image Processing (ICIP)](https://2026.ieeeicip.org/).
   * <span style='color: red'>**03/27**:</span> Our paper, [<em>"Rate-Distortion-Classification Representation Theory for Bernoulli Sources"</em>](https://arxiv.org/abs/2601.11919), has been accepted to the [2026 IEEE International Symposium on Information Theory (ISIT)](https://2026.ieee-isit.org/).
   * <span style='color: red'>**03/18**:</span> I was offered a Machine Learning Graduate Research Intern this summer at [Los Alamos National Laboratory (LANL)](https://www.lanl.gov/).
   * <span style='color: red'>**02/04**:</span> A new paper titled <em>"Perception-based Image Denoising via Generative Compression"</em> has been released on [arXiv](https://arxiv.org/abs/2602.11553) and submitted to the [IEEE International Conference on Image Processing (ICIP)](https://2026.ieeeicip.org/).
