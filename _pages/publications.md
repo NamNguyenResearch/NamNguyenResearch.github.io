@@ -26,14 +26,14 @@ neural data compression, representation learning.
 **Topics:** Representation learning, neural data compression, statistical signal processing & Bayesian inference, non-convex optimization, wireless communications, physical layer security  
 
 ### Project: Perception-based Image Denoising via Generative Compression
-**Sponsor:** National Science Foundation (NSF) under Grant No. CCF-2417898
+**Sponsor:** National Science Foundation (NSF) under Grant No. CCF:SHF:2417898
 - Designed a perception-driven denoising framework using entropy-coded latent representations to control the rate-distortion-perception tradeoff.
 - Developed two conditional generative-compression denoisers using GAN- and diffusion-based reconstruction to improve perceptual image quality.
 - Built a PyTorch training and evaluation pipeline and benchmarked on Kodak/DIV2K (synthetic noise) and FMD/SIDD (real noise) using PSNR/SSIM and perceptual metrics.
 - **Outputs:** 1 conference paper submission [1].
 
 ### Project: Rate-Distortion-Classification Representation Theory for Bernoulli Sources
-**Sponsor:** National Science Foundation (NSF) under Grant No. CCF-2417898
+**Sponsor:** National Science Foundation (NSF) under Grant No. CCF:SHF:2417898
 - Developed a theoretical framework for task-oriented lossy compression by analyzing rate–distortion–classification (RDC) tradeoffs for Bernoulli sources under Hamming distortion.
 - Derived closed-form expressions for one-shot RDC and distortion-rate-classification (DRC) functions using common randomness, enabling explicit characterization of optimal tradeoffs.
 - Formulated the distortion–classification achievable region via representation-based analysis and solved its lower boundary using linear programming.
@@ -41,14 +41,14 @@ neural data compression, representation learning.
 - **Outputs:** 1 accepted conference paper.
 
 ### Project: Cross-Domain Lossy Compression via Rate- and Classification-constrained Optimal Transport 
-**Sponsor:** National Science Foundation (NSF) under Grant No. CCF-2417898
+**Sponsor:** National Science Foundation (NSF) under Grant No. CCF:SHF:2417898
 - Developed a novel compression framework integrating bit-rate, distortion, classification, and perception constraints to improve robustness across domains.  
 - Implemented deep learning models (VAE, W-GAN, CNN) with differentiable quantization and entropy-constrained losses for image super-resolution, denoising, and inpainting.
 - Validated on MNIST, SVHN, CIFAR-10, ImageNet, and KODAK datasets, achieving strong alignment between theoretical tradeoffs and real-world performance.  
 - **Outputs:** 1 accepted conference paper and 1 journal paper manuscript [2].
 
 ### Project: Universal Rate-Distortion-Classification Representations for Lossy Compression
-**Sponsor:** National Science Foundation (NSF) under Grant No. CCF-2417898
+**Sponsor:** National Science Foundation (NSF) under Grant No. CCF:SHF:2417898
 - Developed a universal representation framework in lossy compression to handle multiple distortion-classification tradeoffs with a single encoder.  
 - Proved the approximate achievability of the universal rate-distortion-classification function using theoretical information-theoretic methods.  
 - Implemented and evaluated novel deep learning algorithms for classification-enhanced neural image compression models (using Autoencoder + GAN + CNN Classifier) on MNIST and SVHN datasets with PyTorch, achieving performance comparable to designing separate encoders for each objective.  
@@ -88,7 +88,7 @@ neural data compression, representation learning.
 
 ---
 ## Publications
-1. **Nam Nguyen**, Thinh Nguyen, Bella Bose, “Perception-based Image Denoising via Generative Compression,” submitted to The IEEE International Conference on Image Processing (ICIP), 2026. [[Paper]](https://arxiv.org/abs/2602.11553) 
+1. **Nam Nguyen**, Thinh Nguyen, Bella Bose, “Perception-based Image Denoising via Generative Compression,” accepted at The IEEE International Conference on Image Processing (ICIP), 2026. [[Paper]](https://arxiv.org/abs/2602.11553) 
 2. **Nam Nguyen**, Thinh Nguyen, Bella Bose, “Cross-Domain Lossy Compression via Rate- and Classification-constrained Optimal Transport,” accepted at The Fourteenth International Conference on Learning Representations (ICLR), 2026. (Oral Presentation) [[Paper]](https://openreview.net/forum?id=mUIGdUTtk2&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DICLR.cc%2F2026%2FConference%2FAuthors%23your-submissions))  
 3. **Nam Nguyen**, Thinh Nguyen, Bella Bose, “Rate-Distortion-Classification Representation Theory for Bernoulli Sources,” IEEE International Symposium on Information Theory (ISIT), 2026 (Accepted). [[Paper]](https://arxiv.org/abs/2601.11919) 
 4. **Nam Nguyen**, Thuan Nguyen, Thinh Nguyen, Bella Bose, “Universal Rate-Distortion-Classification Representations for Lossy Compression,” submitted to IEEE Journal on Selected Areas in Information Theory, 2025. [[Paper]](https://arxiv.org/abs/2504.09932) 
