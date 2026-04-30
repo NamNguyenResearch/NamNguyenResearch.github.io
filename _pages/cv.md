@@ -73,14 +73,17 @@ Multi-Agent AI
 
 ---
 ## Reviewer Service
-- Area Chair of Machine Learning for Signal Processing track of ICASSP 2026
-- 2026 IEEE International Conference on Acoustics, Speech, and Signal Processing: 15 papers
+- 2026 Computer Vision and Pattern Recognition (CVPR): 1 paper 
+- 2026 IEEE International Conference on Image Processing (ICIP): 3 papers
+- 2026 International Conference on Learning Representations (ICLR): 7 papers
+- Area Chair of Machine Learning for Signal Processing track of 2026 International Conference on Acoustics, Speech, and Signal Processing (ICASSP) 
+- 2026 IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP): 15 papers
 - 2026 Annual AAAI Conference on Artificial Intelligence: 1 paper
-- 2026 Conference on Parsimony and Learning: 1 paper 
-- 2025 IEEE Wireless Communications Magazine: 2 papers
-- NeurIPS 2025: 5 papers
-- 2025 IEEE International Symposium on Information Theory: 4 papers
-- 2024 IEEE Wireless Communications Magazine: 1 paper
+- 2026 Conference on Parsimony and Learning (CPAL): 1 paper 
+- 2025 IEEE Wireless Communications Magazine (WCM): 2 papers
+- 2025 Conference on Neural Information Processing Systems (NeurIPS): 5 papers
+- 2025 IEEE International Symposium on Information Theory (ISIT): 4 papers
+- 2024 IEEE Wireless Communications Magazine (WCM): 1 paper
 - 2024 IEEE Access: 1 paper
-- 2024 IEEE Wireless Communications Magazine: 1 paper 
-- 2023 IEEE International Conference on Communications Workshops: 1 paper  
+- 2024 IEEE Wireless Communications Magazine (WCM): 1 paper 
+- 2023 IEEE International Conference on Communications (ICC) Workshops: 1 paper  
