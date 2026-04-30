@@ -30,7 +30,7 @@ neural data compression, representation learning.
 - Designed a perception-driven denoising framework using entropy-coded latent representations to control the rate-distortion-perception tradeoff.
 - Developed two conditional generative-compression denoisers using GAN- and diffusion-based reconstruction to improve perceptual image quality.
 - Built a PyTorch training and evaluation pipeline and benchmarked on Kodak/DIV2K (synthetic noise) and FMD/SIDD (real noise) using PSNR/SSIM and perceptual metrics.
-- **Outputs:** 1 conference paper submission [1].
+- **Outputs:** 1 accepted conference paper [1].
 
 ### Project: Rate-Distortion-Classification Representation Theory for Bernoulli Sources
 **Sponsor:** National Science Foundation (NSF) under Grant No. CCF:SHF:2417898
@@ -38,7 +38,7 @@ neural data compression, representation learning.
 - Derived closed-form expressions for one-shot RDC and distortion-rate-classification (DRC) functions using common randomness, enabling explicit characterization of optimal tradeoffs.
 - Formulated the distortion–classification achievable region via representation-based analysis and solved its lower boundary using linear programming.
 - Established universal encoder representation theory, deriving computable bounds on the minimum rate and quantifying the rate penalty for supporting multiple task objectives with a single encoder.
-- **Outputs:** 1 accepted conference paper.
+- **Outputs:** 1 accepted conference paper [3].
 
 ### Project: Cross-Domain Lossy Compression via Rate- and Classification-constrained Optimal Transport 
 **Sponsor:** National Science Foundation (NSF) under Grant No. CCF:SHF:2417898
