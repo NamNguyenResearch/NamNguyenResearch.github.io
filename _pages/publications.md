@@ -32,6 +32,13 @@ neural data compression, representation learning.
 - Built a PyTorch training and evaluation pipeline and benchmarked on Kodak/DIV2K (synthetic noise) and FMD/SIDD (real noise) using PSNR/SSIM and perceptual metrics.
 - **Outputs:** 1 accepted conference paper [1].
 
+### Project: Cross-Domain Lossy Compression via Rate- and Classification-constrained Optimal Transport 
+**Sponsor:** National Science Foundation (NSF) under Grant No. CCF:SHF:2417898
+- Developed a novel compression framework integrating bit-rate, distortion, classification, and perception constraints to improve robustness across domains.  
+- Implemented deep learning models (VAE, W-GAN, CNN) with differentiable quantization and entropy-constrained losses for image super-resolution, denoising, and inpainting.
+- Validated on MNIST, SVHN, CIFAR-10, ImageNet, and KODAK datasets, achieving strong alignment between theoretical tradeoffs and real-world performance.  
+- **Outputs:** 1 accepted conference paper and 1 journal paper manuscript [2].
+
 ### Project: Rate-Distortion-Classification Representation Theory for Bernoulli Sources
 **Sponsor:** National Science Foundation (NSF) under Grant No. CCF:SHF:2417898
 - Developed a theoretical framework for task-oriented lossy compression by analyzing rate–distortion–classification (RDC) tradeoffs for Bernoulli sources under Hamming distortion.
@@ -39,13 +46,6 @@ neural data compression, representation learning.
 - Formulated the distortion–classification achievable region via representation-based analysis and solved its lower boundary using linear programming.
 - Established universal encoder representation theory, deriving computable bounds on the minimum rate and quantifying the rate penalty for supporting multiple task objectives with a single encoder.
 - **Outputs:** 1 accepted conference paper [3].
-
-### Project: Cross-Domain Lossy Compression via Rate- and Classification-constrained Optimal Transport 
-**Sponsor:** National Science Foundation (NSF) under Grant No. CCF:SHF:2417898
-- Developed a novel compression framework integrating bit-rate, distortion, classification, and perception constraints to improve robustness across domains.  
-- Implemented deep learning models (VAE, W-GAN, CNN) with differentiable quantization and entropy-constrained losses for image super-resolution, denoising, and inpainting.
-- Validated on MNIST, SVHN, CIFAR-10, ImageNet, and KODAK datasets, achieving strong alignment between theoretical tradeoffs and real-world performance.  
-- **Outputs:** 1 accepted conference paper and 1 journal paper manuscript [2].
 
 ### Project: Universal Rate-Distortion-Classification Representations for Lossy Compression
 **Sponsor:** National Science Foundation (NSF) under Grant No. CCF:SHF:2417898
