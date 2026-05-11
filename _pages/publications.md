@@ -31,7 +31,7 @@ neural data compression, representation learning.
 - Derived closed-form Bernoulli characterizations and established an equivalent deterministic coupling formulation under common randomness.
 - Designed a neural restoration framework using quantization, entropy modeling, distribution matching, and classification regularization for super-resolution and denoising tasks.
 - Built a PyTorch training and evaluation pipeline and benchmarked on MNIST (super-resolution) and SVHN (denoising) using classification accuracy, cross-entropy loss, and perceptual reconstruction metrics.
-- **Outputs:** 1 conference paper submission.
+- **Outputs:** 1 conference paper submission [1].
   
 ### Project: Perception-based Image Denoising via Generative Compression
 **Sponsor:** National Science Foundation (NSF) under Grant No. CCF:SHF:2417898
