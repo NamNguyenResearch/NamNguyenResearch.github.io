@@ -30,6 +30,7 @@ Corvallis, Oregon, United States
 ## News
 
 * **2026**
+  * <span style='color: red'>**05/10**:</span> A new paper titled <em>"Cross-Domain Lossy Compression via Constrained Minimum Entropy Coupling"</em> has been released on [arXiv]() and submitted to the [2026 IEEE Information Theory Workshop (ITW)](https://2026.ieee-itw.org/).
   * <span style='color: red'>**04/30**:</span> Our paper, [<em>"Perception-based Image Denoising via Generative Compression"</em>](https://arxiv.org/abs/2602.11553), has been accepted to the [IEEE International Conference on Image Processing (ICIP)](https://2026.ieeeicip.org/).
   * <span style='color: red'>**03/27**:</span> Our paper, [<em>"Rate-Distortion-Classification Representation Theory for Bernoulli Sources"</em>](https://arxiv.org/abs/2601.11919), has been accepted to the [2026 IEEE International Symposium on Information Theory (ISIT)](https://2026.ieee-isit.org/).
   * <span style='color: red'>**03/18**:</span> I was offered a Machine Learning Graduate Research Intern this summer at [Los Alamos National Laboratory (LANL)](https://www.lanl.gov/).
