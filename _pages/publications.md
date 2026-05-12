@@ -96,7 +96,7 @@ neural data compression, representation learning.
 
 ---
 ## Publications
-1. **Nam Nguyen**, Hassan Tavakoli, An Vuong, Thinh Nguyen, Bella Bose, “Cross-Domain Lossy Compression via Constrained Minimum Entropy Coupling,” submitted to The 2026 IEEE Information Theory Workshop. [[Paper]]()
+1. **Nam Nguyen**, Hassan Tavakoli, An Vuong, Thinh Nguyen, Bella Bose, “Cross-Domain Lossy Compression via Constrained Minimum Entropy Coupling,” submitted to The 2026 IEEE Information Theory Workshop. [[Paper]](https://arxiv.org/abs/2605.09833)
 2. **Nam Nguyen**, Thinh Nguyen, Bella Bose, “Perception-based Image Denoising via Generative Compression,” accepted at The IEEE International Conference on Image Processing (ICIP), 2026. [[Paper]](https://arxiv.org/abs/2602.11553) 
 3. **Nam Nguyen**, Thinh Nguyen, Bella Bose, “Cross-Domain Lossy Compression via Rate- and Classification-constrained Optimal Transport,” accepted at The Fourteenth International Conference on Learning Representations (ICLR), 2026. (Oral Presentation) [[Paper]](https://openreview.net/forum?id=mUIGdUTtk2&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DICLR.cc%2F2026%2FConference%2FAuthors%23your-submissions))  
 4. **Nam Nguyen**, Thinh Nguyen, Bella Bose, “Rate-Distortion-Classification Representation Theory for Bernoulli Sources,” IEEE International Symposium on Information Theory (ISIT), 2026 (Accepted). [[Paper]](https://arxiv.org/abs/2601.11919) 
